@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        card_view:cardBackgroundColor="@color/cardview_dark_background"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="false"
+        card_view:cardPreventCornerOverlap="false"
+        >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/indicator_arrow"/>
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left|top"
+            android:textColor="@android:color/white"
+            android:text="CardView:它是继承自FrameLayout,\n我们可以
+            设置卡片的圆角(cardCornerRadius='10dp');\n
+            背景色(cardBackgroundColor='@color/**');\n
+            Z轴上的阴影:(cardElevation='10dp')\n
+            cardMaxElevation:最大阴影高度\n
+            cardUseCompatPadding:boolean值，是否设置内边距\n
+            cardPreventCornerOverlap:boolean值，是否允许卡片内的内容与边角重叠\n
+            contentPadding以及contentPaddingLeft,contentPaddingRight\n
+            contentPaddingTop,contentPaddingBottom等都是设置卡片内的内容与边界的边距。
+            "
+            android:textSize="16sp" />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_btn"
+        android:layout_below="@+id/card_view_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardBackgroundColor="@color/bg_color_selector2"
+        android:layout_gravity="bottom"
+        >
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

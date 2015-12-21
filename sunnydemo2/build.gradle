@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.smartbracelet.sunny.sunnydemo2"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets{
+        main{
+            manifest.srcFile('AndroidManifest.xml')
+            res.srcDirs('res')
+            java.srcDirs('src')
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['asserts']
+        }
+    }
+
+   /* allprojects{
+        repositories{
+            maven{
+
+                credentials{
+                    username    'admin'
+                    password    'admin123'
+                }
+                url 'http://192.168.3.5:8081/nexus/content/groups/public/'
+            }
+        }
+    }*/
+
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    // compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.squareup.okhttp:okhttp:2.6.0'
+    provided files('../libs/xUitls-2.6.14.jar')
+    compile 'com.android.common:BaseProject:1.0.1'
+    compile 'com.android.support:multidex:1.0.0'
+
+
+    provided files('../android-app-appcompat-v7/libs/android-support-v4.jar')
+    provided files('../android-app-appcompat-v7/libs/android-support-v7-appcompat.jar')
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+}

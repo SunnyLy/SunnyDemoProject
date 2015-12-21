@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/red" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/tint_icon_1"
+        android:tint="@color/red"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/tint_icon_2"
+        android:tint="@color/blue"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/tint_icon_3"
+        android:tint="#FFCC22EE"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#FFFF0000"
+        android:contentDescription="space"/>
+
+    <Button
+        android:id="@+id/btn_bg_tint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="backgroundTint"
+        android:background="@drawable/list_pressed_holo_light"
+        android:backgroundTint="@color/bg_color_selector"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/list_pressed_holo_light"
+        android:tint="@color/red"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:orientation="horizontal"
+        android:columnOrderPreserved="false"
+        android:alignmentMode="alignMargins">
+
+       <Button
+           android:text="1"
+           android:textSize="16sp"
+           android:textColor="@color/black_text"/>
+        <Button
+            android:text="2"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="3"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="/"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="4"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="5"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="6"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="*"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="7"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="8"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="9"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="-"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="0"
+            android:textSize="16sp"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:textColor="@color/black_text"/>
+        <Button
+            android:text="."
+            />
+        <Button
+            android:text="+"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill"/>
+
+        <Button
+            android:text="="
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill"/>
+
+
+
+    </GridLayout>
+
+</LinearLayout>

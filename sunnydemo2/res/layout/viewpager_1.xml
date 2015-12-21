@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ViewPager1"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/pager4"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="下面的圆点水平平滑移动的动画用的是属性动画，\n
+        Android中动画分为三类：
+        1，视图动画（View动画）
+        2，帧动画（Frame动画）
+        3，属性动画(Property动画)
+        View动画：
+         基类：Animation
+         子类：
+         TranslateAnimation(位移动画)、
+         AlphaAnimation(渐变动画)、
+         RotateAnimation(旋转动画)、
+         ScaleAnimation(绽放动画)
+         AnimationSet(动画组合)
+
+         Property动画：
+         基类：Animator
+         子类：
+         ValueAnimator、
+         ObjectAnimator、
+         TimeAnimator、
+         AnimatorSet(动画组合)"/>
+
+
+</LinearLayout>

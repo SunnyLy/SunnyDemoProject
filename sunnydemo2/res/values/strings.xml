@@ -1,0 +1,45 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">SunnyDemo2</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="item_names">
+        <item>自定义控件</item>
+        <item>XUtils网络请求</item>
+        <item>OkHttp网络请求</item>
+        <item>Activity启动模式</item>
+        <item>蓝牙4.0自动连接</item>
+        <item>Android新特性</item>
+        <item>图片加载框架</item>
+        <item>图文混排</item>
+        <item>Android5.0 新控件</item>
+    </string-array>
+
+    <string-array name="new_properties">
+        <item>下拉刷新</item>
+    </string-array>
+
+    <!--图片加载框架-->
+    <string-array name="image_loader">
+        <item>ImageLoader</item>
+        <item>FaceBook的Fresco</item>
+        <item>Google推荐的图片加载库glide</item>
+        <item>Sunny图片加载框架</item>
+        <item>仿微信选择图片、拍照</item>
+    </string-array>
+
+    <string-array name="android_5_new_views">
+        <item>RecyclerView</item>
+        <item>tint着色</item>
+        <item>CardView</item>
+    </string-array>
+
+
+    <string name="number_picker_increment_button">Increase</string>
+    <!-- Description of the button to decrease the NumberPicker value. [CHAR LIMIT=NONE] -->
+    <string name="number_picker_decrement_button">Decrease</string>
+    <!-- Description of the tap and hold action to get into scroll mode in NumberPicker. [CHAR LIMIT=NONE] -->
+    <string name="number_picker_increment_scroll_mode"><xliff:g id="value" example="3">%s</xliff:g> touch and hold.</string>
+    <!-- Description of the scrolling action in NumberPicker. [CHAR LIMIT=NONE] -->
+    <string name="number_picker_increment_scroll_action">Slide up to increase and down to decrease.</string>
+
+</resources>

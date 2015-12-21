@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/choose_photo_titlebar"
+        layout="@layout/item_titlebar"/>
+    <GridView
+        android:id="@+id/choose_photo_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/choose_photo_titlebar"
+        android:layout_above="@+id/choose_photo_bottom"
+        android:numColumns="3"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:scrollbars="none"
+        android:paddingBottom="50dp"
+        android:background="@color/bg_color_a5"
+        ></GridView>
+
+    <LinearLayout
+        android:id="@+id/choose_photo_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/cardview_dark_background"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="15dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="所有图片"
+            android:textColor="@color/white"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+</RelativeLayout>

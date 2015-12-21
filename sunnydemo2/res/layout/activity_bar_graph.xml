@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <sunnydemo2.bargraph.view.BarGraphView
+        android:id="@+id/graph_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/darker_gray"
+        app:chart_bg="#FFF8F8F8"
+        app:chart_title="简单柱形图"
+        />
+
+</LinearLayout>

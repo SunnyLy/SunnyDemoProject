@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+       <!-- <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+    <!--<style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>-->
+   <!-- <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+
+    <style name="TextAppearance">
+       <!-- <item name="textColor">?textColorPrimary</item>
+        <item name="textSize">16sp</item>
+        <item name="textColorHighlight">?textColorHighlight</item>
+        <item name="textColorHint">?textColorHint</item>
+        <item name="textColorLink">?textColorLink</item>
+        <item name="textStyle">normal</item>-->
+    </style>
+
+    <style name="TextAppearance.Large">
+       <!-- <item name="textSize">22sp</item>-->
+    </style>
+
+    <style name="TextAppearance.Large.Inverse">
+       <!-- <item name="textColor">?textColorPrimaryInverse</item>
+        <item name="textColorHint">?textColorHintInverse</item>
+        <item name="textColorHighlight">?textColorHighlightInverse</item>
+        <item name="textColorLink">?textColorLinkInverse</item>-->
+    </style>
+
+    <style name="TextAppearance.Large.Inverse.NumberPickerInputText">
+      <!--  <item name="textColor">@color/primary_text_light</item>
+        <item name="textSize">30sp</item>-->
+    </style>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入手机号"
+        android:text="15914077946"
+        />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:text="555555"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        />
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="result:"/>
+
+    <Button
+        android:id="@+id/btn_get_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET请求"
+        android:onClick="getRequest"
+        />
+    <Button
+        android:id="@+id/btn_post_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post请求"
+        android:onClick="postRequest"
+        />
+    <Button
+        android:id="@+id/btn_upload_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件上传"
+        android:onClick="uploadRequest"
+        />
+    <Button
+        android:id="@+id/btn_download_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件下载"
+        android:onClick="downloadRequest"
+        />
+
+</LinearLayout>

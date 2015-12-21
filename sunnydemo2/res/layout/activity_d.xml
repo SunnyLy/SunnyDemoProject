@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ActivityD"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转至主界面"
+        android:onClick="startA"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转至ActivityC"
+        android:onClick="startC"/>
+
+    <TextView
+        android:id="@+id/activityD_taskId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="taskID"
+        android:gravity="center"/>
+
+</LinearLayout>

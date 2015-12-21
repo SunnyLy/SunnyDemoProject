@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartbracelet.sunny.sunnydemo2">
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="sunnydemo2.AppApplication"
+        android:theme="@style/SampleTheme.Light"
+        tools:replace="android:theme">
+        <activity
+            android:name="sunnydemo2.StartActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="sunnydemo2.ad.MainActivity"/>
+        <activity android:name="sunnydemo2.network.XutilsNetWorkActivity"/>
+        <activity android:name="sunnydemo2.network.OkHttpNetWorkActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityA"
+            android:launchMode="singleTask"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityB"
+            android:launchMode="singleTop"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityC"
+            android:launchMode="singleInstance"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityD"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityE"/>
+        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityStartMode"/>
+        <activity android:name="sunnydemo2.ad.ui.ble.SunnyBLEActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.CarouselADActivity"/>
+        <activity android:name="sunnydemo2.bargraph.BarGraphActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.view.VerticalViewPagerActivity"/>
+        <activity android:name="sunnydemo2.bargraph.CurveChartActivity"/>
+        <activity android:name="sunnydemo2.bargraph.DivisionCircle2Activity"/>
+        <activity android:name="sunnydemo2.bargraph.DivisionCircleActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.newproperties.NewPropertiesActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.newproperties.PullToRefreshLayout"/>
+        <activity android:name="sunnydemo2.androidl.AndroidLActivity"/>
+        <activity android:name="sunnydemo2.androidl.TintActivity"/>
+        <activity android:name="sunnydemo2.androidl.CardViewActivity"/>
+
+        <!--图片加载-->
+        <activity android:name="sunnydemo2.imageloader.PictureLoaderFrameActivity"/>
+        <activity android:name="sunnydemo2.imageloader.ImageLoaderActivity"/>
+        <activity android:name="sunnydemo2.imageloader.FrescoActivity"/>
+        <activity android:name="sunnydemo2.imageloader.GlideActivity"/>
+        <activity android:name="sunnydemo2.imageloader.SunnyImageLoaderActivity"/>
+        <activity android:name="sunnydemo2.imageloader.ChoosePictureActivity"/>
+
+        <!--图文混排-->
+        <activity android:name="sunnydemo2.imagetext.ImageTextActivity"/>
+    </application>
+
+</manifest>
