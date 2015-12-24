@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        //applicationId "com.example.android.apis"
+        minSdkVersion 16
+        targetSdkVersion 21
+
+        //testApplicationId "com.example.android.apis"
+        testInstrumentationRunner ".app.LocalSampleInstrumentation"
+    }
+
+    sourceSets{
+        main{
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs =['src']
+            res.srcDirs =['res']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}

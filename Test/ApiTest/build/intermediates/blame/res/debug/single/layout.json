@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\service.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\service.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_activity_test.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\activity_activity_test.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\content_provider.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\content_provider.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\notification_test.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\notification_test.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_single_task.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\activity_single_task.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_single_top.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\activity_single_top.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_standard.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\activity_standard.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\broadcast_receiver.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\broadcast_receiver.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_single_instance.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\layout\\activity_single_instance.xml"
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "outputFile": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 196
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 220,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 361
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 201,
+                    "endLine": 7,
+                    "endColumn": 12,
+                    "endOffset": 387
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\bin\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 392,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 579
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\bin\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 246,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 433
+                    }
+                }
+            }
+        ]
+    }
+]

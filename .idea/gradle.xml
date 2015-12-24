@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.8" />
+        <option name="gradleJvm" value="1.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ApiDemos" />
+            <option value="$PROJECT_DIR$/BarryDemo_MultiLanguage" />
+            <option value="$PROJECT_DIR$/Bluetooth4_3" />
+            <option value="$PROJECT_DIR$/CommonUtils" />
+            <option value="$PROJECT_DIR$/CrashDemo" />
+            <option value="$PROJECT_DIR$/CrashDemoLibrary" />
+            <option value="$PROJECT_DIR$/DroidPlugin" />
+            <option value="$PROJECT_DIR$/KJFrame" />
+            <option value="$PROJECT_DIR$/KJLibraryExample" />
+            <option value="$PROJECT_DIR$/Libraries" />
+            <option value="$PROJECT_DIR$/Libraries/DroidPlugin" />
+            <option value="$PROJECT_DIR$/NumberPicker" />
+            <option value="$PROJECT_DIR$/OSChinaAndroidApp" />
+            <option value="$PROJECT_DIR$/SwitchLanguageDemo-master" />
+            <option value="$PROJECT_DIR$/Test" />
+            <option value="$PROJECT_DIR$/Test/ApiTest" />
+            <option value="$PROJECT_DIR$/TestPlugin" />
+            <option value="$PROJECT_DIR$/TestYBP" />
+            <option value="$PROJECT_DIR$/VCameraDemo" />
+            <option value="$PROJECT_DIR$/VitamioRecorderLibrary" />
+            <option value="$PROJECT_DIR$/XCL-Charts" />
+            <option value="$PROJECT_DIR$/XCL-Charts-demo" />
+            <option value="$PROJECT_DIR$/XUtilsLibrary" />
+            <option value="$PROJECT_DIR$/XUtilsSample" />
+            <option value="$PROJECT_DIR$/android-app" />
+            <option value="$PROJECT_DIR$/android-app-appcompat-v7" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/downloader-lib" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/oschian2.4" />
+            <option value="$PROJECT_DIR$/propertyanimationdemo" />
+            <option value="$PROJECT_DIR$/social_sdk_library_project" />
+            <option value="$PROJECT_DIR$/sunnydemo2" />
+            <option value="$PROJECT_DIR$/sunnydemo3" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ApiDemos" />
+            <option value="$PROJECT_DIR$/BarryDemo_MultiLanguage" />
+            <option value="$PROJECT_DIR$/Bluetooth4_3" />
+            <option value="$PROJECT_DIR$/CommonUtils" />
+            <option value="$PROJECT_DIR$/CrashDemo" />
+            <option value="$PROJECT_DIR$/CrashDemoLibrary" />
+            <option value="$PROJECT_DIR$/DroidPlugin" />
+            <option value="$PROJECT_DIR$/KJFrame" />
+            <option value="$PROJECT_DIR$/KJLibraryExample" />
+            <option value="$PROJECT_DIR$/Libraries" />
+            <option value="$PROJECT_DIR$/Libraries/DroidPlugin" />
+            <option value="$PROJECT_DIR$/NumberPicker" />
+            <option value="$PROJECT_DIR$/OSChinaAndroidApp" />
+            <option value="$PROJECT_DIR$/SwitchLanguageDemo-master" />
+            <option value="$PROJECT_DIR$/Test" />
+            <option value="$PROJECT_DIR$/Test/ApiTest" />
+            <option value="$PROJECT_DIR$/TestPlugin" />
+            <option value="$PROJECT_DIR$/TestYBP" />
+            <option value="$PROJECT_DIR$/VCameraDemo" />
+            <option value="$PROJECT_DIR$/VitamioRecorderLibrary" />
+            <option value="$PROJECT_DIR$/XCL-Charts" />
+            <option value="$PROJECT_DIR$/XCL-Charts-demo" />
+            <option value="$PROJECT_DIR$/XUtilsLibrary" />
+            <option value="$PROJECT_DIR$/XUtilsSample" />
+            <option value="$PROJECT_DIR$/android-app" />
+            <option value="$PROJECT_DIR$/android-app-appcompat-v7" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/downloader-lib" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/oschian2.4" />
+            <option value="$PROJECT_DIR$/propertyanimationdemo" />
+            <option value="$PROJECT_DIR$/social_sdk_library_project" />
+            <option value="$PROJECT_DIR$/sunnydemo2" />
+            <option value="$PROJECT_DIR$/sunnydemo3" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

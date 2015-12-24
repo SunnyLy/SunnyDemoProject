@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\plugin_activity_loading_bitmap.9.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\bin\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\drawable-xxhdpi-v4\\plugin_activity_loading_bitmap.9.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\plugin_activity_loading.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Test\\ApiTest\\bin\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\drawable-xxhdpi-v4\\plugin_activity_loading.xml"
+    }
+]

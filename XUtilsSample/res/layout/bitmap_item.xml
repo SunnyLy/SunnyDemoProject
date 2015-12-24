@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_item"
+               android:minWidth="50dp"
+               android:minHeight="50dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+    <ProgressBar android:id="@+id/img_pb"
+                 android:layout_width="fill_parent"
+                 android:layout_height="2dp"
+                 style="?android:attr/progressBarStyleHorizontal"/>
+</LinearLayout>

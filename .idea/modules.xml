@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ApiDemos/ApiDemos.iml" filepath="$PROJECT_DIR$/ApiDemos/ApiDemos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" filepath="$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" filepath="$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" filepath="$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CrashDemo/CrashDemo.iml" filepath="$PROJECT_DIR$/CrashDemo/CrashDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CrashDemoLibrary/CrashDemoLibrary.iml" filepath="$PROJECT_DIR$/CrashDemoLibrary/CrashDemoLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KJFrame/KJFrame.iml" filepath="$PROJECT_DIR$/KJFrame/KJFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KJLibraryExample/KJLibraryExample.iml" filepath="$PROJECT_DIR$/KJLibraryExample/KJLibraryExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libraries/Libraries.iml" filepath="$PROJECT_DIR$/Libraries/Libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libraries/DroidPlugin/Libraries-DroidPlugin.iml" filepath="$PROJECT_DIR$/Libraries/DroidPlugin/Libraries-DroidPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumberPicker/NumberPicker.iml" filepath="$PROJECT_DIR$/NumberPicker/NumberPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSChinaAndroidApp/OSChinaAndroidApp.iml" filepath="$PROJECT_DIR$/OSChinaAndroidApp/OSChinaAndroidApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SunnyDemo1.iml" filepath="$PROJECT_DIR$/SunnyDemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DroidPlugin/SunnyDemo1-DroidPlugin.iml" filepath="$PROJECT_DIR$/DroidPlugin/SunnyDemo1-DroidPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SwitchLanguageDemo-master/SwitchLanguageDemo-master.iml" filepath="$PROJECT_DIR$/SwitchLanguageDemo-master/SwitchLanguageDemo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestPlugin/TestPlugin.iml" filepath="$PROJECT_DIR$/TestPlugin/TestPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestYBP/TestYBP.iml" filepath="$PROJECT_DIR$/TestYBP/TestYBP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VCameraDemo/VCameraDemo.iml" filepath="$PROJECT_DIR$/VCameraDemo/VCameraDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VitamioRecorderLibrary/VitamioRecorderLibrary.iml" filepath="$PROJECT_DIR$/VitamioRecorderLibrary/VitamioRecorderLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XCL-Charts/XCL-Charts.iml" filepath="$PROJECT_DIR$/XCL-Charts/XCL-Charts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XCL-Charts-demo/XCL-Charts-demo.iml" filepath="$PROJECT_DIR$/XCL-Charts-demo/XCL-Charts-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XUtilsLibrary/XUtilsLibrary.iml" filepath="$PROJECT_DIR$/XUtilsLibrary/XUtilsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XUtilsSample/XUtilsSample.iml" filepath="$PROJECT_DIR$/XUtilsSample/XUtilsSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-app/android-app.iml" filepath="$PROJECT_DIR$/android-app/android-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" filepath="$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/downloader-lib/downloader-lib.iml" filepath="$PROJECT_DIR$/downloader-lib/downloader-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oschian2.4/oschian2.4.iml" filepath="$PROJECT_DIR$/oschian2.4/oschian2.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/propertyanimationdemo/propertyanimationdemo.iml" filepath="$PROJECT_DIR$/propertyanimationdemo/propertyanimationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/social_sdk_library_project/social_sdk_library_project.iml" filepath="$PROJECT_DIR$/social_sdk_library_project/social_sdk_library_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunnydemo2/sunnydemo2.iml" filepath="$PROJECT_DIR$/sunnydemo2/sunnydemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunnydemo3/sunnydemo3.iml" filepath="$PROJECT_DIR$/sunnydemo3/sunnydemo3.iml" />
+    </modules>
+  </component>
+</project>
