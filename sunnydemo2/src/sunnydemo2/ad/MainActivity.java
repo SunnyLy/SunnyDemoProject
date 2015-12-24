@@ -26,7 +26,7 @@ import sunnydemo2.bargraph.DivisionCircleActivity;
 
 /**
  * Created by sunny on 2015/11/12.
- * Annotion:
+ * 自定义控件主Activity
  */
 public class MainActivity extends Activity {
 
@@ -181,6 +181,15 @@ public class MainActivity extends Activity {
     public void jumpToDivishCircle2(View view) {
         Intent targetIntent = new Intent(this, DivisionCircle2Activity.class);
         startActivity(targetIntent);
+    }
+
+    /**
+     * 跳转至罗盘
+     * @param view
+     */
+    public void jumpToComprassView(View view){
+
+        ComprassViewActivity.startCompassViewActivity(this);
     }
 
     public void jumpToCurveChart(View view) {

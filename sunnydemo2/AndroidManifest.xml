@@ -58,6 +58,8 @@
         <activity android:name="sunnydemo2.androidl.TintActivity"/>
         <activity android:name="sunnydemo2.androidl.CardViewActivity"/>
 
+        <activity android:name="sunnydemo2.ad.ComprassViewActivity"/>
+
         <!--图片加载-->
         <activity android:name="sunnydemo2.imageloader.PictureLoaderFrameActivity"/>
         <activity android:name="sunnydemo2.imageloader.ImageLoaderActivity"/>
