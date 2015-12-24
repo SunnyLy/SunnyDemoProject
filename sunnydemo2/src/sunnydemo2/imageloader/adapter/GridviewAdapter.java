@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.het.common.utils.LogUtils;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
 import java.util.ArrayList;
@@ -22,18 +23,16 @@ import java.util.List;
  * Annotion:
  */
 public class GridviewAdapter extends BaseAdapter {
-    private SparseArray<String> mImageLists = new SparseArray<>();
+    private List<String> mImageLists = new ArrayList<>();
     private LayoutInflater mInflater;
     private View.OnClickListener mOnClickListener;
 
-    public GridviewAdapter(Context context, SparseArray<String> imageList, View.OnClickListener clickListener) {
+    public GridviewAdapter(Context context, List<String> imageList, View.OnClickListener clickListener) {
         mInflater = LayoutInflater.from(context);
         this.mOnClickListener = clickListener;
         if (imageList != null && imageList.size() > 0) {
             mImageLists.clear();
-            for (int i = 0; i < imageList.size(); i++) {
-                mImageLists.put(i, imageList.get(i));
-            }
+            mImageLists.addAll(imageList);
         }
 
     }
@@ -72,8 +71,8 @@ public class GridviewAdapter extends BaseAdapter {
             holder.mPictureInfo.setVisibility(View.VISIBLE);
             holder.mPicture.setImageURI(Uri.parse("res://drawable/" + R.drawable.takephoto));
         } else {
-
-            holder.mPicture.setImageURI(Uri.parse(mImageLists.get(position)));
+            holder.mPicture.setImageURI(Uri.parse("file://" + mImageLists.get(position)));
+            LogUtils.e("position:"+position+",url:content://"+mImageLists.get(position));
             holder.mPictureInfo.setVisibility(View.GONE);
         }
         holder.mPicture.setOnClickListener(mOnClickListener);

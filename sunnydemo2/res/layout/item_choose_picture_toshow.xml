@@ -5,23 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    android:background="@color/transparent"
+    android:background="#FF272B34"
     android:orientation="vertical">
     
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/picture_show"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="centerInside"
+        android:layout_height="100dp"
         fresco:placeholderImage="@drawable/ic_launcher"
         fresco:placeholderImageScaleType="center"
         />
 
     <TextView
         android:id="@+id/picture_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="3dp"
         android:text="拍摄照片"
+        android:gravity="center_horizontal"
         android:textColor="@color/white"
         android:visibility="gone"/>
 
