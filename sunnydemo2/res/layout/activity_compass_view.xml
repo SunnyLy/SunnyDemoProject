@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
@@ -8,6 +8,11 @@
     <sunnydemo2.widget.CompassView
         android:id="@+id/compass_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="300dp"
+        android:visibility="gone"/>
+
+    <sunnydemo2.widget.CanvasTest
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

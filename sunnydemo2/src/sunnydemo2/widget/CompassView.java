@@ -131,6 +131,9 @@ public class CompassView extends View {
         //画圆
         canvas.drawCircle(px, py, radius, circlePaint);
 
+        //测试
+        canvas.drawText("TEST",px-smallCircleRadius-10,py-smallCircleRadius-10,indicatorPaint);
+
         //画小圆
         canvas.drawCircle(px,py,smallCircleRadius,indicatorPaint);
         //画指针
