@@ -66,6 +66,7 @@
         <activity android:name="sunnydemo2.androidl.TintActivity"/>
         <activity android:name="sunnydemo2.androidl.CardViewActivity"/>
         <activity android:name="sunnydemo2.androidl.PaletteActivity"/>
+        <activity android:name="sunnydemo2.androidl.RippleDrawableActivity"/>
 
 
         <!--图片加载-->

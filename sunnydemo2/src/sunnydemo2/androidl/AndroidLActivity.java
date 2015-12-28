@@ -98,6 +98,9 @@ public class AndroidLActivity extends Activity implements SunnyRecyclerViewAdapt
                 case 3:
                     PaletteActivity.startPaletteActivity(this);
                     break;
+                case 4:
+                    RippleDrawableActivity.startRippleDrawableActivity(this);
+                    break;
             }
         }
     }
