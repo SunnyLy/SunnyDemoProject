@@ -36,6 +36,10 @@ public class SunnyRecyclerViewAdapter extends RecyclerView.Adapter<SunnyRecycler
         TextView textView = (TextView) holder.mTextView.findViewById(R.id.item_btn);
         textView.setText(mDataList[position]);
 
+        if(position == 4){
+            textView.setBackgroundDrawable(holder.mTextView.getResources().getDrawable(R.drawable.rippledrawable));
+        }
+
         holder.mTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
