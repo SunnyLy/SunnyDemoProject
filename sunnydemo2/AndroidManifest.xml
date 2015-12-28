@@ -60,9 +60,12 @@
         <activity android:name="sunnydemo2.bargraph.CurveChartActivity"/>
         <activity android:name="sunnydemo2.bargraph.DivisionCircle2Activity"/>
         <activity android:name="sunnydemo2.bargraph.DivisionCircleActivity"/>
+
+
         <activity android:name="sunnydemo2.androidl.AndroidLActivity"/>
         <activity android:name="sunnydemo2.androidl.TintActivity"/>
         <activity android:name="sunnydemo2.androidl.CardViewActivity"/>
+        <activity android:name="sunnydemo2.androidl.PaletteActivity"/>
 
 
         <!--图片加载-->

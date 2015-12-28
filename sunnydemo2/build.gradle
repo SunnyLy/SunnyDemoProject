@@ -54,10 +54,10 @@ dependencies {
     compile 'com.android.common:BaseProject:1.0.1'
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.squareup.picasso:picasso:2.4.0'
-
-
     provided files('../android-app-appcompat-v7/libs/android-support-v4.jar')
     provided files('../android-app-appcompat-v7/libs/android-support-v7-appcompat.jar')
+    provided files('../android-app-appcompat-v7/libs/android-support-v7-palette.jar')
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:palette-v7:23.1.1'
 }
