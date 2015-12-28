@@ -34,6 +34,12 @@
     </string-array>
 
 
+    <string name="text_from_html">
+        <title>标题</title>
+        <a href="http:www.baidu.com">link</a>
+    </string>
+
+
     <string name="number_picker_increment_button">Increase</string>
     <!-- Description of the button to decrease the NumberPicker value. [CHAR LIMIT=NONE] -->
     <string name="number_picker_decrement_button">Decrease</string>

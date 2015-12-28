@@ -9,7 +9,7 @@
         android:id="@+id/compass_view"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <sunnydemo2.widget.CanvasTest
         android:layout_width="wrap_content"

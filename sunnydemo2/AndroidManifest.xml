@@ -33,9 +33,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="sunnydemo2.ad.MainActivity"/>
         <activity android:name="sunnydemo2.network.XutilsNetWorkActivity"/>
         <activity android:name="sunnydemo2.network.OkHttpNetWorkActivity"/>
+
+        <activity android:name="sunnydemo2.ad.MainActivity"/>
+        <activity android:name="sunnydemo2.ad.ComprassViewActivity"/>
+        <activity android:name="sunnydemo2.ad.TextLinkifyActivity"/>
+
         <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityA"
             android:launchMode="singleTask"/>
         <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityB"
@@ -47,18 +51,19 @@
         <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityStartMode"/>
         <activity android:name="sunnydemo2.ad.ui.ble.SunnyBLEActivity"/>
         <activity android:name="sunnydemo2.ad.ui.CarouselADActivity"/>
-        <activity android:name="sunnydemo2.bargraph.BarGraphActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.newproperties.NewPropertiesActivity"/>
+        <activity android:name="sunnydemo2.ad.ui.newproperties.PullToRefreshLayout"/>
         <activity android:name="sunnydemo2.ad.ui.view.VerticalViewPagerActivity"/>
+
+
+        <activity android:name="sunnydemo2.bargraph.BarGraphActivity"/>
         <activity android:name="sunnydemo2.bargraph.CurveChartActivity"/>
         <activity android:name="sunnydemo2.bargraph.DivisionCircle2Activity"/>
         <activity android:name="sunnydemo2.bargraph.DivisionCircleActivity"/>
-        <activity android:name="sunnydemo2.ad.ui.newproperties.NewPropertiesActivity"/>
-        <activity android:name="sunnydemo2.ad.ui.newproperties.PullToRefreshLayout"/>
         <activity android:name="sunnydemo2.androidl.AndroidLActivity"/>
         <activity android:name="sunnydemo2.androidl.TintActivity"/>
         <activity android:name="sunnydemo2.androidl.CardViewActivity"/>
 
-        <activity android:name="sunnydemo2.ad.ComprassViewActivity"/>
 
         <!--图片加载-->
         <activity android:name="sunnydemo2.imageloader.PictureLoaderFrameActivity"/>

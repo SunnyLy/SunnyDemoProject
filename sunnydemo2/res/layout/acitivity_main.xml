@@ -17,6 +17,12 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:onClick="jumpTextLinkify"
+                android:text="TextView文字超链接" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:onClick="jumpAD"
                 android:text="广告轮播" />
 

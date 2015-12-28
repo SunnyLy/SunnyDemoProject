@@ -163,6 +163,10 @@ public class MainActivity extends Activity {
         return index;
     }
 
+    public void jumpTextLinkify(View view){
+        TextLinkifyActivity.startTextLinkifyActivity(this);
+    }
+
     public void jumpAD(View view) {
         Intent targetIntent = new Intent(this, CarouselADActivity.class);
         startActivity(targetIntent);
