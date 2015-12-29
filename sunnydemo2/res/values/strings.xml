@@ -12,6 +12,7 @@
         <item>图片加载框架</item>
         <item>图文混排</item>
         <item>Android5.0 新控件</item>
+        <item>RxJava,Retrofit,EventBus实现响应式编程</item>
     </string-array>
 
     <string-array name="new_properties">

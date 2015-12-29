@@ -80,6 +80,8 @@
 
         <!--图文混排-->
         <activity android:name="sunnydemo2.imagetext.ImageTextActivity"/>
+
+        <activity android:name="sunnydemo2.rxjava.RxJavaActivity"/>
     </application>
 
 </manifest>

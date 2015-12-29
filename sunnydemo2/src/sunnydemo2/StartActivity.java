@@ -25,6 +25,7 @@ import sunnydemo2.ad.ui.newproperties.NewPropertiesActivity;
 import sunnydemo2.imageloader.PictureLoaderFrameActivity;
 import sunnydemo2.imagetext.ImageTextActivity;
 import sunnydemo2.androidl.TintActivity;
+import sunnydemo2.rxjava.RxJavaActivity;
 
 /**
  * Created by sunny on 2015/11/18.
@@ -101,6 +102,9 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
                 break;
             case 8:
                 AndroidLActivity.startAndroidLActivity(this);
+                break;
+            case 9:
+                RxJavaActivity.startRxJavaActivity(this);
                 break;
         }
 

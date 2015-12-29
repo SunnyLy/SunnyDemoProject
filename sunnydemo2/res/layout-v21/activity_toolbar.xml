@@ -4,12 +4,12 @@
     android:layout_margin="5dp"
     android:orientation="horizontal">
 
-    <android.support.v7.widget.Toolbar
+  <!--  <android.support.v7.widget.Toolbar
         android:id="@+id/my_awesome_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/colorPrimary"
-        android:minHeight="?android:attr/actionBarSize" />
+        android:minHeight="?android:attr/actionBarSize" />-->
 
     <Button
         android:id="@+id/ripple_drawable"

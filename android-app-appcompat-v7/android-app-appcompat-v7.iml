@@ -69,8 +69,8 @@
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="android-support-v7-recyclerview" level="project" />
-    <orderEntry type="library" exported="" name="andrnoid-support-v4" level="project" />
     <orderEntry type="library" exported="" name="android-support-v7-palette" level="project" />
     <orderEntry type="library" exported="" name="android-support-v7-appcompat" level="project" />
+    <orderEntry type="library" exported="" name="andrnoid-support-v4" level="project" />
   </component>
 </module>
