@@ -207,12 +207,12 @@ public class ImageGridAdapter extends BaseAdapter {
     }
 
     class ViewHolde {
-        SimpleDraweeView image;
+        ImageView image;
         ImageView indicator;
         View mask;
 
         ViewHolde(View view){
-            image = (SimpleDraweeView) view.findViewById(R.id.image);
+            image = (ImageView) view.findViewById(R.id.image);
             indicator = (ImageView) view.findViewById(R.id.checkmark);
             mask = view.findViewById(R.id.mask);
             view.setTag(this);
@@ -236,11 +236,9 @@ public class ImageGridAdapter extends BaseAdapter {
                 indicator.setVisibility(View.GONE);
             }
             File imageFile = new File(data.path);
-            LogUtils.e("图片地址："+data.path);
-
-            if(mItemSize > 0) {
+            if(mImages.size() > 0) {
                 // 显示图片
-              /*  Picasso.with(mContext)
+               /* Picasso.with(mContext)
                         .load(imageFile)
                         .placeholder(R.drawable.default_error)
                                 //.error(R.drawable.default_error)
@@ -248,6 +246,7 @@ public class ImageGridAdapter extends BaseAdapter {
                         .centerCrop()
                         .into(image);*/
 
+                LogUtils.e("图片地址："+data.path);
                 image.setImageURI(Uri.parse("file://"+data.path));
             }
         }

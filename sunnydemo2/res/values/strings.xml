@@ -33,6 +33,7 @@
         <item>CardView</item>
         <item>Palette获取图片颜色</item>
         <item>RippleDrawable背景波纹效果</item>
+        <item>Toolbar代替ActionBar</item>
     </string-array>
 
 

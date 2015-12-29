@@ -8,8 +8,14 @@
         android:id="@+id/image"
         fresco:placeholderImageScaleType="centerInside"
         fresco:placeholderImage="@drawable/default_error"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <!--<ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"/>-->
 
     <View
         android:visibility="gone"

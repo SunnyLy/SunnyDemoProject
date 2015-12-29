@@ -67,7 +67,7 @@ public class ChoosePictureActivity extends Activity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_picture);
-      //  getLocalAllPhoto();
+        //getLocalAllPhoto();
 
         mImageAdapter = new ImageGridAdapter(this,true);
         mFolderAdapter = new FolderAdapter(this);
@@ -102,6 +102,7 @@ public class ChoosePictureActivity extends Activity implements View.OnClickListe
         if (imges != null) {
             mGridViewAdapter = new GridviewAdapter(this, imges, this);
             mGridViewPicture.setAdapter(mGridViewAdapter);
+            mGridViewAdapter.notifyDataSetChanged();
         }
     }
 

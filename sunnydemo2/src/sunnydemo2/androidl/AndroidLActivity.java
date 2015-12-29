@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.internal.app.ToolbarActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -100,6 +101,9 @@ public class AndroidLActivity extends Activity implements SunnyRecyclerViewAdapt
                     break;
                 case 4:
                     RippleDrawableActivity.startRippleDrawableActivity(this);
+                    break;
+                case 5:
+                    ToolbarActivity.startToolbarActivity(this);
                     break;
             }
         }
