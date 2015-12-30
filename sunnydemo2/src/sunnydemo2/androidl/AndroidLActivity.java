@@ -65,7 +65,7 @@ public class AndroidLActivity extends Activity implements SunnyRecyclerViewAdapt
 
     private void setSwipRefreshLayout() {
         if (mSwipRefreshLayout != null) {
-            mSwipRefreshLayout.setProgressBackgroundColor(R.color.bg_color_e0);
+            mSwipRefreshLayout.setProgressBackgroundColor(0xFFE0E0E0);
             mSwipRefreshLayout.setOnRefreshListener(this);
         }
     }

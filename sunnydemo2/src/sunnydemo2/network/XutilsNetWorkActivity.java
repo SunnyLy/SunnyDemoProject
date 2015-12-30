@@ -12,10 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.het.account.callback.IQueryFirstLoginCallback;
-import com.het.account.manager.HetLogin;
-import com.het.account.manager.LoginManager;
-import com.het.account.ui.LoginActivity;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
@@ -72,32 +68,6 @@ public class XutilsNetWorkActivity extends Activity implements View.OnClickListe
 
 
        // LoginActivity.startLoginActivity(XutilsNetWorkActivity.this);
-       HetLogin.login(new IQueryFirstLoginCallback() {
-           @Override
-           public void isFirstLogin() {
-
-           }
-
-           @Override
-           public void notFirstLogin() {
-
-           }
-
-           @Override
-           public void queryError(int i, String s) {
-
-           }
-
-           @Override
-           public void getThirdIdSuccess(String s, String s1) {
-
-           }
-
-           @Override
-           public void loginSuccess(String s, String s1) {
-
-           }
-       },phone,pwd);
     }
 
     private void startLogin(String phone, String pwd) {

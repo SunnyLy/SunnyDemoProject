@@ -8,7 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.het.common.utils.LogUtils;
+import sunnydemo2.utils.LogUtils;
+
 
 /**
  * Created by sunny on 2015/12/23.

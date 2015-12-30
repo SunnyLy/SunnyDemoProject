@@ -42,7 +42,7 @@ public class AppApplication extends Application {
                 // .showImageOnLoading(R.drawable.personal_default_icon)
                 // .showImageForEmptyUri(R.drawable.personal_default_icon)
                 // .showImageOnFail(R.drawable.personal_default_icon)
-                .cacheOnDisc(true).cacheInMemory(true)
+                .cacheOnDisc().cacheInMemory()
                 .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
                 .bitmapConfig(Bitmap.Config.RGB_565).build();
 

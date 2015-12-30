@@ -3,13 +3,13 @@ package sunnydemo2.widget;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.het.common.utils.LogUtils;
+import sunnydemo2.utils.LogUtils;
+
 
 /**
  * Created by sunny on 2015/12/24.

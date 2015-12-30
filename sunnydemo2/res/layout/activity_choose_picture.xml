@@ -17,7 +17,7 @@
         android:verticalSpacing="1dp"
         android:scrollbars="none"
         android:paddingBottom="50dp"
-        android:background="@color/bg_color_a5"
+        android:background="#FFA5A5A5"
         ></GridView>
 
     <LinearLayout
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="所有图片"
-            android:textColor="@color/white"
+            android:textColor="@android:color/white"
             android:background="@color/transparent"/>
     </LinearLayout>
 

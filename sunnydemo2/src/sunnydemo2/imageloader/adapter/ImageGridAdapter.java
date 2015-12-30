@@ -10,7 +10,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.het.common.utils.LogUtils;
 import com.smartbracelet.sunny.sunnydemo2.R;
 import com.squareup.picasso.Picasso;
 
@@ -19,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sunnydemo2.imageloader.model.LocalImage;
+import sunnydemo2.utils.LogUtils;
 
 /**
  * 图片Adapter

@@ -12,11 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.het.common.utils.LogUtils;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import sunnydemo2.utils.LogUtils;
 
 /**
  * Created by sunny on 2015/12/21.

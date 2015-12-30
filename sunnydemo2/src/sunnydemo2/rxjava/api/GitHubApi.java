@@ -1,11 +1,21 @@
 package sunnydemo2.rxjava.api;
 
-import java.util.List;
+import com.squareup.okhttp.Response;
 
+import java.util.TreeMap;
+
+import de.greenrobot.event.EventBus;
+import retrofit.Call;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
 import rx.Observable;
+import rx.Scheduler;
+import rx.Subscriber;
+import rx.schedulers.Schedulers;
 import sunnydemo2.rxjava.biz.GitHubService;
+import sunnydemo2.rxjava.event.BaseEvent;
+import sunnydemo2.rxjava.event.DingCanEvent;
 
 /**
  * Created by sunny on 2015/12/29.
@@ -15,31 +25,97 @@ public class GitHubApi {
 
     /**
      * 把GitHubService变成实现类
-     *
      */
 
-    public Observable<String > getUser(String url, String user){
+    public Call<Object> getUser(String url, String user) {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(url)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
         GitHubService gitHubService = retrofit.create(GitHubService.class);
-       return  gitHubService.listRepos(user);
+        return gitHubService.listRepos(user);
     }
 
 
     /**
      * 订餐。
+     * 返回Observable
+     *
      * @param serverUrl
      * @param foodId
      * @return
      */
-    public Observable<String > dingCan(String serverUrl,String foodId){
+    public Observable<Object> dingCan(String serverUrl, String foodId) {
+        Observable.create(new Observable.OnSubscribe<Object>() {
+            @Override
+            public void call(Subscriber<? super Object> subscriber) {
+
+            }
+        });
         Retrofit foodRetrofit = new Retrofit.Builder()
                 .baseUrl(serverUrl)
                 .addConverterFactory(GsonConverterFactory.create())//返回数据解析方式
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
         GitHubService gitHubService = foodRetrofit.create(GitHubService.class);
         return gitHubService.dingCan(foodId);
     }
+
+    public Call<Response> dingCan1(String serverUrl, String foodId) {
+
+        Retrofit foodRetrofit = new Retrofit.Builder()
+                .baseUrl(serverUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+        GitHubService gitHubService = foodRetrofit.create(GitHubService.class);
+        return gitHubService.dingCan1(foodId);
+    }
+
+    /**
+     * 多参数请求
+     *
+     * @param serverUrl
+     * @param params
+     * @return
+     */
+    public void dingCan2(String serverUrl, TreeMap<String, String> params) {
+
+        Retrofit foodRetrofit = new Retrofit.Builder()
+                .baseUrl(serverUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+        GitHubService gitHubService = foodRetrofit.create(GitHubService.class);
+
+        Observable<Object> objectObservable = gitHubService.dingCan(params);
+        objectObservable.subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.newThread())//新开一个线程
+                .subscribe(new Subscriber<Object>() {
+                    @Override
+                    public void onCompleted() {
+                        DingCanEvent dingCanEvent = new DingCanEvent();
+                        dingCanEvent.setResponseStatus(BaseEvent.ResponseStatus.ON_COMPLETE);
+                        EventBus.getDefault().post(dingCanEvent);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        DingCanEvent dingCanEvent = new DingCanEvent();
+                        dingCanEvent.setmObject(e.getCause());
+                        dingCanEvent.setResponseStatus(BaseEvent.ResponseStatus.ERROR);
+                        EventBus.getDefault().post(dingCanEvent);
+                    }
+
+                    @Override
+                    public void onNext(Object o) {
+                        DingCanEvent dingCanEvent = new DingCanEvent(o);
+                        dingCanEvent.setResponseStatus(BaseEvent.ResponseStatus.ON_NEXT);
+                        EventBus.getDefault().post(dingCanEvent);
+                    }
+                });
+    }
+
 
 }

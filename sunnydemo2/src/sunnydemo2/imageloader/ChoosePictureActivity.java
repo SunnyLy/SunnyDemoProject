@@ -16,12 +16,10 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.het.common.utils.LogUtils;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import sunnydemo2.imageloader.adapter.FolderAdapter;
@@ -29,6 +27,7 @@ import sunnydemo2.imageloader.adapter.GridviewAdapter;
 import sunnydemo2.imageloader.adapter.ImageGridAdapter;
 import sunnydemo2.imageloader.model.Folder;
 import sunnydemo2.imageloader.model.LocalImage;
+import sunnydemo2.utils.LogUtils;
 
 /**
  * Created by sunny on 2015/12/21.
