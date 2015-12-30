@@ -9,4 +9,5 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="blue">#33b6e7</color>
+    <color name="swipfreshlistview">#FFE0E0E0</color>
 </resources>
