@@ -21,7 +21,7 @@ import java.util.List;
 public class VerticalViewPagerActivity extends FragmentActivity {
 
  /*   private VerticalViewPager vertical_viewpager;
-    private PagerAdapter mPagerAdapter;*/
+    private SunnyPagerAdapter mPagerAdapter;*/
     private List<View> mViewLists = new ArrayList<>();
 
     private DirectionalViewPager mViewPager;
@@ -48,8 +48,8 @@ public class VerticalViewPagerActivity extends FragmentActivity {
             mViewLists.add(textView);
         }
 
-        TestFragmentAdapter adpater = new TestFragmentAdapter(getSupportFragmentManager());
-        mViewPager.setAdapter(adpater);
+       /* TestFragmentAdapter adpater = new TestFragmentAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(adpater);*/
 
     }
 

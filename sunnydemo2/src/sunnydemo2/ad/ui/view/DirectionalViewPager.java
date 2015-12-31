@@ -27,10 +27,8 @@ import android.support.v4.os.ParcelableCompatCreatorCallbacks;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.VelocityTrackerCompat;
-import android.support.v4.view1.VerticalViewPagerCompat;
 import android.support.v4.view.ViewConfigurationCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view1.ViewPagerAdapter;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -74,7 +72,6 @@ public class DirectionalViewPager extends ViewPager {
     private Parcelable mRestoredAdapterState = null;
     private ClassLoader mRestoredClassLoader = null;
     private Scroller mScroller;
-    private VerticalViewPagerCompat.DataSetObserver mObserver;
 
     private int mChildWidthMeasureSpec;
     private int mChildHeightMeasureSpec;
@@ -155,16 +152,16 @@ public class DirectionalViewPager extends ViewPager {
 
     public void setAdapter(PagerAdapter adapter) {
         if (mAdapter != null) {
-            VerticalViewPagerCompat.setDataSetObserver((ViewPagerAdapter)mAdapter, null);
+           // VerticalViewPagerCompat.setDataSetObserver((ViewPagerAdapter)mAdapter, null);
         }
 
         mAdapter = adapter;
 
         if (mAdapter != null) {
-            if (mObserver == null) {
+           /* if (mObserver == null) {
                 mObserver = new DataSetObserver();
             }
-            VerticalViewPagerCompat.setDataSetObserver((ViewPagerAdapter)mAdapter, mObserver);
+            VerticalViewPagerCompat.setDataSetObserver((ViewPagerAdapter)mAdapter, mObserver);*/
             mPopulatePending = false;
             if (mRestoredCurItem >= 0) {
                 mAdapter.restoreState(mRestoredAdapterState, mRestoredClassLoader);
@@ -1070,10 +1067,10 @@ public class DirectionalViewPager extends ViewPager {
         }
     }
 
-    private class DataSetObserver implements VerticalViewPagerCompat.DataSetObserver {
+    /*private class DataSetObserver implements VerticalViewPagerCompat.DataSetObserver {
         @Override
         public void onDataSetChanged() {
             dataSetChanged();
         }
-    }
+    }*/
 }
