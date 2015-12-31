@@ -12,6 +12,7 @@ import retrofit.RxJavaCallAdapterFactory;
 import rx.Observable;
 import rx.Scheduler;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import sunnydemo2.rxjava.biz.GitHubService;
 import sunnydemo2.rxjava.event.BaseEvent;
@@ -90,8 +91,10 @@ public class GitHubApi {
         GitHubService gitHubService = foodRetrofit.create(GitHubService.class);
 
         Observable<Object> objectObservable = gitHubService.dingCan(params);
-        objectObservable.subscribeOn(Schedulers.io())
-                .observeOn(Schedulers.newThread())//新开一个线程
+        objectObservable
+                .subscribeOn(Schedulers.io())//数据请求线程
+                // .observeOn(Schedulers.newThread())//新开一个线程
+                .observeOn(AndroidSchedulers.mainThread())//这是RxAndroid中的UI线程
                 .subscribe(new Subscriber<Object>() {
                     @Override
                     public void onCompleted() {

@@ -26,6 +26,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" />
 
+        <ImageView
+            android:id="@+id/rxjava_imageview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
 
         <Button
             android:id="@+id/rxjava_retrofit"
@@ -44,5 +52,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Retrofit网络请求,用EventBus来发送，接收" />
+
+        <Button
+            android:id="@+id/retrofit_rxAndroid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="RxAndroid" />
     </LinearLayout>
 </ScrollView>

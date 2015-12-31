@@ -3,9 +3,13 @@ package sunnydemo2.rxjava;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smartbracelet.sunny.sunnydemo2.R;
@@ -18,8 +22,11 @@ import retrofit.Callback;
 import retrofit.Retrofit;
 import rx.Observable;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 import sunnydemo2.rxjava.api.GitHubApi;
 import sunnydemo2.rxjava.event.BaseEvent;
 import sunnydemo2.rxjava.event.DingCanEvent;
@@ -34,13 +41,20 @@ public class RxJavaActivity extends Activity implements View.OnClickListener {
     private static final String SERVEL_URL = "http://200.200.200.54:8080";
     private static final String USER_URL = "https://api.github.com";
 
+    private String result = "";
+    private int drawableRes;
+
 
     private Button mBtnSend;
     private Button mRetrofit;
     private Button mRetrofitObservable;
     private Button mRetrofitEventBus;
+    private Button mRxAndroid;
+
     private TextView mTextViewShow;
     private TextView mTextViewShow1;
+
+    private ImageView mImageView;
 
     public static void startRxJavaActivity(Context context) {
         Intent targetIntent = new Intent(context, RxJavaActivity.class);
@@ -57,15 +71,31 @@ public class RxJavaActivity extends Activity implements View.OnClickListener {
         mRetrofit = (Button) findViewById(R.id.rxjava_retrofit);
         mRetrofitObservable = (Button) findViewById(R.id.retrofit_observable);
         mRetrofitEventBus = (Button) findViewById(R.id.retrofit_eventbus);
+        mRxAndroid = (Button) findViewById(R.id.retrofit_rxAndroid);
 
         mTextViewShow = (TextView) findViewById(R.id.rxjava_info);
         mTextViewShow1 = (TextView) findViewById(R.id.rxjava_info1);
+
+        mImageView = (ImageView) findViewById(R.id.rxjava_imageview);
 
         mBtnSend.setOnClickListener(this);
         mRetrofit.setOnClickListener(this);
         mRetrofitObservable.setOnClickListener(this);
         mRetrofitEventBus.setOnClickListener(this);
+        // mRxAndroid.setOnClickListener(this);
 
+        bindViewByRxAndroid(mRxAndroid);
+
+        initParams();
+
+    }
+
+    private void initParams() {
+        drawableRes = R.drawable.pager2;
+    }
+
+    private void bindViewByRxAndroid(Button mRxAndroid) {
+        mRxAndroid.setOnClickListener(this);
     }
 
     @Override
@@ -85,7 +115,56 @@ public class RxJavaActivity extends Activity implements View.OnClickListener {
                 //多个请求参数
                 responseByObservalbeMultiParams(SERVEL_URL);
                 break;
+            case R.id.retrofit_rxAndroid:
+                //printStringArray();
+                showDrawable();
+                break;
         }
+    }
+
+    /**
+     * 显示Drawable
+     * Observable.just(T...)与Observable.from(T[])用来多实现多任务请求，
+     * 下面以实现一个任务为简单例子
+     */
+    private void showDrawable() {
+
+
+        mImageView.setVisibility(View.VISIBLE);
+        Observable.just(drawableRes)
+                .map(new Func1<Integer, Drawable>() {
+                    @Override
+                    public Drawable call(Integer integer) {
+                        return getResources().getDrawable(integer);
+                    }
+                })
+               // .observeOn(Schedulers.io())
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<Drawable>() {
+                    @Override
+                    public void call(Drawable drawable) {
+
+                        mImageView.setImageDrawable(drawable);
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        Log.e("subscribeError", throwable.getMessage());
+                    }
+                });
+    }
+
+    private void printStringArray() {
+        result = "reslut:\n";
+        String[] strings = {"China", "HonKong", "America", "England"};
+        Observable.from(strings).subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                Log.e("observale", s);
+                result += s + "\n";
+                freshUI(result);
+            }
+        });
     }
 
     @Override
@@ -181,7 +260,7 @@ public class RxJavaActivity extends Activity implements View.OnClickListener {
             if (s == null) {
                 result = "返回结果为null";
             } else {
-                result = "返回Observable:"+s.toString();
+                result = "返回Observable:" + s.toString();
             }
             freshUI(result);
         }
@@ -310,7 +389,7 @@ public class RxJavaActivity extends Activity implements View.OnClickListener {
                     break;
                 case ON_NEXT:
                     Object msg = event.getmObject();
-                    freshUI(msg == null ? "返回结果为null" : "EventBus:\n"+msg.toString());
+                    freshUI(msg == null ? "返回结果为null" : "EventBus:\n" + msg.toString());
                     break;
                 case ON_COMPLETE:
                     break;
