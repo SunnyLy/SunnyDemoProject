@@ -17,6 +17,10 @@ import com.smartbracelet.sunny.sunnydemo2.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.functions.Func1;
 import sunnydemo2.utils.LogUtils;
 
 /**
@@ -72,14 +76,45 @@ public class GridviewAdapter extends BaseAdapter {
             holder.mPictureInfo.setVisibility(View.VISIBLE);
             holder.mPicture.setImageURI(Uri.parse("res://drawable/" + R.drawable.takephoto));
         } else {
-            holder.mPicture.setImageURI(Uri.parse("file://" + mImageLists.get(position)));
+          //  holder.mPicture.setImageURI(Uri.parse("file://" + mImageLists.get(position)));
             LogUtils.e("position:"+position+",url:content://"+mImageLists.get(position));
             holder.mPictureInfo.setVisibility(View.GONE);
+
+            showImage(mImageLists,position,holder.mPicture);
+
         }
         holder.mPicture.setOnClickListener(mOnClickListener);
         return convertView;
 
     }
+
+    /**
+     * 显示图片
+     * @param mPicture
+     */
+    private void showImage(List<String> mImageLists, int position, final SimpleDraweeView mPicture) {
+        Observable.from(new String[]{mImageLists.get(position)})
+                .filter(new Func1<String, Boolean>() {
+                    @Override
+                    public Boolean call(String url) {
+                        return !url.startsWith("http://")||!url.startsWith("https://");
+                    }
+                })
+                .map(new Func1<String , Uri>() {
+                    @Override
+                    public Uri call(String s) {
+                        return Uri.parse("file://"+s);
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<Uri>() {
+                    @Override
+                    public void call(Uri uri) {
+                        mPicture.setImageURI(uri);
+                    }
+                });
+    }
+
 
     private class ViewHold {
 
