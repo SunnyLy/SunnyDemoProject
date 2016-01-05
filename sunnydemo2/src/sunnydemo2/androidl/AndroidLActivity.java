@@ -105,6 +105,9 @@ public class AndroidLActivity extends Activity implements SunnyRecyclerViewAdapt
                 case 5:
                     ToolbarActivity.startToolbarActivity(this);
                     break;
+                case 6:
+                    TestPrefeerenceActivity.startTestPreferenceActivity(this);
+                    break;
             }
         }
     }

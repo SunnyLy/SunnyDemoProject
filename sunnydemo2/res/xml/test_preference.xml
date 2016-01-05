@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:layout="@layout/item_titlebar" />
+
+    <PreferenceCategory
+        android:title="性别"
+        >
+        <CheckBoxPreference
+            android:key="preference_sex_man"
+            android:title="男"/>
+        <CheckBoxPreference
+            android:key="preference_sex_woman"
+            android:title="女"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="城市选择">
+
+        <ListPreference
+            android:key="city_choose"
+            android:title="城市选择"
+            android:summary="点击进行城市选择"
+            android:entries="@array/cities_name"
+            android:entryValues="@array/cities_name"></ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="昵称">
+        <EditTextPreference
+            android:key="nickName_edit"
+            android:title="修改昵称"
+            android:summary="点击进行昵称修改"
+            android:dialogTitle="修改昵称"
+            android:dialogMessage="确认修改？"></EditTextPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -35,8 +35,18 @@
         <item>Palette获取图片颜色</item>
         <item>RippleDrawable背景波纹效果</item>
         <item>Toolbar代替ActionBar</item>
+        <item>首选项,PreferenceActivity,PreferenceFragment等</item>
     </string-array>
 
+    <string-array name="cities_name">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深圳</item>
+        <item>长沙</item>
+        <item>娄底</item>
+        <item>新化</item>
+    </string-array>
 
     <string name="text_from_html">
         <title>标题</title>

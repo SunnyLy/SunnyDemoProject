@@ -68,6 +68,8 @@
         <activity android:name="sunnydemo2.androidl.PaletteActivity"/>
         <activity android:name="sunnydemo2.androidl.RippleDrawableActivity"/>
         <activity android:name="sunnydemo2.androidl.ToolbarActivity"/>
+        <activity android:name="sunnydemo2.androidl.TestPrefeerenceActivity"/>
+
 
 
         <!--图片加载-->
