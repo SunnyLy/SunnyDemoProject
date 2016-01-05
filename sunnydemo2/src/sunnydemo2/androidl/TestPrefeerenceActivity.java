@@ -17,7 +17,8 @@ import com.smartbracelet.sunny.sunnydemo2.R;
  * Created by sunny on 2016/1/5.
  * 首选项设置，
  */
-public class TestPrefeerenceActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener{
+public class TestPrefeerenceActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener
+        , SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String TAG = TestPrefeerenceActivity.class.getSimpleName();
 
@@ -29,66 +30,99 @@ public class TestPrefeerenceActivity extends PreferenceActivity implements Prefe
     private EditTextPreference mEditPreference;
 
 
-    public static void startTestPreferenceActivity(Context context){
-        Intent targetIntent = new Intent(context,TestPrefeerenceActivity.class);
+    public static void startTestPreferenceActivity(Context context) {
+        Intent targetIntent = new Intent(context, TestPrefeerenceActivity.class);
         context.startActivity(targetIntent);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_test_preference);
+        // setContentView(R.layout.activity_test_preference);
         addPreferencesFromResource(R.xml.test_preference);
 
         mSharePreference = PreferenceManager.getDefaultSharedPreferences(this);
 
-        mListPreference = (ListPreference) findPreference("city_choose");
-        mCBPreferenceMan = (CheckBoxPreference) findPreference("preference_sex_man");
-        mCBPreferenceWoman = (CheckBoxPreference) findPreference("preference_sex_woman");
-        mEditPreference = (EditTextPreference) findPreference("nickName_edit");
+        initView();
+        bindView();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        freshUI();
+        mSharePreference.registerOnSharedPreferenceChangeListener(this);
+    }
+
+    private void freshUI() {
+        mListPreference.setTitle(mSharePreference.getString("city_choose","null"));
+        mEditPreference.setTitle(mSharePreference.getString("nickName_edit","null"));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mSharePreference.unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    private void bindView() {
         mEditPreference.setOnPreferenceChangeListener(this);
         mListPreference.setOnPreferenceChangeListener(this);
         mCBPreferenceWoman.setOnPreferenceChangeListener(this);
         mCBPreferenceMan.setOnPreferenceChangeListener(this);
     }
 
+    private void initView() {
+        mListPreference = (ListPreference) findPreference("city_choose");
+        mCBPreferenceMan = (CheckBoxPreference) findPreference("preference_sex_man");
+        mCBPreferenceWoman = (CheckBoxPreference) findPreference("preference_sex_woman");
+        mEditPreference = (EditTextPreference) findPreference("nickName_edit");
+
+    }
+
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if(preference instanceof EditTextPreference){
+        if (preference instanceof EditTextPreference) {
             mEditPreference.setTitle(newValue.toString());
             mEditPreference.setText(newValue.toString());
             mEditPreference.setDefaultValue(newValue);
-        }else if(preference instanceof ListPreference){
+        } else if (preference instanceof ListPreference) {
 
             mListPreference.setValue(newValue.toString());
             mListPreference.setTitle(newValue.toString());
-        }else if(preference instanceof CheckBoxPreference){
-          changeCBState(preference);
+        } else if (preference instanceof CheckBoxPreference) {
+            changeCBState(preference);
         }
         return false;
     }
 
     private void changeCBState(Preference preference) {
-        if(preference.getKey().equals("preference_sex_man")){
-            checkCheckBoxPreference(preference,mCBPreferenceWoman);
-        }else{
-            checkCheckBoxPreference(preference,mCBPreferenceMan);
+        if (preference.getKey().equals("preference_sex_man")) {
+            checkCheckBoxPreference(preference, mCBPreferenceWoman);
+        } else {
+            checkCheckBoxPreference(preference, mCBPreferenceMan);
         }
     }
 
     /**
      * 选中相反的CheckBoxPreference;
+     *
      * @param preference
      * @param mCBPreferenceWoman
      */
     private void checkCheckBoxPreference(Preference preference, CheckBoxPreference mCBPreferenceWoman) {
-        if(((CheckBoxPreference)preference).isChecked()){
+        if (((CheckBoxPreference) preference).isChecked()) {
             ((CheckBoxPreference) preference).setChecked(false);
             mCBPreferenceWoman.setChecked(true);
-        }else{
+        } else {
             ((CheckBoxPreference) preference).setChecked(true);
             mCBPreferenceWoman.setChecked(false);
         }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
     }
 }
