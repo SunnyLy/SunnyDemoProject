@@ -84,6 +84,9 @@
         <activity android:name="sunnydemo2.imagetext.ImageTextActivity"/>
 
         <activity android:name="sunnydemo2.rxjava.RxJavaActivity"/>
+
+        <!--下拉刷新-->
+        <activity android:name="sunnydemo2.pulltofresh.SunnyPullToFreshActivity"/>
     </application>
 
 </manifest>

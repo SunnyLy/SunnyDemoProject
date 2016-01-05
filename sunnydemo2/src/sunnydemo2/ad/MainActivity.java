@@ -23,6 +23,7 @@ import sunnydemo2.bargraph.BarGraphActivity;
 import sunnydemo2.bargraph.CurveChartActivity;
 import sunnydemo2.bargraph.DivisionCircle2Activity;
 import sunnydemo2.bargraph.DivisionCircleActivity;
+import sunnydemo2.pulltofresh.SunnyPullToFreshActivity;
 
 /**
  * Created by sunny on 2015/11/12.
@@ -203,6 +204,13 @@ public class MainActivity extends Activity {
 
     public void jumpToVerticalViewPager(View view) {
         VerticalViewPagerActivity.startVerticalViewPagerActivity(this);
+    }
+
+    /**
+     * 下拉刷新控件
+     */
+    public void jumpToPullToFreshActivity(View view){
+        SunnyPullToFreshActivity.startSunnyPullToFreshActivity(this);
     }
 
     /**

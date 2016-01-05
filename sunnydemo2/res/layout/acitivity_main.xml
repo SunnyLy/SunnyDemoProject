@@ -65,6 +65,12 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:onClick="jumpToPullToFreshActivity"
+                android:text="头部有动画的下拉刷新控件" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:onClick="showTimeDialog"
                 android:text="自定义滚轮时间选择器" />
 
