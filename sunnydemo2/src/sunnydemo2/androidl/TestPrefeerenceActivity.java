@@ -10,6 +10,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.widget.LinearLayout;
 
 import com.smartbracelet.sunny.sunnydemo2.R;
 
@@ -23,6 +24,9 @@ public class TestPrefeerenceActivity extends PreferenceActivity implements Prefe
     public static final String TAG = TestPrefeerenceActivity.class.getSimpleName();
 
     private SharedPreferences mSharePreference;
+
+    private Preference mTitleBar;
+    private LinearLayout mTitleBarLayoutTitle;
 
     private ListPreference mListPreference;
     private CheckBoxPreference mCBPreferenceMan;
@@ -73,6 +77,8 @@ public class TestPrefeerenceActivity extends PreferenceActivity implements Prefe
     }
 
     private void initView() {
+        mTitleBar = findPreference("title");
+
         mListPreference = (ListPreference) findPreference("city_choose");
         mCBPreferenceMan = (CheckBoxPreference) findPreference("preference_sex_man");
         mCBPreferenceWoman = (CheckBoxPreference) findPreference("preference_sex_woman");
@@ -98,7 +104,7 @@ public class TestPrefeerenceActivity extends PreferenceActivity implements Prefe
     }
 
     private void changeCBState(Preference preference) {
-        if (preference.getKey().equals("preference_sex_man")) {
+        if (preference == mCBPreferenceMan) {
             checkCheckBoxPreference(preference, mCBPreferenceWoman);
         } else {
             checkCheckBoxPreference(preference, mCBPreferenceMan);

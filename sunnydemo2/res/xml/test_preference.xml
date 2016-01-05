@@ -2,6 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
+        android:key="title"
         android:layout="@layout/item_titlebar" />
 
     <PreferenceCategory
@@ -13,6 +14,22 @@
         <CheckBoxPreference
             android:key="preference_sex_woman"
             android:title="女"/>
+        <SwitchPreference
+            android:key="switch"
+            android:title="wifi"
+            />
+        <PreferenceScreen
+            android:key="wifisetting"
+            android:title="WifiSetting">
+            <SwitchPreference
+                android:key="sencond_preferencScreen"
+                android:title="SencondPreference"/>
+           <!-- &lt;!&ndash;也可以直接用intent跳转到指定Activity&ndash;&gt;
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.baidu.com">
+            </intent>-->
+        </PreferenceScreen>
     </PreferenceCategory>
 
     <PreferenceCategory
