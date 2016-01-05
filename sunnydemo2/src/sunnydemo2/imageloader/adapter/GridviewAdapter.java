@@ -76,11 +76,11 @@ public class GridviewAdapter extends BaseAdapter {
             holder.mPictureInfo.setVisibility(View.VISIBLE);
             holder.mPicture.setImageURI(Uri.parse("res://drawable/" + R.drawable.takephoto));
         } else {
-          //  holder.mPicture.setImageURI(Uri.parse("file://" + mImageLists.get(position)));
-            LogUtils.e("position:"+position+",url:content://"+mImageLists.get(position));
+            //  holder.mPicture.setImageURI(Uri.parse("file://" + mImageLists.get(position)));
+            LogUtils.e("position:" + position + ",url:content://" + mImageLists.get(position));
             holder.mPictureInfo.setVisibility(View.GONE);
 
-            showImage(mImageLists,position,holder.mPicture);
+            showImage(mImageLists, position, holder.mPicture);
 
         }
         holder.mPicture.setOnClickListener(mOnClickListener);
@@ -90,6 +90,7 @@ public class GridviewAdapter extends BaseAdapter {
 
     /**
      * 显示图片
+     *
      * @param mPicture
      */
     private void showImage(List<String> mImageLists, int position, final SimpleDraweeView mPicture) {
@@ -100,7 +101,7 @@ public class GridviewAdapter extends BaseAdapter {
                         return !url.startsWith("http://")||!url.startsWith("https://");
                     }
                 })
-                .map(new Func1<String , Uri>() {
+                .map(new Func1<String , Uri>() {//map()是一对一的转换，flatMap()是多对一的转换，就是替换for()循环
                     @Override
                     public Uri call(String s) {
                         return Uri.parse("file://"+s);
@@ -113,6 +114,15 @@ public class GridviewAdapter extends BaseAdapter {
                         mPicture.setImageURI(uri);
                     }
                 });
+
+        //下面是Java8上lambda的用法，代码要简洁很多，
+        //但不知道是java8的bug还是IDE的bug,报编译错误，
+      /*  Observable.from(new String[]{mImageLists.get(position)})
+                .filter(url -> !url.startsWith("http://") || !url.startsWith("https://"))
+                .map(s -> Uri.parse("file://" + s))
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe(uri -> mPicture.setImageURI(uri));*/
+
     }
 
 

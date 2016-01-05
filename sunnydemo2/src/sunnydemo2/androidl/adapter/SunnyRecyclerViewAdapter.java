@@ -1,5 +1,6 @@
 package sunnydemo2.androidl.adapter;
 
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ public class SunnyRecyclerViewAdapter extends RecyclerView.Adapter<SunnyRecycler
         textView.setText(mDataList[position]);
 
         if(position == 4){
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             textView.setBackgroundDrawable(holder.mTextView.getResources().getDrawable(R.drawable.rippledrawable));
         }
 
