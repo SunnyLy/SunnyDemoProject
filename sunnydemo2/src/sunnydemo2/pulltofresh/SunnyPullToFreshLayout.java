@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+import com.nineoldandroids.view.ViewHelper;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
 /**
@@ -22,6 +23,10 @@ import com.smartbracelet.sunny.sunnydemo2.R;
  * 下拉刷新控件
  */
 public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouchListener {
+    /**
+     * 图片动态缩放
+     */
+    public static  float SCALE = 255.0f/200;
     /**
      * 下拉状态
      */
@@ -167,7 +172,7 @@ public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouch
         super.onLayout(changed, l, t, r, b);
         if (changed && !loadOnce) {
             hideHeaderHeight = -header.getHeight();
-            progress.setMax(600);// 设置进度条最大值
+            progress.setMax(300);// 设置进度条最大值
             Log.i("hideHeaderHeight", hideHeaderHeight + "");
             headerLayoutParams = (MarginLayoutParams) header.getLayoutParams();
             headerLayoutParams.topMargin = hideHeaderHeight;
@@ -179,6 +184,7 @@ public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouch
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        int scale;
         setIsAbleToPull(event);
         if (ableToPull) {
             switch (event.getAction()) {
@@ -190,9 +196,13 @@ public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouch
                     int distance = (int) (yMove - yDown);
                     if (distance >= 0) {
                         progress.setProgress(distance);
+                         scale = (int) (distance*SCALE);
                     } else {
+                        scale = 255;
                         progress.setProgress(0);
                     }
+                    ViewHelper.setScaleX(progress,scale/255.0f);
+
                     // 如果手指是下滑状态，并且下拉头是完全隐藏的，就屏蔽下拉事件
                     if (distance <= 0
                             && headerLayoutParams.topMargin <= hideHeaderHeight) {

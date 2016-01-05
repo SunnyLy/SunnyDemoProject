@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.ProgressBar;
 
 import com.smartbracelet.sunny.sunnydemo2.R;
@@ -33,6 +34,8 @@ public class EatProgressBar extends ProgressBar {
      * 图片
      */
     private Bitmap bitmap;
+
+    private float mScale = 1.0f;
 
     public EatProgressBar(Context context) {
         this(context, null);
@@ -90,7 +93,7 @@ public class EatProgressBar extends ProgressBar {
             bitmap = BitmapFactory.decodeResource(getResources(),
                     R.drawable.dropdown_anim_10);
         }
-        canvas.drawBitmap(bitmap, getWidth() / 2 - bitmap.getWidth() / 2, 0,
+        canvas.drawBitmap(bitmap, (getWidth() / 2 - bitmap.getWidth() / 2)*mScale, 0,
                 paint);
     }
 
@@ -100,7 +103,20 @@ public class EatProgressBar extends ProgressBar {
         /**
          * 设置控件大小
          */
-        setMeasuredDimension(bitmap.getWidth(), bitmap.getHeight());
+        setMeasuredDimension(onMeasureSpec(widthMeasureSpec),onMeasureSpec(heightMeasureSpec));
+    }
+
+    private int onMeasureSpec(int measureSpec){
+        int result = 0;
+        int specSize = MeasureSpec.getSize(measureSpec);
+        int specMode = MeasureSpec.getMode(measureSpec);
+        if(specMode == MeasureSpec.EXACTLY){
+            result = bitmap.getWidth();
+        }else{
+            result = specSize;
+        }
+
+        return result;
     }
 
     /**
@@ -141,5 +157,9 @@ public class EatProgressBar extends ProgressBar {
             postInvalidate();
         }
 
+    }
+
+    public void setmScale(float mScale) {
+        this.mScale = mScale;
     }
 }
