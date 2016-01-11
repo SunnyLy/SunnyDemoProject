@@ -28,8 +28,10 @@ public class SunnyShareActivity extends Activity implements ICommonShareLinstene
     //private String musicUrl = "http://music.baidu.com/song/256006577";
     private String musicUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
     private String musicDataUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
+    private String mTargetUrl = "http://www.baidu.com";
     private String mTitle = "Sunny";
     private String mDescription = "Hello,I'm Sunny";
+    private String mImgUrl = "http://pic15.nipic.com/20110725/7067632_020203324179_2.jpg";
 
     private String mWeixinAppId = "wxd930ea5d5a258f4f";//微信Demo用
     private String mWeixinSecrect = "";//分享的时候不要用到secretId,只有微信登录的时候要
@@ -75,12 +77,17 @@ public class SunnyShareActivity extends Activity implements ICommonShareLinstene
         shareBean.setTitle(mTitle);
         shareBean.setDescription(mDescription);
         shareBean.setAppName("SunnyDemo");
+        shareBean.setTargetUrl(mTargetUrl);
         shareBean.setMusicUrl(musicUrl);
         shareBean.setMusicDataUrl(musicDataUrl);
         shareBean.setBm(null);
         shareBean.setSharePlatform(sharePlatform);
 
-        mShareManger.shareMusic(shareBean);
+        //分享音乐
+       // mShareManger.shareMusic(shareBean);
+        //分享网页
+        shareBean.setImgUrl(mImgUrl);
+        mShareManger.shareWebpage(shareBean);
         Toast.makeText(this,"点击："+sharePlatform,Toast.LENGTH_SHORT).show();
     }
 
