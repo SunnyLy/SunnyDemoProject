@@ -55,9 +55,10 @@ public class SunnyShareActivity extends Activity implements ICommonShareLinstene
 
     private void initParams() {
         mShareManger = new CommonShareManager.Builder(this).
-                registerWeixin(mWeixinAppId).
-                registerQQ(mQQAppId).
-                registerSinaWeibo(mSinaWeiboAppId).create();
+                registerWeixin(mWeixinAppId).//注册微信
+                registerQQ(mQQAppId).//注册QQ
+                registerSinaWeibo(mSinaWeiboAppId).//注册微博
+                create();
         mShareDialog = new CommonShareDialog(this,this);
 
     }
