@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:name="sunnydemo2.AppApplication"
         android:theme="@style/SampleTheme.Light"
-        tools:replace="android:theme">
+        tools:replace="android:theme,name">
         <activity
             android:name="sunnydemo2.StartActivity"
             android:label="@string/app_name"
@@ -87,6 +87,53 @@
 
         <!--下拉刷新-->
         <activity android:name="sunnydemo2.pulltofresh.SunnyPullToFreshActivity"/>
+
+        <!--分享-->
+        <activity android:name="sunnydemo2.sharesdk.SunnyShareActivity"/>
+
+
+        <!-- ====================分享开始 ========================== -->
+        <!-- 分享 -->
+       <!-- <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent222222" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+
+        <!-- sinaweibo -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+        <!-- =====================分享结束=========================== -->
     </application>
 
 </manifest>

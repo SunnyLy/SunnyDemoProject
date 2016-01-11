@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ApiDemos" />
+            <option value="$PROJECT_DIR$/BaiWeiBeer" />
             <option value="$PROJECT_DIR$/BarryDemo_MultiLanguage" />
             <option value="$PROJECT_DIR$/Bluetooth4_3" />
             <option value="$PROJECT_DIR$/CommonUtils" />
@@ -23,6 +24,7 @@
             <option value="$PROJECT_DIR$/Libraries/DroidPlugin" />
             <option value="$PROJECT_DIR$/NumberPicker" />
             <option value="$PROJECT_DIR$/OSChinaAndroidApp" />
+            <option value="$PROJECT_DIR$/ShareSDK" />
             <option value="$PROJECT_DIR$/SwitchLanguageDemo-master" />
             <option value="$PROJECT_DIR$/Test" />
             <option value="$PROJECT_DIR$/Test/ApiTest" />
@@ -50,6 +52,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ApiDemos" />
+            <option value="$PROJECT_DIR$/BaiWeiBeer" />
             <option value="$PROJECT_DIR$/BarryDemo_MultiLanguage" />
             <option value="$PROJECT_DIR$/Bluetooth4_3" />
             <option value="$PROJECT_DIR$/CommonUtils" />
@@ -62,6 +65,7 @@
             <option value="$PROJECT_DIR$/Libraries/DroidPlugin" />
             <option value="$PROJECT_DIR$/NumberPicker" />
             <option value="$PROJECT_DIR$/OSChinaAndroidApp" />
+            <option value="$PROJECT_DIR$/ShareSDK" />
             <option value="$PROJECT_DIR$/SwitchLanguageDemo-master" />
             <option value="$PROJECT_DIR$/Test" />
             <option value="$PROJECT_DIR$/Test/ApiTest" />

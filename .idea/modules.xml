@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ApiDemos/ApiDemos.iml" filepath="$PROJECT_DIR$/ApiDemos/ApiDemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" filepath="$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiWeiBeer/BaiWeiBeer.iml" filepath="$PROJECT_DIR$/BaiWeiBeer/BaiWeiBeer.iml" />
       <module fileurl="file://$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" filepath="$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" filepath="$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" />
@@ -15,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/Libraries/DroidPlugin/Libraries-DroidPlugin.iml" filepath="$PROJECT_DIR$/Libraries/DroidPlugin/Libraries-DroidPlugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/NumberPicker/NumberPicker.iml" filepath="$PROJECT_DIR$/NumberPicker/NumberPicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/OSChinaAndroidApp/OSChinaAndroidApp.iml" filepath="$PROJECT_DIR$/OSChinaAndroidApp/OSChinaAndroidApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/ShareSDK/ShareSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/SunnyDemo1.iml" filepath="$PROJECT_DIR$/SunnyDemo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/DroidPlugin/SunnyDemo1-DroidPlugin.iml" filepath="$PROJECT_DIR$/DroidPlugin/SunnyDemo1-DroidPlugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwitchLanguageDemo-master/SwitchLanguageDemo-master.iml" filepath="$PROJECT_DIR$/SwitchLanguageDemo-master/SwitchLanguageDemo-master.iml" />

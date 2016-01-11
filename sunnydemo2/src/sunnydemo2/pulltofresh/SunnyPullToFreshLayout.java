@@ -157,8 +157,8 @@ public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouch
                 null, true);
         progress = (EatProgressBar) header.findViewById(R.id.progress);
         load = (ImageView) header.findViewById(R.id.load);
-        AnimationDrawable aniDrawable = (AnimationDrawable) load.getDrawable();
-        aniDrawable.start();
+       /* AnimationDrawable aniDrawable = (AnimationDrawable) load.getDrawable();
+        aniDrawable.start();*/
         touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         setOrientation(VERTICAL);
         addView(header, 0);
@@ -258,14 +258,35 @@ public class SunnyPullToFreshLayout extends LinearLayout implements View.OnTouch
             if (currentStatus == STATUS_PULL_TO_REFRESH) {
                 progress.setVisibility(VISIBLE);
                 load.setVisibility(GONE);
+                stopAnimation(load);
             } else if (currentStatus == STATUS_RELEASE_TO_REFRESH) {
                 progress.setVisibility(VISIBLE);
                 load.setVisibility(GONE);
+                stopAnimation(load);
             } else if (currentStatus == STATUS_REFRESHING) {
                 progress.setVisibility(GONE);
                 load.setVisibility(VISIBLE);
+                startAnimation(load);
             }
         }
+    }
+
+    /**
+     * 停止动画
+     * @param load
+     */
+    private void stopAnimation(ImageView load) {
+        AnimationDrawable animationDrawable = (AnimationDrawable) load.getDrawable();
+        animationDrawable.stop();
+    }
+
+    /**
+     * 开始动画
+     * @param load
+     */
+    private void startAnimation(ImageView load){
+        AnimationDrawable animationDrawable = (AnimationDrawable) load.getDrawable();
+        animationDrawable.start();
     }
 
     /**
