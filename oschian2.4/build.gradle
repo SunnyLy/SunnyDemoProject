@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '21.1.2'
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "net.oschina.app"
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 47
         versionName "2.4"
     }

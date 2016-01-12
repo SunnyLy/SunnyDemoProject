@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/BaiWeiBeer" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/ShareSDK" vcs="svn" />
     <mapping directory="E:\studio_workspace\SunnyDemo1\ActionBarSherlock" vcs="Git" />
+    <mapping directory="E:\studio_workspace\SunnyDemo1\OSChina2.5" vcs="Git" />
     <mapping directory="E:\studio_workspace\SunnyDemo1\WrapRecyclerView" vcs="Git" />
   </component>
 </project>
