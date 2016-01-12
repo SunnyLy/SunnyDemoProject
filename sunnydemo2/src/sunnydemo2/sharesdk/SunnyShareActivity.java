@@ -28,13 +28,16 @@ public class SunnyShareActivity extends Activity implements ICommonShareLinstene
     //private String musicUrl = "http://music.baidu.com/song/256006577";
     private String musicUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
     private String musicDataUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
-    private String mTargetUrl = "http://www.baidu.com";
-    private String mTitle = "Sunny";
-    private String mDescription = "Hello,I'm Sunny";
+    private String mTargetUrl = "http://user.qzone.qq.com/450512747/infocenter?ptsig=vpvnl-fJW5GE6ROJxYC3-U4Ah0KsYVZD0m3jkC3Q-Yo_";
+    private String mTitle = "我是艳国，我是Sunny";
+    private String mDescription = "我为自己代言，想听就听吧！";
     private String mImgUrl = "http://pic15.nipic.com/20110725/7067632_020203324179_2.jpg";
 
-    private String mWeixinAppId = "wxd930ea5d5a258f4f";//微信Demo用
-    private String mWeixinSecrect = "";//分享的时候不要用到secretId,只有微信登录的时候要
+    /*private String mWeixinAppId = "wxd930ea5d5a258f4f";//微信Demo用
+    private String mWeixinSecrect = "";//分享的时候不要用到secretId,只有微信登录的时候要*/
+
+    private String mWeixinAppId = "wxe46768b16f799372";
+    private String mWeixinSecrect = "f0ce1674d0d12867467b0b7342c7b670";
 
     private String mQQAppId = "1104541762";//CLife用的
     private String mSinaWeiboAppId = "3475229326";//Clife用
@@ -85,10 +88,10 @@ public class SunnyShareActivity extends Activity implements ICommonShareLinstene
         shareBean.setSharePlatform(sharePlatform);
 
         //分享音乐
-       // mShareManger.shareMusic(shareBean);
+        mShareManger.shareMusic(shareBean);
         //分享网页
-        shareBean.setImgUrl(mImgUrl);
-        mShareManger.shareWebpage(shareBean);
+        /*shareBean.setImgUrl(mImgUrl);
+        mShareManger.shareWebpage(shareBean);*/
         Toast.makeText(this,"点击："+sharePlatform,Toast.LENGTH_SHORT).show();
     }
 
