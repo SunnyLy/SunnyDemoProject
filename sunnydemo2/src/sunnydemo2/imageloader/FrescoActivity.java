@@ -3,7 +3,12 @@ package sunnydemo2.imageloader;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.ViewGroup;
+
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.het.frescosupport.FrescoManager;
 
 /**
  * Created by sunny on 2015/11/25.
@@ -19,5 +24,9 @@ public class FrescoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SimpleDraweeView simpleDraweeView = new SimpleDraweeView(this);
+        addContentView(simpleDraweeView,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        FrescoManager.getInstance(this).init();
+        simpleDraweeView.setImageURI(Uri.parse("http://200.200.200.58:8981/group2/M00/04/33/yMjIOlaXUrKAPkljAAGUMlWlJeY2811924"));
     }
 }

@@ -34,8 +34,9 @@ public class ImageLoaderActivity extends Activity {
 
     private TextView tvInfo;
 
-    private static final String URL = "http://d.hiphotos.baidu.com/image/pic/item/7c1ed21b0ef41bd" +
-            "5a6e81a8052da81cb39db3d0e.jpg";
+   /* private static final String URL = "http://d.hiphotos.baidu.com/image/pic/item/7c1ed21b0ef41bd" +
+            "5a6e81a8052da81cb39db3d0e.jpg";*/
+    private static final String URL = "http://200.200.200.58:8981/group2/M00/04/33/yMjIOlaXUrKAPkljAAGUMlWlJeY2811924";
 
     public static void startImageLoaderActivity(Context context){
         Intent targetIntent = new Intent(context,ImageLoaderActivity.class);

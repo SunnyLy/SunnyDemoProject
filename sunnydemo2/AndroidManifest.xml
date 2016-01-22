@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -94,12 +95,12 @@
 
         <!-- ====================分享开始 ========================== -->
         <!-- 分享 -->
-       <!-- <activity
+        <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
@@ -134,6 +135,11 @@
             android:name="com.sina.weibo.sdk.net.DownloadService"
             android:exported="false" />
         <!-- =====================分享结束=========================== -->
+
+        <service android:name="sunnydemo2.service.SunnyService"
+            android:enabled="true"
+            android:permission="com.paad.MY_SERVICE_PERMISSION">
+        </service>
     </application>
 
 </manifest>
