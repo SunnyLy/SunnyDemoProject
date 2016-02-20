@@ -4,13 +4,19 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.UriMatcher;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.TextSwitcher;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import com.smartbracelet.sunny.sunnydemo2.R;
 
@@ -29,7 +35,10 @@ import sunnydemo2.pulltofresh.SunnyPullToFreshActivity;
  * Created by sunny on 2015/11/12.
  * 自定义控件主Activity
  */
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
+
+    private TextSwitcher mTextViewSwitcher;
+    private boolean isAutoing = true;
 
 
     private NumberPicker mNumberPickerYear;
@@ -89,11 +98,11 @@ public class MainActivity extends Activity {
             mDisplayedValuesYear[i] = DEFAULT_START_YEAR + i + "年";
         }
 
-        for(int j=0;j<12;j++){
-            mDisplayedValuesMonth[j] = DEFAULT_START_MONTH+j+"月";
+        for (int j = 0; j < 12; j++) {
+            mDisplayedValuesMonth[j] = DEFAULT_START_MONTH + j + "月";
         }
-        for(int k=0;k<30;k++){
-            mDisplayedValuesDay[k] = DEFAULT_START_DAY+k+"日";
+        for (int k = 0; k < 30; k++) {
+            mDisplayedValuesDay[k] = DEFAULT_START_DAY + k + "日";
         }
         mMaxDate = getCalendarForLocale(mMaxDate, Locale.CHINA);
         mMinDate = getCalendarForLocale(mMinDate, Locale.CHINA);
@@ -103,6 +112,9 @@ public class MainActivity extends Activity {
 
     @Override
     public void onContentChanged() {
+        mTextViewSwitcher = (TextSwitcher) findViewById(R.id.text_view_ad);
+        mTextViewSwitcher.setFactory(this);
+
         mNumberPickerYear = (NumberPicker) findViewById(R.id.number_picker_year);
         mNumberPickerYear.setWrapSelectorWheel(false);
         mNumberMonth = (NumberPicker) findViewById(R.id.number_picker_month);
@@ -133,7 +145,7 @@ public class MainActivity extends Activity {
 
         //月
         mNumberMonth.setDisplayedValues(mDisplayedValuesMonth);
-        mNumberMonth.setMaxValue(mDisplayedValuesMonth.length-1);
+        mNumberMonth.setMaxValue(mDisplayedValuesMonth.length - 1);
         mNumberMonth.setMinValue(0);
 
         mPickerMonth.setDisplayedValues(mDisplayedValuesMonth);
@@ -152,6 +164,33 @@ public class MainActivity extends Activity {
         mPickerDay.setWrapSelectorWheel(false);//当值达到最大时，不再循环滚动
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        autoSwitcher();
+    }
+
+    /**
+     * 自动循环播放
+     */
+    private void autoSwitcher() {
+        int i = -1;
+                    while (i == -1) {
+                        i ++;
+                        final int finalI = i;
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mTextViewSwitcher.setText("文字切换类似广告轮播:" + finalI);
+                            }
+                        });
+                        if(i>=5){
+                            i = -1;
+                        }
+                    }
+
+    }
+
     private int getMaxIndex(int maxYear) {
         int index = 0;
         for (int i = 0; i < mDisplayedValuesYear.length; i++) {
@@ -164,7 +203,7 @@ public class MainActivity extends Activity {
         return index;
     }
 
-    public void jumpTextLinkify(View view){
+    public void jumpTextLinkify(View view) {
         TextLinkifyActivity.startTextLinkifyActivity(this);
     }
 
@@ -190,9 +229,10 @@ public class MainActivity extends Activity {
 
     /**
      * 跳转至罗盘
+     *
      * @param view
      */
-    public void jumpToComprassView(View view){
+    public void jumpToComprassView(View view) {
 
         ComprassViewActivity.startCompassViewActivity(this);
     }
@@ -209,7 +249,7 @@ public class MainActivity extends Activity {
     /**
      * 下拉刷新控件
      */
-    public void jumpToPullToFreshActivity(View view){
+    public void jumpToPullToFreshActivity(View view) {
         SunnyPullToFreshActivity.startSunnyPullToFreshActivity(this);
     }
 
@@ -242,11 +282,26 @@ public class MainActivity extends Activity {
     }
 
 
-    public void onSure(View view){
+    public void onSure(View view) {
 
         String year = mEditTextYear.getText().toString();
         String month = mEidtTextMonth.getText().toString();
         String day = mEditTextDay.getText().toString();
-        Toast.makeText(MainActivity.this,year+"-"+month+"-"+day,Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, year + "-" + month + "-" + day, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        isAutoing = false;
+    }
+
+    @Override
+    public View makeView() {
+        //ViewFactory创建一个视图，并返回
+        TextView textView = new TextView(this);
+        textView.setText("Test");
+        textView.setTextSize(36);
+        return textView;
     }
 }

@@ -33,6 +33,8 @@
       <module fileurl="file://$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" filepath="$PROJECT_DIR$/android-app-appcompat-v7/android-app-appcompat-v7.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/downloader-lib/downloader-lib.iml" filepath="$PROJECT_DIR$/downloader-lib/downloader-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellocharts-library/hellocharts-library.iml" filepath="$PROJECT_DIR$/hellocharts-library/hellocharts-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellocharts-samples/hellocharts-samples.iml" filepath="$PROJECT_DIR$/hellocharts-samples/hellocharts-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/oschian2.4/oschian2.4.iml" filepath="$PROJECT_DIR$/oschian2.4/oschian2.4.iml" />
       <module fileurl="file://$PROJECT_DIR$/propertyanimationdemo/propertyanimationdemo.iml" filepath="$PROJECT_DIR$/propertyanimationdemo/propertyanimationdemo.iml" />

@@ -28,8 +28,21 @@ android {
         multiDexEnabled true
     }
 
+    signingConfigs {
+        HetConfig {
+            storeFile file("sunnydemo2.jks")
+            storePassword "555555"
+            keyAlias "sunny"
+            keyPassword "555555"
+        }
+    }
+
     buildTypes {
+        debug{
+            //signingConfig  signingConfigs.HetConfig
+        }
         release {
+           // signingConfig  signingConfigs.HetConfig
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

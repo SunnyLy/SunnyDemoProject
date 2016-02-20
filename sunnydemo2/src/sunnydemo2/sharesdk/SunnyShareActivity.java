@@ -17,6 +17,7 @@ import com.het.share.model.CommonShareImage;
 import com.het.share.model.CommonShareMusic;
 import com.het.share.model.CommonShareTextOnly;
 import com.het.share.model.CommonShareWebpage;
+import com.het.share.utils.CommonShareProxy;
 import com.sina.weibo.sdk.api.share.BaseResponse;
 import com.sina.weibo.sdk.api.share.IWeiboHandler;
 import com.sina.weibo.sdk.constant.WBConstants;
@@ -34,6 +35,7 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
 
     private CommonShareManager mShareManger;
     private CommonShareDialog mShareDialog;
+    private CommonShareProxy mShareProxy;
 
     //private String musicUrl = "http://music.baidu.com/song/256006577";
     private String musicUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
@@ -41,7 +43,8 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
     private String mTargetUrl = "http://www.baidu.com";
     private String mTitle = "阳总";
     private String mDescription = "Hi,阳总,吃晚饭了没";
-    private String mImgUrl = "http://img.369xxw.com/uploads/20151203/rse4m0b3sfv.jpg";
+    //private String mImgUrl = "http://img.369xxw.com/uploads/20151203/rse4m0b3sfv.jpg";
+    private String mImgUrl = "http://www.baidu.com/img/bdlogo.png";
 
     /*private String mWeixinAppId = "wxd930ea5d5a258f4f";//微信Demo用
     private String mWeixinSecrect = "";//分享的时候不要用到secretId,只有微信登录的时候要*/
@@ -64,9 +67,27 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
-
         initParams();
+        mShareProxy = new CommonShareProxy(mContext);
+        mShareProxy.onCreate(savedInstanceState);
 
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        mShareProxy.onNewIntent(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        mShareProxy.onActivityResult(requestCode, resultCode, data);
     }
 
     private void initParams() {
@@ -77,6 +98,7 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
                 create();
         mShareDialog = new CommonShareDialog(this,this);
         mShareDialog.showSina();
+
 
     }
 
@@ -140,7 +162,9 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         image.setDescription(mDescription);
         image.setAppName("SunnyDemo2");
         image.setTargetUrl(mTargetUrl);
-        image.setImgUrl(mImgUrl);
+       // image.setImgUrl(mImgUrl);
+        //设置本地图片地址
+        image.setImgUrl("/storage/emulated/0/tencent/tassistant/cloudkit/html/1/qzs.qq.com/open/yyb/coupon/img/icon01.png");
         image.setSharePlatform(sharePlatform);
 
         /**
@@ -156,15 +180,16 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         textOnly.setSharePlatform(sharePlatform);
 
         //分享文字
-       // mShareManger.shareTextOnly(textOnly);
+      //  mShareManger.shareTextOnly(textOnly);//success
 
         //分享音乐
-        //mShareManger.shareMusic(music);
+        //mShareManger.shareMusic(music);//success
         //分享网页
         webpage.setImgUrl(mImgUrl);
-        mShareManger.shareWebpage(webpage);
+       // mShareManger.shareWebpage(webpage);//success
         //分享图片
-       // mShareManger.sharePicOnly(image);
+        mShareManger.sharePicOnly(image);//success
+        //mShareManger.sharePicText(webpage);
     }
 
     @Override
@@ -193,8 +218,14 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
      */
     @Override
     public void onComplete(Object o) {
-        hideDialog();
-        Toast.makeText(this,"分享完成",Toast.LENGTH_SHORT).show();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                hideDialog();
+                Toast.makeText(SunnyShareActivity.this,"分享完成",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -214,6 +245,7 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                hideDialog();
                 Toast.makeText(SunnyShareActivity.this,"分享onCancel",Toast.LENGTH_SHORT).show();
             }
         });
