@@ -99,6 +99,9 @@
             </intent-filter>
         </activity>
 
+        <!--Android 弹幕-->
+        <activity android:name="sunnydemo2.danmuku.DanmuKuActivity"/>
+
         <!--TTS和语音识别-->
         <activity android:name="sunnydemo2.tts.TTSActivity"/>
         <activity android:name="sunnydemo2.tts.RecognizerIntentActivity"/>

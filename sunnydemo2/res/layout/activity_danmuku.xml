@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/p1"/>
+
+    <!--Android弹幕控件-->
+    <com.opendanmaku.DanmakuView
+        android:id="@+id/danmakuView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:start_Y_offset="0.2"
+        app:end_Y_offset="0.8"
+        android:background="@color/transparent"
+        app:max_row="4"
+        app:max_running_per_row="2"
+        app:pick_interval="1000"
+        app:show_debug="false" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/danmuku_eidttext"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="4.0"
+            android:hint="请输入想说的话"/>
+
+        <Button
+            android:id="@+id/danmaku_send"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.0"
+            android:text="发送"
+            android:onClick="sendDanmaku"/>
+    </LinearLayout>
+
+</RelativeLayout>

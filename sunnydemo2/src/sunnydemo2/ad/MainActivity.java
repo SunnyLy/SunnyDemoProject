@@ -9,6 +9,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -18,9 +21,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import com.opendanmaku.DanmakuItem;
+import com.opendanmaku.DanmakuView;
+import com.opendanmaku.IDanmakuItem;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 import sunnydemo2.ad.ui.CarouselADActivity;
@@ -29,6 +37,7 @@ import sunnydemo2.bargraph.BarGraphActivity;
 import sunnydemo2.bargraph.CurveChartActivity;
 import sunnydemo2.bargraph.DivisionCircle2Activity;
 import sunnydemo2.bargraph.DivisionCircleActivity;
+import sunnydemo2.danmuku.DanmuKuActivity;
 import sunnydemo2.pulltofresh.SunnyPullToFreshActivity;
 
 /**
@@ -80,6 +89,11 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
     private static final int DEFAULT_START_DAY = 1;
     private static final int DEFALUT_END_DAY = 30;
     private int mCurrentDayIndex = 0;//当前年在展示列表中的索引
+
+    //弹幕
+    private DanmakuView mDanmaku;
+    private List<IDanmakuItem> mDanmakuList;
+    private boolean isShowing = false;
 
     public static void startMainActivity(Context context) {
         Intent targetIntent = new Intent(context, MainActivity.class);
@@ -162,12 +176,49 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
         mPickerDay.setMaxValue(mDisplayedValuesDay.length - 1);
         mPickerDay.setMinValue(DEFAULT_START_DAY);
         mPickerDay.setWrapSelectorWheel(false);//当值达到最大时，不再循环滚动
+
+        mDanmaku = (DanmakuView) findViewById(R.id.danmakuView);
+        initDanmaKu();
+    }
+
+    private void initDanmaKu() {
+        mDanmakuList = initItems();
+        mDanmaku.clear();
+        mDanmaku.addItem(mDanmakuList,true);
+        mDanmaku.addItem(new DanmakuItem(this,"呵呵，呵呵",mDanmaku.getWidth()));
+    }
+
+    private List<IDanmakuItem> initItems() {
+        List<IDanmakuItem> list = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            IDanmakuItem item = new DanmakuItem(this, i + " : plain text danmuku", mDanmaku.getWidth());
+            list.add(item);
+        }
+
+        String msg = " : text with image   ";
+        for (int i = 0; i < 100; i++) {
+            ImageSpan imageSpan = new ImageSpan(this, R.drawable.ic_launcher);
+            SpannableString spannableString = new SpannableString(i + msg);
+            spannableString.setSpan(imageSpan, spannableString.length() - 2, spannableString.length() - 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            IDanmakuItem item = new DanmakuItem(this, spannableString, mDanmaku.getWidth(), 0, 0, 0, 1.5f);
+            list.add(item);
+        }
+        return list;
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         autoSwitcher();
+        //mDanmaku.show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mDanmaku != null){
+            mDanmaku.clear();
+        }
     }
 
     /**
@@ -225,6 +276,23 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
     public void jumpToDivishCircle2(View view) {
         Intent targetIntent = new Intent(this, DivisionCircle2Activity.class);
         startActivity(targetIntent);
+    }
+
+    /**
+     * 跳转至Android弹幕
+     * @param view
+     */
+    public void jumpDanmuKu(View view){
+
+      /*  if(isShowing){
+            isShowing = false;
+            mDanmaku.hide();
+        }else{
+            isShowing = true;
+            mDanmaku.show();
+        }*/
+
+        DanmuKuActivity.startDanmuKuActivity(this);
     }
 
     /**
