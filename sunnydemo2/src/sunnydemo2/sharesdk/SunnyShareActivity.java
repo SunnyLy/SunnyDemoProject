@@ -1,18 +1,16 @@
 package sunnydemo2.sharesdk;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.het.share.dialog.CommonShareDialog;
-import com.het.share.listener.ICommonShareLinstener;
+import com.het.share.listener.ICommonShareListener;
 import com.het.share.manager.CommonShareManager;
 import com.het.share.manager.CommonSharePlatform;
-import com.het.share.model.CommonShareBaseBean;
 import com.het.share.model.CommonShareImage;
 import com.het.share.model.CommonShareMusic;
 import com.het.share.model.CommonShareTextOnly;
@@ -20,9 +18,10 @@ import com.het.share.model.CommonShareWebpage;
 import com.het.share.utils.CommonShareProxy;
 import com.sina.weibo.sdk.api.share.BaseResponse;
 import com.sina.weibo.sdk.api.share.IWeiboHandler;
-import com.sina.weibo.sdk.constant.WBConstants;
 import com.smartbracelet.sunny.sunnydemo2.R;
+import com.tencent.connect.common.Constants;
 import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
 import sunnydemo2.base.BaseActivity;
@@ -31,7 +30,7 @@ import sunnydemo2.base.BaseActivity;
  * Created by sunny on 2016/1/9.
  * 分享测试 类
  */
-public class SunnyShareActivity extends BaseActivity implements ICommonShareLinstener,IUiListener{
+public class SunnyShareActivity extends BaseActivity implements ICommonShareListener, IWeiboHandler.Response {
 
     private CommonShareManager mShareManger;
     private CommonShareDialog mShareDialog;
@@ -57,7 +56,6 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
     private String mSinaAppkey = "380422110";//SunnyDemo2专用
 
 
-
     public static void startSunnyShareActivity(Context context) {
         Intent targetIntent = new Intent(context, SunnyShareActivity.class);
         context.startActivity(targetIntent);
@@ -68,8 +66,9 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
         initParams();
-        mShareProxy = new CommonShareProxy(mContext);
+        mShareProxy = new CommonShareProxy(SunnyShareActivity.this, this);
         mShareProxy.onCreate(savedInstanceState);
+
 
     }
 
@@ -79,14 +78,18 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         mShareProxy.onNewIntent(intent);
     }
 
+    /**
+     * 在onDestroy的时候，释放所有的资源
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mShareManger.releaseResource();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        //super.onActivityResult(requestCode, resultCode, data);
         mShareProxy.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -94,35 +97,23 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         mShareManger = new CommonShareManager.Builder(this).
                 registerWeixin(mWeixinAppId).//注册微信
                 registerQQ(mQQAppId).//注册QQ
-                registerSinaWeibo(mSinaAppkey,"www.baidu.com").//注册微博
+                registerSinaWeibo(mSinaAppkey, "www.baidu.com").//注册微博
                 create();
-        mShareDialog = new CommonShareDialog(this,this);
+        mShareDialog = new CommonShareDialog(SunnyShareActivity.this, this);
         mShareDialog.showSina();
-
 
     }
 
-    public void startShare(View view){
+    public void startShare(View view) {
 
-        if(mShareDialog != null && !mShareDialog.isShowing()){
+        if (mShareDialog != null && !mShareDialog.isShowing()) {
             mShareDialog.show();
         }
     }
 
     @Override
     public void onStartShare(CommonSharePlatform sharePlatform) {
-
         showDialog();
-
-        CommonShareBaseBean shareBean = new CommonShareBaseBean();
-        shareBean.setUiListener(this);
-        shareBean.setTitle(mTitle);
-        shareBean.setDescription(mDescription);
-        shareBean.setAppName("SunnyDemo");
-        shareBean.setTargetUrl(mTargetUrl);
-        shareBean.setBm(null);
-        shareBean.setSharePlatform(sharePlatform);
-
 
         /**
          * 音乐
@@ -162,7 +153,7 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         image.setDescription(mDescription);
         image.setAppName("SunnyDemo2");
         image.setTargetUrl(mTargetUrl);
-       // image.setImgUrl(mImgUrl);
+        // image.setImgUrl(mImgUrl);
         //设置本地图片地址
         image.setImgUrl("/storage/emulated/0/tencent/tassistant/cloudkit/html/1/qzs.qq.com/open/yyb/coupon/img/icon01.png");
         image.setSharePlatform(sharePlatform);
@@ -180,78 +171,67 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareLins
         textOnly.setSharePlatform(sharePlatform);
 
         //分享文字
-      //  mShareManger.shareTextOnly(textOnly);//success
-
+        //  mShareManger.shareTextOnly(textOnly);//success
         //分享音乐
         //mShareManger.shareMusic(music);//success
         //分享网页
         webpage.setImgUrl(mImgUrl);
-       // mShareManger.shareWebpage(webpage);//success
+        // mShareManger.shareWebpage(webpage);//success
         //分享图片
         mShareManger.sharePicOnly(image);//success
-        //mShareManger.sharePicText(webpage);
+        //分享文本
+        //mShareManger.sharePicText(webpage);//success
+    }
+
+
+    /**
+     * 分享回调监听
+     *
+     * @param sharePlatform
+     * @param msg
+     */
+    @Override
+    public void onShareSuccess(final CommonSharePlatform sharePlatform, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(SunnyShareActivity.this, msg, Toast.LENGTH_SHORT).show();
+                hideDialog();
+            }
+        });
+
     }
 
     @Override
-    public void onShareSuccess(CommonSharePlatform sharePlatform, String msg,CommonShareDialog dialog) {
-
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-        hideDialog();
+    public void onShareFialure(final CommonSharePlatform sharePlatform, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(SunnyShareActivity.this,  msg, Toast.LENGTH_SHORT).show();
+                hideDialog();
+            }
+        });
     }
 
     @Override
-    public void onShareFialure(CommonSharePlatform sharePlatform, String msg) {
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-        hideDialog();
-    }
-
-    @Override
-    public void onShareCancel(CommonSharePlatform sharePlatform, String msg) {
-        if(sharePlatform != CommonSharePlatform.SinaWeibo)
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-        hideDialog();
+    public void onShareCancel(final CommonSharePlatform sharePlatform, final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(SunnyShareActivity.this,  msg, Toast.LENGTH_SHORT).show();
+                hideDialog();
+            }
+        });
     }
 
     /**
-     * //////////////下面是腾讯分享回调
-     * @param o
+     * 新浪微博分享回调
+     *
+     * @param baseResponse
      */
     @Override
-    public void onComplete(Object o) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                hideDialog();
-                Toast.makeText(SunnyShareActivity.this,"分享完成",Toast.LENGTH_SHORT).show();
-            }
-        });
-
+    public void onResponse(BaseResponse baseResponse) {
+        CommonShareDialog.sinaOnResp(baseResponse);
     }
-
-    @Override
-    public void onError(final UiError uiError) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(SunnyShareActivity.this,uiError.errorMessage,Toast.LENGTH_SHORT).show();
-                hideDialog();
-            }
-        });
-
-    }
-
-    @Override
-    public void onCancel() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                hideDialog();
-                Toast.makeText(SunnyShareActivity.this,"分享onCancel",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
-
 
 }

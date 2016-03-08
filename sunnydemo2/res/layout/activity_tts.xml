@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/tts_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens50"
+        android:hint="请随便输入"
+        android:layout_margin="@dimen/dimens10"/>
+
+    <Button
+        android:id="@+id/tts_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens50"
+        android:text="把输入的文字用语音读出来"
+        android:layout_margin="@dimen/dimens10"
+        android:onClick="startTTS"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens50"
+        android:text="开始语音识别"
+        android:layout_margin="@dimen/dimens10"
+        android:onClick="startRecognize"/>
+
+</LinearLayout>

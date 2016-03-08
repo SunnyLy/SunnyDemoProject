@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- -->
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
 
     <application
         android:allowBackup="true"
@@ -90,7 +92,16 @@
         <activity android:name="sunnydemo2.pulltofresh.SunnyPullToFreshActivity"/>
 
         <!--分享-->
-        <activity android:name="sunnydemo2.sharesdk.SunnyShareActivity"/>
+        <activity android:name="sunnydemo2.sharesdk.SunnyShareActivity">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--TTS和语音识别-->
+        <activity android:name="sunnydemo2.tts.TTSActivity"/>
+        <activity android:name="sunnydemo2.tts.RecognizerIntentActivity"/>
 
 
         <!-- ====================分享开始 ========================== -->
@@ -118,7 +129,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="tencent222222" />
+                <!--这里要把222222替换成自己在腾讯开放平台注册的appId-->
+                <data android:scheme="tencent1104541762" />
                 <!-- 100380359 100381104 222222 -->
             </intent-filter>
         </activity>

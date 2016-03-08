@@ -19,25 +19,20 @@ public class BaseActivity extends Activity {
 
     public Context mContext;
     public CommonLoadingDialog.LoadingDialog mCommonLoadingDialog;
-    private CommonShareProxy commonShareProxy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        commonShareProxy = new CommonShareProxy(this);
-        commonShareProxy.onCreate(savedInstanceState);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        commonShareProxy.onNewIntent(intent);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        commonShareProxy.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

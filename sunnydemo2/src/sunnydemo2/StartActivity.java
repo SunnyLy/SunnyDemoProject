@@ -27,6 +27,7 @@ import sunnydemo2.imagetext.ImageTextActivity;
 import sunnydemo2.androidl.TintActivity;
 import sunnydemo2.rxjava.RxJavaActivity;
 import sunnydemo2.sharesdk.SunnyShareActivity;
+import sunnydemo2.tts.TTSActivity;
 
 /**
  * Created by sunny on 2015/11/18.
@@ -109,6 +110,9 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
                 break;
             case 10:
                 SunnyShareActivity.startSunnyShareActivity(this);
+                break;
+            case 11:
+                TTSActivity.startTTSActivity(this);
                 break;
         }
 
