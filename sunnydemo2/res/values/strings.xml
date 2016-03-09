@@ -15,6 +15,7 @@
         <item>RxJava,Retrofit,EventBus实现响应式编程</item>
         <item>ShareSDK</item>
         <item>TextToSpeech(TTS)语音输入与语音识别</item>
+        <item>Android MVP模式的应用</item>
     </string-array>
 
     <string-array name="new_properties">
