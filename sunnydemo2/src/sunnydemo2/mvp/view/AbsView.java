@@ -13,9 +13,9 @@ import com.smartbracelet.sunny.sunnydemo2.R;
  * Created by sunny on 2016/3/9.
  * Annotion:视图层实现类，
  */
-public abstract class AbsView implements IView {
+public abstract class AbsView implements IView ,View.OnClickListener{
     private SparseArray<View> mBindViews = new SparseArray<>();
-    private Context context;
+    public Context context;
     private View rootView;
 
     @Override
@@ -52,6 +52,12 @@ public abstract class AbsView implements IView {
         return t;
     }
 
+    public void bindView(View view){
+        if(view != null){
+            view.setOnClickListener(this);
+        }
+    }
+
 
     public <T extends View> T getViewById(int viewId) {
         T view = (T) rootView.findViewById(viewId);
@@ -64,4 +70,10 @@ public abstract class AbsView implements IView {
      * @return
      */
     public abstract int getLayoutId();
+
+
+    @Override
+    public void onClick(View v) {
+
+    }
 }

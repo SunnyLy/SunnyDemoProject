@@ -17,6 +17,7 @@ import java.util.Map;
 
 import sunnydemo2.ad.MainActivity;
 import sunnydemo2.androidl.AndroidLActivity;
+import sunnydemo2.mvp.presenter.LoginAtyPresenter;
 import sunnydemo2.network.OkHttpNetWorkActivity;
 import sunnydemo2.network.XutilsNetWorkActivity;
 import sunnydemo2.ad.ui.activitystartmode.ActivityStartMode;
@@ -113,6 +114,9 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
                 break;
             case 11:
                 TTSActivity.startTTSActivity(this);
+                break;
+            case 12:
+                LoginAtyPresenter.startLoginAtyPresenter(this);
                 break;
         }
 

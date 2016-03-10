@@ -40,6 +40,8 @@ public abstract class ActivityPresenter<T extends IView> extends Activity {
             mView.createView(getLayoutInflater(),null,savedInstanceState);
         }
         setContentView(mView.getRootView());
+        //初始化布局子控件
+        mView.initWidget();
     }
 
     @Override
