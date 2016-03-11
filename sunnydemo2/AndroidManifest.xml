@@ -158,6 +158,16 @@
             android:enabled="true"
             android:permission="com.paad.MY_SERVICE_PERMISSION">
         </service>
+
+
+        <!--第三方平台id-->
+        <meta-data android:name="WeixinAppID"
+            android:value="wxe46768b16f799372"
+            />
+        <meta-data android:name="SinaAppID"
+            android:value="380422110"/>
+        <meta-data android:name="QQID"
+            android:value="1104541762"/>
     </application>
 
 </manifest>

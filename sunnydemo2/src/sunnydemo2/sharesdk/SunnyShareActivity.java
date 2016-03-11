@@ -111,6 +111,13 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         }
     }
 
+    public void showShareDialogFragment(View view){
+        ShareDialog shareDialog = new ShareDialog();
+        shareDialog.setListener(this);
+        shareDialog.show(getSupportFragmentManager(),"");
+
+    }
+
     @Override
     public void onStartShare(CommonSharePlatform sharePlatform) {
         showDialog();

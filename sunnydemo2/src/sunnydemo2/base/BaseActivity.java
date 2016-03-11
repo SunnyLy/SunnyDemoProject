@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 
 import com.het.share.utils.CommonShareProxy;
@@ -15,7 +16,7 @@ import sunnydemo2.widget.CommonLoadingDialog;
  * Created by sunny on 2015/12/29.
  * Annotion:
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends FragmentActivity {
 
     public Context mContext;
     public CommonLoadingDialog.LoadingDialog mCommonLoadingDialog;

@@ -13,4 +13,10 @@
         android:layout_height="@dimen/dimens50"
         android:text="开启分享"
         android:onClick="startShare"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens50"
+        android:text="弹出分享Dialog"
+        android:onClick="showShareDialogFragment"/>
 </LinearLayout>
