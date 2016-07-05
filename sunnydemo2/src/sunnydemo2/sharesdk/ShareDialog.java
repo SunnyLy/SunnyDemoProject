@@ -105,6 +105,14 @@ public class ShareDialog extends BaseDialogFragment {
                     }
                 });
 
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_sinaweibo),
+                mContext.getResources().getString(R.string.share_plat_sina), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onStartShare(CommonSharePlatform.SinaWeibo);
+                    }
+                });
+
     }
 
     /**

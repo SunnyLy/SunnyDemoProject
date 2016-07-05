@@ -19,10 +19,6 @@ import com.het.share.utils.CommonShareProxy;
 import com.sina.weibo.sdk.api.share.BaseResponse;
 import com.sina.weibo.sdk.api.share.IWeiboHandler;
 import com.smartbracelet.sunny.sunnydemo2.R;
-import com.tencent.connect.common.Constants;
-import com.tencent.tauth.IUiListener;
-import com.tencent.tauth.Tencent;
-import com.tencent.tauth.UiError;
 
 import sunnydemo2.base.BaseActivity;
 
@@ -39,9 +35,9 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
     //private String musicUrl = "http://music.baidu.com/song/256006577";
     private String musicUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
     private String musicDataUrl = "http://staff2.ustc.edu.cn/~wdw/softdown/index.asp/0042515_05.ANDY.mp3";
-    private String mTargetUrl = "http://www.baidu.com";
-    private String mTitle = "阳总";
-    private String mDescription = "Hi,阳总,吃晚饭了没";
+    private String mTargetUrl = "http://user.qzone.qq.com/1156581276/mood/9c07f044e63558577a160600.1?ptlang=2052";
+    private String mTitle = "老婆";
+    private String mDescription = "Hi,老婆,吃晚饭了没？";
     //private String mImgUrl = "http://img.369xxw.com/uploads/20151203/rse4m0b3sfv.jpg";
     private String mImgUrl = "http://www.baidu.com/img/bdlogo.png";
 
@@ -127,15 +123,29 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
          */
         CommonShareMusic music = new CommonShareMusic();
         music.setUiListener(this);
-        music.setTitle(mTitle);
-        music.setDescription(mDescription);
+        music.setTitle("分享音乐");
+        music.setDescription("高山流水，寻觅知音");
         music.setAppName("SunnyDemo");
         //music.setTargetUrl("http://music.sina.com.cn/yueku/i/2850305.html");
         music.setTargetUrl(musicUrl);
         music.setMusicUrl(musicUrl);
         music.setMusicDataUrl(musicDataUrl);
         music.setBm(null);
+        music.setImgUrl("http://fdfs.xmcdn.com/group15/M06/94/D2/wKgDaFY7Ei6R79bNAAE0O1cKLAY443_mobile_large.jpg");
         music.setSharePlatform(sharePlatform);
+
+       /* CommonShareMusic music = new CommonShareMusic();
+        music.setUiListener(this);
+        music.setTitle("睡眠音乐分享");
+        music.setDescription("陆莹翻唱《演员》");
+        music.setAppName("Clife睡眠");
+        music.setTargetUrl("http://fdfs.xmcdn.com/group8/M05/53/EC/wKgDYFcfoIGD7OyJAB_P2WhntYE970.mp3");
+        music.setMusicUrl("http://fdfs.xmcdn.com/group8/M05/53/EC/wKgDYFcfoIGD7OyJAB_P2WhntYE970.mp3");
+        music.setMusicDataUrl("http://fdfs.xmcdn.com/group8/M05/53/EC/wKgDYFcfoIGD7OyJAB_P2WhntYE970.mp3");
+        music.setBm(null);
+       // music.setImgUrl("http://fdfs.xmcdn.com/group15/M06/94/D2/wKgDaFY7Ei6R79bNAAE0O1cKLAY443_mobile_large.jpg");
+        music.setImgUrl(mImgUrl);
+        music.setSharePlatform(sharePlatform);*/
 
 
         /**
@@ -148,7 +158,8 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         webpage.setAppName("SunnyDemo");
         webpage.setTargetUrl("http://news.sina.com.cn/c/2013-10-22/021928494669.shtml");
         webpage.setWebpageUrl(mTargetUrl);
-        webpage.setBm(null);
+        //webpage.setBm(null);
+        //webpage.setImgUrl("http://fdfs.xmcdn.com/group15/M06/94/D2/wKgDaFY7Ei6R79bNAAE0O1cKLAY443_mobile_large.jpg");
         webpage.setSharePlatform(sharePlatform);
 
         /**
@@ -180,12 +191,15 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         //分享文字
         //  mShareManger.shareTextOnly(textOnly);//success
         //分享音乐
-        //mShareManger.shareMusic(music);//success
+       // mShareManger.shareMusic(music);//success
         //分享网页
-        webpage.setImgUrl(mImgUrl);
-        // mShareManger.shareWebpage(webpage);//success
+        //webpage.setImgUrl(mImgUrl);
+        webpage.setImgUrl("http://fileserver1.clife.net:8080/group1/M00/06/BC/Cvtlhlb5ATaATUJfAAD2ZMEiqKk661.jpg");
+       // webpage.setImgUrl("http://www.baidu.com/img/bdlogo.png");
+        //webpage.setBm(BitmapFactory.decodeResource(mContext.getResources(),R.drawable.pager5));
+        mShareManger.shareWebpage(webpage);//success
         //分享图片
-        mShareManger.sharePicOnly(image);//success
+        //mShareManger.sharePicOnly(image);//success
         //分享文本
         //mShareManger.sharePicText(webpage);//success
     }
@@ -202,7 +216,9 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(SunnyShareActivity.this, msg, Toast.LENGTH_SHORT).show();
+                Log.e("qq:","onShareSuccess");
+                hideShareDialog();
+                Toast.makeText(SunnyShareActivity.this, msg+",,,,,,,", Toast.LENGTH_SHORT).show();
                 hideDialog();
             }
         });
@@ -214,7 +230,8 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(SunnyShareActivity.this,  msg, Toast.LENGTH_SHORT).show();
+                hideShareDialog();
+                Toast.makeText(SunnyShareActivity.this,  msg+",,,,,,,", Toast.LENGTH_SHORT).show();
                 hideDialog();
             }
         });
@@ -222,13 +239,21 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
 
     @Override
     public void onShareCancel(final CommonSharePlatform sharePlatform, final String msg) {
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(SunnyShareActivity.this,  msg, Toast.LENGTH_SHORT).show();
+                Log.e("qq:","onShareCancel");
+                hideShareDialog();
+                Toast.makeText(SunnyShareActivity.this,  msg+",,,,,,,", Toast.LENGTH_SHORT).show();
                 hideDialog();
             }
         });
+    }
+
+    private void hideShareDialog(){
+        mShareDialog.dismiss();
+        Log.e("qq:","dissmiss end");
     }
 
     /**

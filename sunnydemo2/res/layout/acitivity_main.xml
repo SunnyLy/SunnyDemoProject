@@ -40,7 +40,7 @@
                 android:onClick="jumpDanmuKu"/>
 
             <!--Android弹幕控件-->
-            <com.opendanmaku.DanmakuView
+            <!--<com.opendanmaku.DanmakuView
                 android:id="@+id/danmakuView"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -49,7 +49,7 @@
                 app:max_row="4"
                 app:max_running_per_row="2"
                 app:pick_interval="1000"
-                app:show_debug="false" />
+                app:show_debug="false" />-->
 
 
             <Button

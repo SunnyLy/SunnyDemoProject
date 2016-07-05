@@ -159,6 +159,11 @@
             android:permission="com.paad.MY_SERVICE_PERMISSION">
         </service>
 
+        <!--fabric-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="fa67d5360c264e941063367954eba7dee0ced683" />
+
 
         <!--第三方平台id-->
         <meta-data android:name="WeixinAppID"

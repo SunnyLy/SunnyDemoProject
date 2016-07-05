@@ -8,27 +8,27 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.smartbracelet.sunny.sunnydemo2.R;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.fabric.sdk.android.Fabric;
 import sunnydemo2.ad.MainActivity;
-import sunnydemo2.androidl.AndroidLActivity;
-import sunnydemo2.mvp.presenter.LoginAtyPresenter;
-import sunnydemo2.network.OkHttpNetWorkActivity;
-import sunnydemo2.network.XutilsNetWorkActivity;
 import sunnydemo2.ad.ui.activitystartmode.ActivityStartMode;
 import sunnydemo2.ad.ui.ble.SunnyBLEActivity;
 import sunnydemo2.ad.ui.newproperties.NewPropertiesActivity;
+import sunnydemo2.androidl.AndroidLActivity;
 import sunnydemo2.imageloader.PictureLoaderFrameActivity;
 import sunnydemo2.imagetext.ImageTextActivity;
-import sunnydemo2.androidl.TintActivity;
+import sunnydemo2.mvp.presenter.LoginAtyPresenter;
+import sunnydemo2.network.OkHttpNetWorkActivity;
+import sunnydemo2.network.XutilsNetWorkActivity;
 import sunnydemo2.rxjava.RxJavaActivity;
 import sunnydemo2.sharesdk.SunnyShareActivity;
 import sunnydemo2.tts.TTSActivity;
+
+import com.smartbracelet.sunny.sunnydemo2.R;
 
 /**
  * Created by sunny on 2015/11/18.
@@ -45,6 +45,8 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Fabric.with(this, new Crashlytics());
+        //Crashlytics.start(this);
         setContentView(R.layout.activity_start);
         TextView start_task = (TextView) findViewById(R.id.start_task);
         start_task.setText("StartActivity所在TaskId:"+getTaskId());

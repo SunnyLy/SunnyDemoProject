@@ -21,9 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import com.opendanmaku.DanmakuItem;
-import com.opendanmaku.DanmakuView;
-import com.opendanmaku.IDanmakuItem;
 import com.smartbracelet.sunny.sunnydemo2.R;
 
 import java.util.ArrayList;
@@ -91,8 +88,8 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
     private int mCurrentDayIndex = 0;//当前年在展示列表中的索引
 
     //弹幕
-    private DanmakuView mDanmaku;
-    private List<IDanmakuItem> mDanmakuList;
+   /* private DanmakuView mDanmaku;
+    private List<IDanmakuItem> mDanmakuList;*/
     private boolean isShowing = false;
 
     public static void startMainActivity(Context context) {
@@ -177,11 +174,11 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
         mPickerDay.setMinValue(DEFAULT_START_DAY);
         mPickerDay.setWrapSelectorWheel(false);//当值达到最大时，不再循环滚动
 
-        mDanmaku = (DanmakuView) findViewById(R.id.danmakuView);
-        initDanmaKu();
+       /* mDanmaku = (DanmakuView) findViewById(R.id.danmakuView);
+        initDanmaKu();*/
     }
 
-    private void initDanmaKu() {
+  /*  private void initDanmaKu() {
         mDanmakuList = initItems();
         mDanmaku.clear();
         mDanmaku.addItem(mDanmakuList,true);
@@ -204,7 +201,7 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
             list.add(item);
         }
         return list;
-    }
+    }*/
 
     @Override
     protected void onResume() {
@@ -216,9 +213,9 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory {
     @Override
     protected void onStop() {
         super.onStop();
-        if(mDanmaku != null){
+       /* if(mDanmaku != null){
             mDanmaku.clear();
-        }
+        }*/
     }
 
     /**
