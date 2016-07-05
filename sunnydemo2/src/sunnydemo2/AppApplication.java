@@ -1,9 +1,10 @@
 package sunnydemo2;
 
+import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Bitmap;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.het.frescosupport.FrescoManager;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.MemoryCacheAware;
@@ -59,6 +60,49 @@ public class AppApplication extends Application {
 
         if(!imageLoader.isInited())//只有当它没有初始化时，才去进行init操作
         imageLoader.init(config);
+
+    }
+
+    public static void showShare(final Activity activity) {
+
+    }
+
+    /** 显示分享*/
+    public static void showShare(final Activity activity, final String shareUrl) {
+    }
+
+    /** 检查更新*/
+    public static void checkUpdate(Activity activity) {
+
+    }
+
+    /** 首个activity启动调用*/
+    public static void activityStartMain(Activity activity) {
+
+    }
+
+    /** 每个activity生命周期里的onCreate*/
+    public static void activityCreateStatistics(Activity activity) {
+
+    }
+
+    /** 每个activity生命周期里的onResume*/
+    public static void activityResumeStatistics(Activity activity) {
+
+    }
+
+    /** 每个activity生命周期里的onPause*/
+    public static void activityPauseStatistics(Activity activity) {
+
+    }
+
+    /** 事件统计*/
+    public static void eventStatistics(Context context, String event) {
+
+    }
+
+    /** 事件统计*/
+    public static void eventStatistics(Context context, String event, String tag) {
 
     }
 }

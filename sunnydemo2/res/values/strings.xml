@@ -16,6 +16,7 @@
         <item>ShareSDK</item>
         <item>TextToSpeech(TTS)语音输入与语音识别</item>
         <item>Android MVP模式的应用</item>
+        <item>抢红包插件</item>
     </string-array>
 
     <string-array name="new_properties">
@@ -55,6 +56,12 @@
         <title>标题</title>
         <a href="http:www.baidu.com">link</a>
     </string>
+
+    <!--抢红包插件说明-->
+    <string name="accessibility_description">这是艳国专用版抢红包插件哦~~~如果由于你的贪心，造成被封号，后果自负哦~~</string>
+    <string name="open_service_title">打开红包服务</string>
+    <string name="open_service_button">开启服务</string>
+
 
 
     <string name="number_picker_increment_button">Increase</string>

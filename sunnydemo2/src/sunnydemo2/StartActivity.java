@@ -1,6 +1,7 @@
 package sunnydemo2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -8,12 +9,13 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.smartbracelet.sunny.sunnydemo2.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.fabric.sdk.android.Fabric;
 import sunnydemo2.ad.MainActivity;
 import sunnydemo2.ad.ui.activitystartmode.ActivityStartMode;
 import sunnydemo2.ad.ui.ble.SunnyBLEActivity;
@@ -24,11 +26,10 @@ import sunnydemo2.imagetext.ImageTextActivity;
 import sunnydemo2.mvp.presenter.LoginAtyPresenter;
 import sunnydemo2.network.OkHttpNetWorkActivity;
 import sunnydemo2.network.XutilsNetWorkActivity;
+import sunnydemo2.plugin.GrabRedpacketActivity;
 import sunnydemo2.rxjava.RxJavaActivity;
 import sunnydemo2.sharesdk.SunnyShareActivity;
 import sunnydemo2.tts.TTSActivity;
-
-import com.smartbracelet.sunny.sunnydemo2.R;
 
 /**
  * Created by sunny on 2015/11/18.
@@ -119,6 +120,12 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
                 break;
             case 12:
                 LoginAtyPresenter.startLoginAtyPresenter(this);
+                break;
+
+            case 13:
+               // GrabRedpacketActivity.startGrabRedpacketActivity(this);
+                Intent targeIntent = new Intent(StartActivity.this, GrabRedpacketActivity.class);
+                startActivity(targeIntent);
                 break;
         }
 
