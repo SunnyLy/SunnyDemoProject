@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\arrow_up_float.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\arrow_up_float.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_launcher_settings.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\ic_launcher_settings.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_settings_display.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\ic_settings_display.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\alert_dialog_icon.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\alert_dialog_icon.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_contact_picture.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\ic_contact_picture.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\progress_particle.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\progress_particle.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\stat_neutral.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\stat_neutral.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\button.9.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\button.9.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\stat_sad.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\stat_sad.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\star_big_on.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\star_big_on.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\stat_happy.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\stat_happy.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\stat_sample.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\stat_sample.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\scrollbar_state2.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\scrollbar_state2.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_settings_applications.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\ic_settings_applications.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\progress_circular_background.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\progress_circular_background.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\btn_check_off.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\btn_check_off.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\btn_check_on.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\btn_check_on.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\btn_circle_normal.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\btn_circle_normal.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\app_sample_code.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\app_sample_code.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_popup_reminder.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\ic_popup_reminder.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\btn_default_normal.9.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\btn_default_normal.9.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\arrow_down_float.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\arrow_down_float.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\apidemo_androidlogo.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\apidemo_androidlogo.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\icon48x48_2.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-mdpi\\icon48x48_2.png"
+    }
+]

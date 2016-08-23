@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\studio_workspace\SunnyDemo1\hellocharts-library\res"/><source path="E:\studio_workspace\SunnyDemo1\hellocharts-library\build\generated\res\rs\release"/><source path="E:\studio_workspace\SunnyDemo1\hellocharts-library\build\generated\res\resValues\release"/></dataSet><dataSet config="release"><source path="E:\studio_workspace\SunnyDemo1\hellocharts-library\src\release\res"/></dataSet><mergedItems/></merger>

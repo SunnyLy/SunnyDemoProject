@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_logo_sinaweibo.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_sinaweibo.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_logo_wechat.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_wechat.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_ic_launcher.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_ic_launcher.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_logo_wechatmoments.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_wechatmoments.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_logo_qq.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_qq.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\share_launcher.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\share_launcher.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_share_logo_qzone.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_qzone.png"
+    }
+]

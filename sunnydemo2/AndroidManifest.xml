@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.smartbracelet.sunny.sunnydemo2">
+<manifest package="com.smartbracelet.sunny.sunnydemo2"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
@@ -9,8 +9,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -24,30 +24,30 @@
 
     <permission
         android:name="com.smartbracelet.sunny.sunnydemo2.permission.MIPUSH_RECEIVE"
-        android:protectionLevel="signatureOrSystem" />
+        android:protectionLevel="signatureOrSystem"/>
 
-    <uses-permission android:name="com.smartbracelet.sunny.sunnydemo2.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="com.smartbracelet.sunny.sunnydemo2.permission.MIPUSH_RECEIVE"/>
     <!-- -->
     <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
 
     <!--android:theme="@style/SampleTheme.Light"-->
     <application
+        android:name="sunnydemo2.AppApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name="sunnydemo2.AppApplication"
         android:theme="@style/Theme.AppCompat.Light"
         tools:replace="android:theme,name">
         <activity
             android:name="sunnydemo2.StartActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -58,11 +58,14 @@
         <activity android:name="sunnydemo2.ad.ComprassViewActivity"/>
         <activity android:name="sunnydemo2.ad.TextLinkifyActivity"/>
 
-        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityA"
+        <activity
+            android:name="sunnydemo2.ad.ui.activitystartmode.ActivityA"
             android:launchMode="singleTask"/>
-        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityB"
+        <activity
+            android:name="sunnydemo2.ad.ui.activitystartmode.ActivityB"
             android:launchMode="singleTop"/>
-        <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityC"
+        <activity
+            android:name="sunnydemo2.ad.ui.activitystartmode.ActivityC"
             android:launchMode="singleInstance"/>
         <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityD"/>
         <activity android:name="sunnydemo2.ad.ui.activitystartmode.ActivityE"/>
@@ -89,7 +92,6 @@
         <activity android:name="sunnydemo2.androidl.TestPrefeerenceActivity"/>
 
 
-
         <!--图片加载-->
         <activity android:name="sunnydemo2.imageloader.PictureLoaderFrameActivity"/>
         <activity android:name="sunnydemo2.imageloader.ImageLoaderActivity"/>
@@ -109,8 +111,8 @@
         <!--分享-->
         <activity android:name="sunnydemo2.sharesdk.SunnyShareActivity">
             <intent-filter>
-                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
@@ -126,20 +128,24 @@
 
         <!--抢红包插件-->
         <activity android:name="sunnydemo2.plugin.GrabRedpacketActivity"/>
-        <service android:name="sunnydemo2.plugin.GrabRedpacketService"
-                 android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+
+        <service
+            android:name="sunnydemo2.plugin.GrabRedpacketService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
 
-            <meta-data android:name="android.accessibilityservice"
-                       android:resource="@xml/grab_redpacket_service_config"/>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/grab_redpacket_service_config"/>
 
         </service>
-        <service android:name="sunnydemo2.plugin.GrabRedpacketNotificationService"
-                 android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+        <service
+            android:name="sunnydemo2.plugin.GrabRedpacketNotificationService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
-                <action android:name="android.service.notification.NotificationListenerService" />
+                <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
 
@@ -151,26 +157,26 @@
             android:configChanges="keyboardHidden|orientation"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
                 <!--这里要把222222替换成自己在腾讯开放平台注册的appId-->
-                <data android:scheme="tencent1104541762" />
+                <data android:scheme="tencent1104541762"/>
                 <!-- 100380359 100381104 222222 -->
             </intent-filter>
         </activity>
@@ -181,14 +187,15 @@
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"/>
 
         <service
             android:name="com.sina.weibo.sdk.net.DownloadService"
-            android:exported="false" />
+            android:exported="false"/>
         <!-- =====================分享结束=========================== -->
 
-        <service android:name="sunnydemo2.service.SunnyService"
+        <service
+            android:name="sunnydemo2.service.SunnyService"
             android:enabled="true"
             android:permission="com.paad.MY_SERVICE_PERMISSION">
         </service>
@@ -196,17 +203,38 @@
         <!--fabric-->
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="fa67d5360c264e941063367954eba7dee0ced683" />
+            android:value="fa67d5360c264e941063367954eba7dee0ced683"/>
 
 
         <!--第三方平台id-->
-        <meta-data android:name="WeixinAppID"
+        <!--微信-->
+        <meta-data
+            android:name="WeixinAppID"
             android:value="wxe46768b16f799372"
             />
-        <meta-data android:name="SinaAppID"
+        <meta-data
+            android:name="WeixinAppSecret"
+            android:value="f0ce1674d0d12867467b0b7342c7b670"/>
+
+        <!--新浪微博-->
+        <meta-data
+            android:name="SinaAppID"
             android:value="380422110"/>
-        <meta-data android:name="QQID"
+        <meta-data
+            android:name="SinaAppSecret"
+            android:value="38a4f8204cc784f81f9f0daaf31e02e3"/>
+        <meta-data
+            android:name="SinaRedirectUrl"
+            android:value="http://www.clife.cn"/>
+
+        <!--QQ\QQZone-->
+        <meta-data
+            android:name="QQID"
             android:value="1104541762"/>
+        <meta-data
+            android:name="QQAppSecret"
+            android:value="aed9b0303e3ed1e27bae87c33761161d"/>
+
     </application>
 
 </manifest>

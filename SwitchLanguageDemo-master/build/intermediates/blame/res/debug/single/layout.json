@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\build\\intermediates\\res\\merged\\debug\\layout\\activity_second.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\layout\\activity_second.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_select_lanuage.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\layout\\dialog_select_lanuage.xml"
+    }
+]

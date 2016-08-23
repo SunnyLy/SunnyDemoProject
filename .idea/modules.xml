@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ApiDemos/ApiDemos.iml" filepath="$PROJECT_DIR$/ApiDemos/ApiDemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" filepath="$PROJECT_DIR$/Test/ApiTest/ApiTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BaiWeiBeer/BaiWeiBeer.iml" filepath="$PROJECT_DIR$/BaiWeiBeer/BaiWeiBeer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" filepath="$PROJECT_DIR$/BarryDemo_MultiLanguage/BarryDemo_MultiLanguage.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" filepath="$PROJECT_DIR$/Bluetooth4_3/Bluetooth4_3.iml" />
       <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/CrashDemo/CrashDemo.iml" filepath="$PROJECT_DIR$/CrashDemo/CrashDemo.iml" />

@@ -112,7 +112,7 @@ dependencies {
              }*/
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.squareup.picasso:picasso:2.4.0'
-    compile 'com.android.common:FrescoSupport:1.0.0'
+    compile 'com.android.common:FrescoSupport:1.1.1'
     provided files('../android-app-appcompat-v7/libs/android-support-v4.jar')
     provided files('../android-app-appcompat-v7/libs/android-support-v7-appcompat.jar')
     // provided files('../android-app-appcompat-v7/libs/android-support-v7-palette.jar')

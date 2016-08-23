@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-v13\\resources_smallest_width_inner.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout-sw720dp\\resources_smallest_width_inner.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-v13\\resources_smallest_width_row.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout-sw720dp\\resources_smallest_width_row.xml"
+    }
+]

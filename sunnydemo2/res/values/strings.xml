@@ -17,6 +17,7 @@
         <item>TextToSpeech(TTS)语音输入与语音识别</item>
         <item>Android MVP模式的应用</item>
         <item>抢红包插件</item>
+        <item>OpenGL</item>
     </string-array>
 
     <string-array name="new_properties">

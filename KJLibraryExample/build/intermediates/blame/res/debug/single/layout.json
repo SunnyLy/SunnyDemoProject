@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\http.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\http.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\grid_item.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\grid_item.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\list_item.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_item.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\plugin_item.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\scale_img.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\scale_img.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\example_db.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\example_db.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\frag_plugin.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\frag_plugin.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\aty_kjlistview.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\aty_kjlistview.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\widget.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\widget.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\aty_oom.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\aty_oom.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\aty_new_listview.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\aty_new_listview.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\bitmap.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\bitmap.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\layout_main_content.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\layout_main_content.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\aty_main.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\aty_main.xml"
+    }
+]

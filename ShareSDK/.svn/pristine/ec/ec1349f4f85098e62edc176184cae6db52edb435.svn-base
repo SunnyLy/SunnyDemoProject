@@ -1,0 +1,406 @@
+package com.het.share.dialog;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.het.share.R;
+import com.het.share.adapter.CommoShareViewAdapter;
+import com.het.share.adapter.CommonShareGridViewAdapter;
+import com.het.share.listener.ICommonShareLinstener;
+import com.het.share.manager.CommonShareManager;
+import com.het.share.manager.CommonSharePlatform;
+import com.het.share.model.CommonShareItemModel;
+import com.het.share.utils.AccessTokenKeeper;
+import com.het.share.widget.CircleFlowIndicator;
+import com.het.share.widget.CommonShareView;
+import com.het.share.widget.CommonShareViewpager;
+import com.het.share.widget.ViewFlow;
+import com.sina.weibo.sdk.api.share.BaseResponse;
+import com.sina.weibo.sdk.auth.AuthInfo;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.auth.WeiboAuthListener;
+import com.sina.weibo.sdk.auth.sso.SsoHandler;
+import com.sina.weibo.sdk.constant.WBConstants;
+import com.sina.weibo.sdk.exception.WeiboException;
+import com.sina.weibo.sdk.utils.LogUtil;
+import com.tencent.mm.sdk.modelbase.BaseResp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CommonShareDialog extends CommonShareBaseLoadingDialog implements android.view.View.OnClickListener {
+
+    public static final String TAG = "SelectPhotoDialog";
+    private static final int pageItemCount = 8;//一页的item数
+    private int pageCounts = 1;//总页数
+    private static Context mContext;
+
+    private static ICommonShareLinstener listener;
+    private static CommonSharePlatform mSharePlatform;
+    private List<GridView> shareViewList = new ArrayList<>();
+    private List<CommonShareItemModel> shareItemModels = new ArrayList<>();
+    private CommoShareViewAdapter mShareViewAdapter;
+    private CommonShareGridViewAdapter mShareGridViewAdapter;
+
+    private ViewFlow shareViewPager;
+    private CircleFlowIndicator mFlowIndicator;
+    public static CommonShareDialog mShareDialog;
+
+    /**
+     * Scope 是 OAuth2.0 授权机制中 authorize 接口的一个参数。通过 Scope，平台将开放更多的微博
+     * 核心功能给开发者，同时也加强用户隐私保护，提升了用户体验，用户在新 OAuth2.0 授权页中有权利
+     * 选择赋予应用的功能。
+     * <p/>
+     * 我们通过新浪微博开放平台-->管理中心-->我的应用-->接口管理处，能看到我们目前已有哪些接口的
+     * 使用权限，高级权限需要进行申请。
+     * <p/>
+     * 目前 Scope 支持传入多个 Scope 权限，用逗号分隔。
+     * <p/>
+     * 有关哪些 OpenAPI 需要权限申请，请查看：http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI
+     * 关于 Scope 概念及注意事项，请查看：http://open.weibo.com/wiki/Scope
+     */
+    public static final String SCOPE =
+            "email,direct_messages_read,direct_messages_write,"
+                    + "friendships_groups_read,friendships_groups_write,statuses_to_me_read,"
+                    + "follow_app_official_microblog," + "invitation_write";
+
+    /**
+     * 封装了 "access_token"，"expires_in"，"refresh_token"，并提供了他们的管理功能
+     */
+    private Oauth2AccessToken mAccessToken;
+    private AuthInfo mAuthInfo;
+    private SsoHandler mSsoHandler;
+
+    public static ICommonShareLinstener getListener() {
+        return listener;
+    }
+
+    /**
+     * 简单分享弹出框
+     *
+     * @param context  上下文
+     * @param listener 分享监听
+     */
+    public CommonShareDialog(Context context, ICommonShareLinstener listener) {
+        super(context, R.style.CommonShareDialogStyleBottom);
+        this.listener = listener;
+        initUI(context, null);
+    }
+
+
+    /**
+     * 自定义弹窗的style
+     *
+     * @param context  上下文
+     * @param style    自定义样式
+     * @param listener 分享监听
+     */
+    public CommonShareDialog(Context context, int style, ICommonShareLinstener listener) {
+        super(context, style);
+        this.listener = listener;
+        initUI(context, null);
+    }
+
+    /**
+     * 自定义布局的弹窗
+     *
+     * @param context     上下文
+     * @param contentView 自定义布局
+     * @param listener    分享监听
+     */
+    public CommonShareDialog(Context context, View contentView, ICommonShareLinstener listener) {
+        super(context, R.style.CommonShareDialogStyleBottom);
+        this.listener = listener;
+        initUI(context, contentView);
+    }
+
+    /**
+     * 自定义样式，布局的弹窗
+     *
+     * @param context     上下文
+     * @param style       自定义样式
+     * @param contentView 自定义布局
+     * @param listener    分享监听
+     */
+    public CommonShareDialog(Context context, int style, View contentView, ICommonShareLinstener listener) {
+        super(context, style);
+        this.listener = listener;
+        initUI(context, contentView);
+    }
+
+    private void initUI(Context context, View contentView) {
+        shareViewList.clear();
+        mContext = context;
+        mShareDialog = this;
+        View dlgView = LayoutInflater.from(mContext).inflate(R.layout.common_vertical_dialog_layout, null);
+        LinearLayout mContainer = (LinearLayout) dlgView.findViewById(R.id.common_dialog_content_container);
+        setContentView(dlgView);
+        setCanceledOnTouchOutside(true);
+        Window window = getWindow();
+        window.setWindowAnimations(R.style.CommonShareAnimBottom); // 设置显示动画
+        window.setGravity(Gravity.BOTTOM); // 设置显示位置
+        window.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT); // 设置布局大小
+
+        if (contentView == null) {
+            //如果上层没有传内容View进来，则使用默认的
+            View view = LayoutInflater.from(mContext).inflate(
+                    R.layout.common_share_dialog, null);
+            Button mBtnCancelShare = (Button) view.findViewById(R.id.cancel_share);
+            mBtnCancelShare.setOnClickListener(this);
+            shareViewPager = (ViewFlow) view.findViewById(R.id.share_viewpager);
+            mFlowIndicator = (CircleFlowIndicator) view.findViewById(R.id.share_flow_indicator);
+            shareViewPager.setFlowIndicator(mFlowIndicator);
+
+            addShareViews();
+            mContainer.addView(view, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        } else {
+            mContainer.addView(contentView, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        }
+
+    }
+
+    /**
+     * 添加分享平台
+     */
+    private void addShareViews() {
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_wechatmoments),
+                mContext.getResources().getString(R.string.share_plat_wechatmoments), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onStartShare(CommonSharePlatform.WeixinFriendCircle);
+                    }
+                });
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_wechat),
+                mContext.getResources().getString(R.string.share_plat_wechat), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onStartShare(CommonSharePlatform.WeixinFriend);
+                    }
+                });
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_qzone),
+                mContext.getResources().getString(R.string.share_plat_qqzone), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onStartShare(CommonSharePlatform.QQ_Zone);
+                    }
+                });
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_qq),
+                mContext.getResources().getString(R.string.share_plat_qq), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        listener.onStartShare(CommonSharePlatform.QQ_Friend);
+                    }
+                });
+
+    }
+
+    /**
+     * 显示新浪图标
+     */
+    public void showSina() {
+
+        addShareView(mContext.getResources().getDrawable(R.drawable.common_share_logo_sinaweibo),
+                mContext.getResources().getString(R.string.share_plat_sina), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //点击的时候要对微博进行授权
+                        mSharePlatform = CommonSharePlatform.SinaWeibo;
+                        //authToSina();
+                        listener.onStartShare(CommonSharePlatform.SinaWeibo);
+                    }
+                });
+    }
+
+    private void authToSina() {
+        CommonShareManager shareManager = CommonShareManager.getInstance();
+        mAuthInfo = new AuthInfo(mContext, shareManager.getSinaAppKey(), shareManager.getSinaRedirectUrl(), SCOPE);
+        //授权
+        mSsoHandler = new SsoHandler((Activity) mContext, mAuthInfo);
+        shareManager.setSsoHandler(mSsoHandler);
+        mSsoHandler.authorize(new WeiboAuthListener() {
+            @Override
+            public void onComplete(Bundle bundle) {
+                mAccessToken = Oauth2AccessToken.parseAccessToken(bundle);
+                if (mAccessToken.isSessionValid()) {
+                    // 保存 Token 到 SharedPreferences
+                    AccessTokenKeeper.writeAccessToken(mContext, mAccessToken);
+                    listener.onShareSuccess(mSharePlatform, getString(R.string.share_result_sina_success), CommonShareDialog.this);
+                } else {
+                    String errorCode = bundle.getString("code");
+                    listener.onShareFialure(mSharePlatform, getString(R.string.share_result_sina_canel)+errorCode);
+                }
+            }
+
+            @Override
+            public void onWeiboException(WeiboException e) {
+                listener.onShareFialure(mSharePlatform, e.getMessage());
+            }
+
+            @Override
+            public void onCancel() {
+                listener.onShareCancel(mSharePlatform,getString(R.string.share_result_sina_canel));
+            }
+        });
+
+    }
+
+    @Override
+    public void show() {
+
+        super.show();
+    }
+
+    @Override
+    public void dismiss() {
+        super.dismiss();
+    }
+
+    /**
+     * 根据item数目，生成相应的gridView
+     */
+    private void initGridView() {
+
+        mShareViewAdapter = new CommoShareViewAdapter(mContext, shareItemModels);
+        shareViewPager.setAdapter(mShareViewAdapter);
+        mShareViewAdapter.notifyDataSetChanged();
+        if (shareItemModels.size() <= 8) {
+            mFlowIndicator.setVisibility(View.GONE);
+        } else {
+            mFlowIndicator.setVisibility(View.VISIBLE);
+        }
+
+    }
+
+    /**
+     * 动态添加分享图标
+     *
+     * @param shareDrawable
+     * @param shareText
+     */
+    public void addShareView(@NonNull Drawable shareDrawable,
+                             @NonNull String shareText,
+                             @Nullable View.OnClickListener onClickListener) {
+
+        CommonShareItemModel itemModel = new CommonShareItemModel();
+        itemModel.setmShareDrawable(shareDrawable);
+        itemModel.setmShareTitle(shareText);
+        itemModel.setOnClick(onClickListener);
+
+        shareItemModels.add(itemModel);
+        if (mShareViewAdapter != null) {
+            mShareViewAdapter.notifyDataSetChanged();
+        }
+
+        initGridView();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                dismiss();
+                break;
+            default:
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onClick(View arg0) {
+        if (arg0.getId() == R.id.cancel_share) {
+            this.dismiss();
+        }
+     /*   if (arg0.getId() == R.id.wechatmomentsRe) {
+            mSharePlatform = CommonSharePlatform.WeixinFriendCircle;
+            listener.onStartShare(CommonSharePlatform.WeixinFriendCircle);
+
+        } else if (arg0.getId() == R.id.wechatRe) {
+            mSharePlatform = CommonSharePlatform.WeixinFriend;
+            listener.onStartShare(CommonSharePlatform.WeixinFriend);
+
+        } else if (arg0.getId() == R.id.qqRe) {
+            mSharePlatform = CommonSharePlatform.QQ_Friend;
+            listener.onStartShare(CommonSharePlatform.QQ_Friend);
+
+        } else if (arg0.getId() == R.id.qqzoneRe) {
+            mSharePlatform = CommonSharePlatform.QQ_Zone;
+            listener.onStartShare(CommonSharePlatform.QQ_Zone);
+
+        } else if (arg0.getId() == R.id.cancel_share) {
+            this.dismiss();
+        }*/
+    }
+
+    /**
+     * 微信回调
+     *
+     * @param resp
+     */
+    public static void onResp(BaseResp resp) {
+
+        ICommonShareLinstener shareLinstener = getListener();
+        if (shareLinstener == null) {
+            return;
+        }
+        int code = resp.errCode;
+        if (code == BaseResp.ErrCode.ERR_OK) {
+            shareLinstener.onShareSuccess(mSharePlatform, getString(R.string.share_result_success), mShareDialog);
+        } else if (code == BaseResp.ErrCode.ERR_USER_CANCEL) {
+            shareLinstener.onShareCancel(mSharePlatform, getString(R.string.share_result_cancel));
+        } else if (code == BaseResp.ErrCode.ERR_AUTH_DENIED) {
+            shareLinstener.onShareFialure(mSharePlatform, getString(R.string.share_result_refused));
+        } else {
+            shareLinstener.onShareFialure(mSharePlatform, getString(R.string.share_result_failure));
+        }
+    }
+
+    /**
+     * 新浪微博回调
+     */
+    public static void sinaOnResp(BaseResponse response) {
+        Log.e("share", "新浪回调");
+
+        ICommonShareLinstener shareLinstener = getListener();
+        if (shareLinstener == null) {
+            return;
+        }
+        int code = response.errCode;
+
+        if (code == WBConstants.ErrorCode.ERR_OK) {
+            shareLinstener.onShareSuccess(mSharePlatform, getString(R.string.share_result_success), mShareDialog);
+        } else if (code == WBConstants.ErrorCode.ERR_CANCEL) {
+            shareLinstener.onShareCancel(mSharePlatform, getString(R.string.share_result_cancel));
+        } else {
+            shareLinstener.onShareFialure(mSharePlatform, getString(R.string.share_result_failure));
+        }
+
+    }
+
+    private static String getString(@StringRes int resId) {
+        return mContext.getResources().getString(resId);
+    }
+
+}

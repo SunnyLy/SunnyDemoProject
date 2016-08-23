@@ -1,0 +1,107 @@
+package com.het.share.widget;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.het.share.R;
+
+/**
+ * Created by sunny on 2016/1/14.
+ * 自定义分享控件，
+ * 可以在xml中设置图标，文字，字体大小，字体颜色等
+ */
+public class CommonShareView extends RelativeLayout {
+    private Drawable shareDrawable;
+    private int shareBgColor;
+    private String shareText;
+    private int shareTextColor;
+    private float shareTextSize;
+    private float shareLayoutWidth;
+    private float shareLayoutHeight;
+
+    private ImageView mShareDrawable;
+    private TextView mShareTitle;
+
+    public void setShareDrawable(Drawable shareDrawable) {
+        this.shareDrawable = shareDrawable;
+        if (mShareDrawable != null) {
+            mShareDrawable.setImageDrawable(shareDrawable);
+        }
+    }
+
+    public void setShareText(String shareText) {
+        this.shareText = shareText;
+        if (mShareTitle != null) {
+            mShareTitle.setText(shareText);
+        }
+    }
+
+    public void setShareTextColor(int shareTextColor) {
+        this.shareTextColor = shareTextColor;
+        if (mShareTitle != null) {
+            mShareTitle.setTextColor(shareTextColor);
+        }
+    }
+
+    public void setShareTextSize(float shareTextSize) {
+        this.shareTextSize = shareTextSize;
+        if (mShareTitle != null) {
+            mShareTitle.setTextSize(shareTextSize);
+        }
+    }
+
+    public CommonShareView(Context context) {
+        this(context, null);
+    }
+
+    public CommonShareView(Context context, AttributeSet attrs) {
+        this(context, attrs, -1);
+    }
+
+    public CommonShareView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initView(context, attrs, defStyleAttr);
+    }
+
+    private void initView(Context context, AttributeSet attrs, int defStyleAttr) {
+
+        Resources resources = context.getResources();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) (context.getSystemService(Context.WINDOW_SERVICE))).getDefaultDisplay().getMetrics(displayMetrics);
+        View view = LayoutInflater.from(context).inflate(R.layout.common_share_widget_share_item, null);
+        mShareDrawable = (ImageView) view.findViewById(R.id.share_item_drawable);
+        mShareTitle = (TextView) view.findViewById(R.id.share_item_title);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CommonShareView);
+        shareLayoutWidth = typedArray.getLayoutDimension(R.styleable.CommonShareView_share_layout_width, LayoutParams.WRAP_CONTENT);
+        shareLayoutHeight = typedArray.getLayoutDimension(R.styleable.CommonShareView_share_layout_height, LayoutParams.WRAP_CONTENT);
+        shareBgColor = typedArray.getColor(R.styleable.CommonShareView_share_bg_color, resources.getColor(R.color.common_share_white));
+        shareDrawable = typedArray.getDrawable(R.styleable.CommonShareView_share_img);
+        shareText = typedArray.getString(R.styleable.CommonShareView_share_text);
+        shareTextColor = typedArray.getColor(R.styleable.CommonShareView_share_textColor, resources.getColor(R.color.common_share_black_text));
+        shareTextSize = typedArray.getDimensionPixelSize(R.styleable.CommonShareView_share_textSize,
+                (int) (resources.getDimension(R.dimen.common_share_textSize14) / (displayMetrics.density) + 0.5f));
+
+        setShareDrawable(shareDrawable);
+
+        setShareText(shareText);
+        setShareTextColor(shareTextColor);
+        setShareTextSize(shareTextSize);
+
+        typedArray.recycle();
+        setGravity(Gravity.CENTER);
+        addView(view);
+    }
+
+}

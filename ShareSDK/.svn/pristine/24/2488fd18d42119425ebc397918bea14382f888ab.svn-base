@@ -1,0 +1,63 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="CommonShareBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="CommonShareTheme" parent="CommonShareBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="CommonShareAnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/common_share_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/common_share_push_bottom_out</item>
+    </style>
+
+    <style name="CommonShareDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/CommonShareAnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 有间隔 不是充满屏幕 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="common_share_horizonal_diliver">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_share_diliverHeight</item>
+        <item name="android:background">@color/common_share_diliverColor</item>
+    </style>
+    
+     <style name="Txt_14_Color36">
+         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/common_share_textcolor_36</item>
+        <item name="android:textSize">@dimen/common_share_textSize14</item>
+    </style>
+
+    <style name="CommonShare_TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/common_share_black_text</item>
+        <item name="android:textSize">@dimen/common_share_textSize14</item>
+    </style>
+
+</resources>

@@ -91,12 +91,13 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
 
     private void initParams() {
         mShareManger = new CommonShareManager.Builder(this).
-                registerWeixin(mWeixinAppId).//注册微信
-                registerQQ(mQQAppId).//注册QQ
-                registerSinaWeibo(mSinaAppkey, "www.baidu.com").//注册微博
-                create();
+                //不使用默认的微信，QQ，Sina分享，添加自己的分享
+               // setShareOperate(new TestShareOpreate(this)).
+                registerWeixin().registerQQ().registerSinaWeibo("www.baidu.com").
+        create();
         mShareDialog = new CommonShareDialog(SunnyShareActivity.this, this);
         mShareDialog.showSina();
+
 
     }
 
@@ -197,7 +198,8 @@ public class SunnyShareActivity extends BaseActivity implements ICommonShareList
         webpage.setImgUrl("http://fileserver1.clife.net:8080/group1/M00/06/BC/Cvtlhlb5ATaATUJfAAD2ZMEiqKk661.jpg");
        // webpage.setImgUrl("http://www.baidu.com/img/bdlogo.png");
         //webpage.setBm(BitmapFactory.decodeResource(mContext.getResources(),R.drawable.pager5));
-        mShareManger.shareWebpage(webpage);//success
+        //mShareManger.shareWebpage(webpage);//success
+        (mShareManger.getShareOperate()).shareWebPage(webpage,mShareManger.getShareObject(webpage.getSharePlatform()));
         //分享图片
         //mShareManger.sharePicOnly(image);//success
         //分享文本

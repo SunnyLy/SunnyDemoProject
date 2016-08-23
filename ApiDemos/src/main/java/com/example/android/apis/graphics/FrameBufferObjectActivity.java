@@ -16,18 +16,19 @@
 
 package com.example.android.apis.graphics;
 
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL;
-import javax.microedition.khronos.opengles.GL10;
-import javax.microedition.khronos.opengles.GL11ExtensionPack;
-
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLU;
 import android.os.Bundle;
 import android.os.SystemClock;
 
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL;
+import javax.microedition.khronos.opengles.GL10;
+import javax.microedition.khronos.opengles.GL11ExtensionPack;
+
 /**
+ * 演示 帧缓冲区对象在 OpenGL ES的扩展
  * Demonstrate the Frame Buffer Object OpenGL ES extension.
  * <p>
  * This sample renders a scene into an offscreen frame buffer, and then
@@ -46,6 +47,7 @@ public class FrameBufferObjectActivity extends Activity {
         private int mSurfaceHeight;
 
         private Triangle mTriangle;
+        //Cube:立方
         private Cube mCube;
         private float mAngle;
         /**

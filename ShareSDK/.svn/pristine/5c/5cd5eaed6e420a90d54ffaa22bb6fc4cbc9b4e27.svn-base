@@ -1,0 +1,70 @@
+package com.het.share.utils;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.het.share.dialog.CommonShareDialog;
+import com.het.share.manager.CommonShareManager;
+import com.sina.weibo.sdk.api.share.BaseResponse;
+import com.sina.weibo.sdk.api.share.IWeiboHandler;
+
+/**
+ * Created by sunny on 2016/1/21.
+ * 此类主要用来处理新浪微博的回调，
+ * 设计此类时，想到，第三方应用调用时，必须在BaseActivity中持有
+ * 该类的引用，在onNewIntent()等方法中调用我的方法
+ */
+public class CommonShareProxy implements IWeiboHandler.Response{
+
+    private Context mContext;
+    private CommonShareManager mShareManager;
+
+    public CommonShareProxy(Context context){
+        this.mContext = context;
+        mShareManager = CommonShareManager.getInstance();
+    }
+
+    /**
+     * 这里在分享界面Activity的onCreate()中调用，
+     *
+     * @param savedInstanceState
+     */
+    public void onCreate(Bundle savedInstanceState){
+        if (mShareManager.mWeibo != null) {
+            Log.e("CommonShareProxy","onCreate");
+            mShareManager.mWeibo.handleWeiboResponse(((Activity)mContext).getIntent(), this);
+        }
+    }
+
+    //这里主要是Tencent分享时会回调
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        Log.e("CommonShareProxy","onActivityResult");
+        //QQ回调
+        if(mShareManager.mTencent != null){
+            mShareManager.mTencent.onActivityResult(requestCode, resultCode, data);
+        }
+
+        //新浪微博回调
+        if(mShareManager.mSsoHandler != null){
+            mShareManager.mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
+        }
+    }
+
+    public void onNewIntent(Intent intent){
+        // 从当前应用唤起微博并进行分享后，返回到当前应用时，需要在此处调用该函数
+        // 来接收微博客户端返回的数据；执行成功，返回 true，并调用
+        // {@link IWeiboHandler.Response#onResponse}；失败返回 false，不调用上述回调
+        Log.e("CommonShareProxy","onNewIntent");
+        if(mShareManager.mWeibo != null)
+            mShareManager.mWeibo.handleWeiboResponse(intent, this);
+    }
+
+    @Override
+    public void onResponse(BaseResponse baseResponse) {
+        Log.e("CommonShareProxy","onResponse");
+       CommonShareDialog.sinaOnResp(baseResponse);
+    }
+}

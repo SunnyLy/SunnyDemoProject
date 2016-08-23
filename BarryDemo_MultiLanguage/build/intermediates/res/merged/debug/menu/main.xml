@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="barry.demo.multilanguage.MainActivity" >
+
+    <item
+        android:id="@+id/action_english"
+        android:orderInCategory="100"
+        android:title="@string/english"/>
+    <item
+        android:id="@+id/action_simple_chinses"
+        android:orderInCategory="100"
+        android:title="@string/simple_chinese"/>
+    <item
+        android:id="@+id/action_traditional_chinese"
+        android:orderInCategory="100"
+        android:title="@string/traditional_chinese"/>
+
+</menu><!-- From: file:/E:/studio_workspace/SunnyDemo1/BarryDemo_MultiLanguage/res/menu/main.xml -->

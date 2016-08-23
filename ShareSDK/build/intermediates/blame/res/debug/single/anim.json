@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\anim\\common_share_push_bottom_out.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\anim\\common_share_push_bottom_out.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\anim\\common_share_push_bottom_in.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\anim\\common_share_push_bottom_in.xml"
+    }
+]

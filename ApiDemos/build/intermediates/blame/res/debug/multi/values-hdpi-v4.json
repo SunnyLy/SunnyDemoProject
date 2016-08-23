@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\values-hdpi\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 691,
+                        "endColumn": 55,
+                        "endOffset": 742
+                    }
+                }
+            }
+        ]
+    }
+]

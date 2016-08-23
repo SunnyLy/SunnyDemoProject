@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\title_icon.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\title_icon.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\action_bar_settings_action_provider.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\action_bar_settings_action_provider.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\checkable.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\checkable.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\shortcuts.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\shortcuts.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\visible.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\visible.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\list_select_menu.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\list_select_menu.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\groups.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\groups.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\actions.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\actions.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\popup.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\popup.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\title_only.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\title_only.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\disabled.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\disabled.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\searchview_in_menu.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\searchview_in_menu.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\content_actions.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\content_actions.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\submenu.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\submenu.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\action_bar_share_action_provider.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\action_bar_share_action_provider.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\display_options_actions.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\display_options_actions.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\category_order.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\category_order.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\camera_menu.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\camera_menu.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\order.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\order.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\menu\\presentation_with_media_router_menu.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\menu\\presentation_with_media_router_menu.xml"
+    }
+]

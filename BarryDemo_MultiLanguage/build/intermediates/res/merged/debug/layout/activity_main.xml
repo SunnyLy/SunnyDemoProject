@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="barry.demo.multilanguage.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:id="@+id/textViewHello"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:gravity="center"
+        android:text="@string/hello_world" />
+
+</FrameLayout>
+<!-- From: file:/E:/studio_workspace/SunnyDemo1/BarryDemo_MultiLanguage/res/layout/activity_main.xml -->

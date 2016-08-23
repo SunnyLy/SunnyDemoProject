@@ -16,6 +16,15 @@
 
 package com.example.android.apis.graphics;
 
+import android.app.Activity;
+import android.opengl.ETC1Util;
+import android.opengl.GLES10;
+import android.opengl.GLSurfaceView;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.example.android.apis.R;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,16 +35,9 @@ import java.nio.ByteOrder;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import android.app.Activity;
-import android.opengl.ETC1Util;
-import android.opengl.GLES10;
-import android.opengl.GLSurfaceView;
-import android.os.Bundle;
-import android.util.Log;
-
-import com.example.android.apis.R;
-
 /**
+ * 该类演示如何使用ETC1格式的压缩纹理
+ * 本例可以使用资源型纹理（离线压缩时使用etc1tool工具类进行压缩）或动态创建的压缩图像来重新编译。
  * Demonstrate how to use ETC1 format compressed textures.
  * This sample can be recompiled to use either resource-based
  * textures (compressed offline using the etc1tool), or
@@ -62,8 +64,10 @@ public class CompressedTextureActivity extends Activity {
         mGLView.setEGLConfigChooser(false);
         StaticTriangleRenderer.TextureLoader loader;
         if (TEST_CREATE_TEXTURE) {
+            //动态创建压缩纹理
             loader = new SyntheticCompressedTextureLoader();
         } else {
+            //资源型纹理
             loader = new CompressedTextureLoader();
         }
         mGLView.setRenderer(new StaticTriangleRenderer(this, loader));

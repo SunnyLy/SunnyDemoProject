@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_view_clicked.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_view_clicked.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap4.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap4.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_ringer_normal.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_ringer_normal.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_ringer_vibrate.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_ringer_vibrate.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap1.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap1.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_ringer_silent.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_ringer_silent.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap3.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap3.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap0.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap0.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_screen_on.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_screen_on.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_view_focused_or_selected.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_view_focused_or_selected.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\robot.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\robot.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap5.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap5.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_window_state_changed.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_window_state_changed.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_view_hover_enter.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_view_hover_enter.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\test_cbr.mp3",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\test_cbr.mp3"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\sound_screen_off.ogg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\sound_screen_off.ogg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\skycubemap2.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\skycubemap2.jpg"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\raw\\androids.pkm",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\raw\\androids.pkm"
+    }
+]

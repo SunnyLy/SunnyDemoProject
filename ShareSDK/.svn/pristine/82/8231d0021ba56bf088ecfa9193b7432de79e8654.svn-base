@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="abs__action_bar_default_height">48.0dip</dimen>
+    <dimen name="rl_top_height">250dp</dimen>
+    
+    <dimen name="slidingmenu_offset">130dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="menu_width">150dp</dimen>
+    
+    
+    <dimen name="personalInfoheight">280dp</dimen>
+    <dimen name="personalInfoEditHeight">48dp</dimen>
+    
+     <dimen name="arrowUp">55dp</dimen>
+     <dimen name="title_height">50dp</dimen>
+     
+     <!-- textSize -->
+     <dimen name="textSize10">10sp</dimen>
+     <dimen name="textSize12">12sp</dimen>
+     <dimen name="textSize14">14sp</dimen>
+     <dimen name="textSize15">15sp</dimen>
+     <dimen name="textSize16">16sp</dimen>
+     <dimen name="textSize17">17sp</dimen>
+     <dimen name="textSize18">18sp</dimen>
+     <dimen name="textSize20">20sp</dimen>
+     <dimen name="textSize22">22sp</dimen>
+     
+     <!-- Login -->
+     <dimen name="diliverHeight">1px</dimen>
+     
+     <dimen name="login_logo">80dp</dimen>
+     <dimen name="reg_edit_height">55dp</dimen>
+     <dimen name="btn_height_40">40dp</dimen>
+     <dimen name="btn_big_hieght">48dp</dimen>
+     <dimen name="style_edit_height_top">54.5dp</dimen>
+     
+     <dimen name="dimens5">5dp</dimen>
+     <dimen name="dimens7">7dp</dimen>
+     <dimen name="dimens10">10dp</dimen>
+     <dimen name="dimens12">12dp</dimen>
+     <dimen name="dimens14">14dp</dimen>
+     <dimen name="dimens15">15dp</dimen>
+     <dimen name="dimens16">16dp</dimen>
+     <dimen name="dimens18">18dp</dimen>
+     <dimen name="dimens20">20dp</dimen>
+     <dimen name="dimens25">25dp</dimen>
+     <dimen name="dimens28">28dp</dimen>
+     <dimen name="dimens30">30dp</dimen>
+     <dimen name="dimens35">35dp</dimen>
+     <dimen name="dimens37">37dp</dimen>
+     <dimen name="dimens40">40dp</dimen>
+     <dimen name="dimens44">44dp</dimen>
+     <dimen name="dimens45">45dp</dimen>
+     <dimen name="dimens46">46dp</dimen>
+     <dimen name="dimens50">50dp</dimen>
+     <dimen name="dimens55">55dp</dimen>
+     <dimen name="dimens60">60dp</dimen>
+     <dimen name="dimens64">64dp</dimen>
+     <dimen name="dimens70">70dp</dimen>
+     <dimen name="dimens73">73dp</dimen>
+     <dimen name="dimens80">80dp</dimen>
+     <dimen name="dimens88">88dp</dimen>
+     <dimen name="dimens100">100dp</dimen>
+     <dimen name="dimens110">110dp</dimen>
+     <dimen name="dimens115">115dp</dimen>
+     <dimen name="dimens138">138dp</dimen>
+     <dimen name="dimens150">150dp</dimen>
+     <dimen name="dimens157">157dp</dimen>
+     <dimen name="dimens180">180dp</dimen>
+	 <dimen name="dimens200">200dp</dimen>
+     <dimen name="dimens34">34dp</dimen>
+     <dimen name="dimens85">85dp</dimen>
+     <dimen name="dimens129">129dp</dimen>
+     <dimen name="dimens179">179dp</dimen>
+     <dimen name="dimens330">330dp</dimen>
+	 
+         <!-- 日历 -->
+    <dimen name="week_top_margin">74px</dimen>
+    <dimen name="week_left_margin">116px</dimen>
+    <dimen name="cell_width">58px</dimen>
+    <dimen name="cell_heigh">53px</dimen>
+    <dimen name="cell_margin_top">92px</dimen>
+    <dimen name="cell_margin_left">115px</dimen>
+    <dimen name="cell_text_size">26px</dimen>
+
+</resources>

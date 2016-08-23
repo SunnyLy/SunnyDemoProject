@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/E:/studio_workspace/SunnyDemo1/BarryDemo_MultiLanguage/res/values-zh-rTW/strings.xml -->
+    <eat-comment/>
+    <string name="hello_world">你好，世界，繁體字！</string>
+</resources>

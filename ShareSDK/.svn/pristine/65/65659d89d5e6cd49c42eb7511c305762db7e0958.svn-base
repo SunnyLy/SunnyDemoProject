@@ -1,0 +1,359 @@
+package com.het.share.model;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.support.annotation.Nullable;
+import android.text.TextUtils;
+
+import com.facebook.common.executors.CallerThreadExecutor;
+import com.facebook.common.references.CloseableReference;
+import com.facebook.datasource.DataSource;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipeline;
+import com.facebook.imagepipeline.datasource.BaseBitmapDataSubscriber;
+import com.facebook.imagepipeline.image.CloseableImage;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.het.share.R;
+import com.het.share.utils.ShareSDKUtils;
+import com.sina.weibo.sdk.api.BaseMediaObject;
+import com.sina.weibo.sdk.api.ImageObject;
+import com.sina.weibo.sdk.api.MusicObject;
+import com.sina.weibo.sdk.api.TextObject;
+import com.sina.weibo.sdk.api.VideoObject;
+import com.sina.weibo.sdk.api.WebpageObject;
+import com.sina.weibo.sdk.api.WeiboMessage;
+import com.sina.weibo.sdk.api.WeiboMultiMessage;
+import com.sina.weibo.sdk.api.share.IWeiboShareAPI;
+import com.sina.weibo.sdk.api.share.SendMessageToWeiboRequest;
+import com.sina.weibo.sdk.api.share.SendMultiMessageToWeiboRequest;
+import com.sina.weibo.sdk.utils.LogUtil;
+import com.sina.weibo.sdk.utils.Utility;
+import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.sdk.modelmsg.WXImageObject;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+/**
+ * Created by sunny on 2016/1/9.
+ * 新浪微博基本实现类：
+ * 1，分享图文
+ * 2，分享图片
+ * 3，分享音乐
+ * 4，分享视频
+ * 5，分享语音
+ * ……
+ */
+public class SinaWeibo {
+    private Context mContext;
+
+    public SinaWeibo(Context context) {
+        this.mContext = context;
+    }
+
+    /**
+     * 1.新浪微博分享文本
+     *
+     * @param title          标题
+     * @param description    描述
+     * @param mWeiboShareAPI 新浪微博分享对像
+     */
+    public void shareTextToSina(CommonShareBaseBean textShareBean, IWeiboShareAPI mWeiboShareAPI) {
+
+        // 1. 初始化微博的分享消息
+        TextObject textObj = new TextObject();
+        textObj.title = textShareBean.getTitle();
+        textObj.text = textShareBean.getDescription();
+
+        WeiboMessage weiboMessage = new WeiboMessage();
+        weiboMessage.mediaObject = textObj;
+
+        // 2. 初始化从第三方到微博的消息请求
+        SendMessageToWeiboRequest request = new SendMessageToWeiboRequest();
+        // 用transaction唯一标识一个请求
+        request.transaction = String.valueOf(System.currentTimeMillis());
+        request.message = weiboMessage;
+
+        // 3. 发送请求消息到微博，唤起微博分享界面
+        mWeiboShareAPI.sendRequest((Activity) mContext, request);
+
+    }
+
+    /**
+     * 2.分享图片
+     *
+     * @param title
+     * @param description
+     * @param imgUrl
+     * @param mWeiboShareAPI
+     */
+    public void sharePicToSina(CommonShareImage image, IWeiboShareAPI mWeiboShareAPI) {
+
+        WeiboMultiMessage weiboMessage = new WeiboMultiMessage();
+        weiboMessage.mediaObject = getImageObj(image);
+
+
+        // 2. 初始化从第三方到微博的消息请求
+        SendMultiMessageToWeiboRequest request = new SendMultiMessageToWeiboRequest();
+        // 用transaction唯一标识一个请求
+        request.transaction = String.valueOf(System.currentTimeMillis());
+        request.multiMessage = weiboMessage;
+
+        // 3. 发送请求消息到微博，唤起微博分享界面
+        mWeiboShareAPI.sendRequest((Activity) mContext, request);
+
+    }
+
+    /**
+     * 3.分享网页
+     *
+     * @param title       网页标题
+     * @param description 网页描述
+     * @param imgUrl      图片地址
+     * @param targetUrl   网页链接地址
+     */
+    public void shareWebpageToSina(CommonShareWebpage webpage, IWeiboShareAPI weiboShareAPI) {
+
+        WeiboMultiMessage weiboMessage = new WeiboMultiMessage();
+        weiboMessage.mediaObject = getWebpageObject(webpage);
+
+        // 2. 初始化从第三方到微博的消息请求
+        SendMultiMessageToWeiboRequest request = new SendMultiMessageToWeiboRequest();
+        // 用transaction唯一标识一个请求
+        request.transaction = String.valueOf(System.currentTimeMillis());
+        request.multiMessage = weiboMessage;
+
+        // 3. 发送请求消息到微博，唤起微博分享界面
+        weiboShareAPI.sendRequest((Activity) mContext, request);
+    }
+
+    /**
+     * 4.分享音乐
+     *
+     * @param title        音乐标题
+     * @param description  音乐描述
+     * @param imgUrl       图片路径
+     * @param musicUrl     音乐的网页链接
+     * @param musicDataUrl 歌曲的地址
+     */
+    public void shareMusicToSina(CommonShareMusic shareMusic, IWeiboShareAPI weiboShareAPI) {
+        WeiboMultiMessage weiboMessage = new WeiboMultiMessage();
+        weiboMessage.mediaObject = getMusiceObject(shareMusic);
+
+        // 2. 初始化从第三方到微博的消息请求
+        SendMultiMessageToWeiboRequest request = new SendMultiMessageToWeiboRequest();
+        // 用transaction唯一标识一个请求
+        request.transaction = String.valueOf(System.currentTimeMillis());
+        request.multiMessage = weiboMessage;
+
+        // 3. 发送请求消息到微博，唤起微博分享界面
+        weiboShareAPI.sendRequest((Activity) mContext, request);
+    }
+
+    private void setThumbImage(String imgUrl, BaseMediaObject musicObject) {
+        if (!TextUtils.isEmpty(imgUrl)) {
+            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
+                getNetBitmap(imgUrl, musicObject);
+            } else {
+                getLocalBitmap(imgUrl, musicObject);
+            }
+        }
+    }
+
+    /**
+     * 5.分享视频
+     *
+     * @param title        视频标题
+     * @param description  视频描述
+     * @param imgUrl       视频图片
+     * @param videoUrl     视频网页地址
+     * @param videoDataUrl 视频资源地址
+     */
+    public void shareVideoToSina(CommonShareVideo video, IWeiboShareAPI weiboShareAPI) {
+        // 创建媒体消息
+        VideoObject videoObject = new VideoObject();
+        videoObject.identify = Utility.generateGUID();
+        videoObject.title = video.getTitle();
+        videoObject.description = video.getDescription();
+        Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.share_launcher);
+        // 设置 Bitmap 类型的图片到视频对象里  设置缩略图。 注意：最终压缩过的缩略图大小不得超过 32kb。
+
+
+        ByteArrayOutputStream os = null;
+        try {
+            os = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 85, os);
+            System.out.println("kkkkkkk    size  " + os.toByteArray().length);
+        } catch (Exception e) {
+            e.printStackTrace();
+            LogUtil.e("Weibo.BaseMediaObject", "put thumb failed");
+        } finally {
+            try {
+                if (os != null) {
+                    os.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        videoObject.setThumbImage(bitmap);
+        videoObject.actionUrl = video.getTargetUrl();
+        videoObject.dataUrl = video.getVideoUrl();
+        videoObject.dataHdUrl = video.getVideoUrl();
+        videoObject.duration = 10;
+        videoObject.defaultText = video.getDescription();
+
+        WeiboMessage weiboMessage = new WeiboMessage();
+        weiboMessage.mediaObject = videoObject;
+
+        SendMessageToWeiboRequest request = new SendMessageToWeiboRequest();
+        request.message = weiboMessage;
+        // 用transaction唯一标识一个请求
+        request.transaction = String.valueOf(System.currentTimeMillis());
+
+        // 3. 发送请求消息到微博，唤起微博分享界面
+        weiboShareAPI.sendRequest((Activity) mContext, request);
+
+    }
+
+
+    /**
+     * 获取网络图片
+     *
+     * @param imgUrl 图片地址
+     * @param msg    WXMediaMes 图片描述
+     * @param iwxapi
+     */
+    private void getNetBitmap(String imgUrl, final BaseMediaObject mediaObject) {
+        //用Fresco获取bitmap
+        ImageRequest imageRequest = ImageRequestBuilder.newBuilderWithSource(Uri.parse(imgUrl))
+                .setProgressiveRenderingEnabled(true).build();
+        ImagePipeline imagePipeline = Fresco.getImagePipeline();
+        DataSource<CloseableReference<CloseableImage>> dataSource =
+                imagePipeline.fetchDecodedImage(imageRequest, mContext);
+        dataSource.subscribe(new BaseBitmapDataSubscriber() {
+            @Override
+            protected void onNewResultImpl(@Nullable Bitmap bitmap) {
+                if (bitmap != null) {
+                    if (mediaObject instanceof MusicObject) {
+                        //音乐
+                        mediaObject.setThumbImage(bitmap);
+                    } else if (mediaObject instanceof ImageObject) {
+                        ((ImageObject) mediaObject).setImageObject(bitmap);
+                    } else if (mediaObject instanceof WebpageObject) {
+                        mediaObject.setThumbImage(bitmap);
+                    }
+                }
+            }
+
+            @Override
+            protected void onFailureImpl(DataSource<CloseableReference<CloseableImage>> dataSource) {
+
+            }
+        }, CallerThreadExecutor.getInstance());
+
+    }
+
+    /**
+     * 获取本地图片
+     *
+     * @param imgUrl
+     * @param msg
+     * @param req
+     * @param iwxapi
+     */
+    private void getLocalBitmap(String imgUrl, BaseMediaObject mediaObject) {
+
+        Bitmap bitmap = BitmapFactory.decodeFile(imgUrl);
+        if (bitmap != null) {
+            if (mediaObject instanceof MusicObject) {
+                //音乐
+                mediaObject.setThumbImage(bitmap);
+            } else if (mediaObject instanceof ImageObject) {
+                ((ImageObject) mediaObject).setImageObject(bitmap);
+            } else if (mediaObject instanceof WebpageObject) {
+                mediaObject.setThumbImage(bitmap);
+            }
+        }
+    }
+
+
+    /**
+     * 创建多媒体（音乐）对象
+     *
+     * @param shareMusic
+     * @return
+     */
+    private MusicObject getMusiceObject(CommonShareMusic shareMusic) {
+        // 创建媒体消息
+        MusicObject musicObject = new MusicObject();
+        musicObject.identify = Utility.generateGUID();
+        musicObject.title = shareMusic.getTitle();
+        musicObject.description = shareMusic.getDescription();
+
+
+        setThumbImageToObject(shareMusic, musicObject);
+        musicObject.actionUrl = shareMusic.getTargetUrl();
+        musicObject.dataUrl = shareMusic.getMusicDataUrl();
+        musicObject.dataHdUrl = shareMusic.getMusicDataUrl();
+        musicObject.duration = 10;
+        musicObject.defaultText = "Music 默认文案";
+        return musicObject;
+    }
+
+    /**
+     * 创建多媒体(网页）消息对象
+     *
+     * @param webpage
+     * @return
+     */
+    private WebpageObject getWebpageObject(CommonShareWebpage webpage) {
+        WebpageObject mediaObject = new WebpageObject();
+        mediaObject.identify = Utility.generateGUID();
+        mediaObject.title = webpage.getTitle();
+        mediaObject.description = webpage.getDescription();
+
+        setThumbImageToObject(webpage, mediaObject);
+        mediaObject.actionUrl = webpage.getTargetUrl();
+        mediaObject.defaultText = webpage.getDescription();
+        return mediaObject;
+    }
+
+    /**
+     * 创建图片消息对象。
+     *
+     * @return 图片消息对象。
+     */
+    private ImageObject getImageObj(CommonShareImage image) {
+        ImageObject imageObject = new ImageObject();
+        setThumbImageToObject(image, imageObject);
+        return imageObject;
+    }
+
+
+    /**
+     * 往多媒体消息对象中设置缩略图
+     *
+     * @param shareBaseBean
+     * @param baseMediaObject
+     */
+    private void setThumbImageToObject(CommonShareBaseBean shareBaseBean, BaseMediaObject baseMediaObject) {
+        String imgUrl = shareBaseBean.getImgUrl();
+        if (TextUtils.isEmpty(imgUrl)) {
+            Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.common_share_ic_launcher);
+            // 设置 Bitmap 类型的图片到视频对象里        设置缩略图。 注意：最终压缩过的缩略图大小不得超过 32kb。
+            baseMediaObject.setThumbImage(bitmap);
+        } else {
+            setThumbImage(imgUrl, baseMediaObject);
+        }
+    }
+
+}

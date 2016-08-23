@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="atLeastHoneycomb">true</bool>
+    <style name="ThemeDialogWhenLarge" parent="android:style/Theme.Holo.DialogWhenLarge">
+    </style>
+    <style name="ThemeHolo" parent="android:Theme.Holo">
+    </style>
+    <style name="ThemeHoloDialog" parent="android:Theme.Holo.Dialog">
+    </style>
+</resources>

@@ -166,7 +166,6 @@
         android:required="false" />
 
     <application
-        android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
@@ -249,7 +248,7 @@
             android:name="com.morgoo.droidplugin.stub.ShortcutProxyActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <!-- 预注册一些Activity，为了插件使用 -->
+ <!-- 预注册一些Activity，为了插件使用 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP00"
             android:allowTaskReparenting="true"
@@ -387,7 +386,7 @@
             android:authorities="com.morgoo.droidplugin_stub_P00"
             android:exported="false"
             android:label="@string/stub_name_povider" />
-        <!-- 第二个插件 -->
+ <!-- 第二个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP01"
             android:allowTaskReparenting="true"
@@ -535,7 +534,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP01" />
-        <!-- 第三个插件 -->
+ <!-- 第三个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP02"
             android:allowTaskReparenting="true"
@@ -683,7 +682,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP02" />
-        <!-- 第四个插件 -->
+ <!-- 第四个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP03"
             android:allowTaskReparenting="true"
@@ -831,7 +830,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP03" />
-        <!-- 第五个插件 -->
+ <!-- 第五个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP04"
             android:allowTaskReparenting="true"
@@ -979,7 +978,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP04" />
-        <!-- 第六个插件 -->
+ <!-- 第六个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP05"
             android:allowTaskReparenting="true"
@@ -1127,7 +1126,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP05" />
-        <!-- 第七个插件 -->
+ <!-- 第七个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP06"
             android:allowTaskReparenting="true"
@@ -1275,7 +1274,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP06" />
-        <!-- 第八个插件 -->
+ <!-- 第八个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP07"
             android:allowTaskReparenting="true"
@@ -1423,7 +1422,7 @@
             android:exported="false"
             android:label="@string/stub_name_povider"
             android:process=":PluginP07" />
-        <!-- 第九个插件 -->
+ <!-- 第九个插件 -->
         <activity
             android:name="com.morgoo.droidplugin.stub.ActivityStub$StandardP08"
             android:allowTaskReparenting="true"

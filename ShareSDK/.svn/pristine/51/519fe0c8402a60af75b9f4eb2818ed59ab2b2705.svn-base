@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonShareView">
+        <!--item背景色-->
+        <attr name="share_bg_color" format="reference|color" />
+        <!--item宽度-->
+        <attr name="share_layout_width" format="reference|dimension" />
+        <!--item高度-->
+        <attr name="share_layout_height" format="reference|dimension" />
+        <!--分享图标-->
+        <attr name="share_img" format="reference" />
+        <!--分享标题-->
+        <attr name="share_text" format="reference|string" />
+        <!--分享标题字体颜色-->
+        <attr name="share_textColor" format="reference|color" />
+        <!--分享标题字体大小-->
+        <attr name="share_textSize" format="reference|dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ViewFlow">
+        <attr name="sidebuffer" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleFlowIndicator">
+        <attr name="activeColor" format="color" />
+        <attr name="inactiveColor" format="color" />
+        <attr name="flowradius" format="dimension" />
+        <attr name="flowcentered" format="boolean" />
+        <attr name="indicatorRadius" format="dimension" />
+        <attr name="spacing" format="dimension" />
+        <attr name="indicatorCentered" format="boolean" />
+        <attr name="fadeOut" format="integer" />
+        <attr name="inactiveType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="activeType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="indicatorSnap" format="boolean" />
+        <attr name="circleSeparation" format="dimension" />
+        <attr name="activeRadius" format="dimension" />
+    </declare-styleable>
+</resources>

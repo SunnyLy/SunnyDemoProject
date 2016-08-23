@@ -30,7 +30,9 @@ class Cube
     public Cube()
     {
         int one = 0x10000;
+        //各点坐标
         int vertices[] = {
+                //X,Y,Z
                 -one, -one, -one,
                 one, -one, -one,
                 one,  one, -one,
@@ -41,6 +43,9 @@ class Cube
                 -one,  one,  one,
         };
 
+        //颜色规则：R,G,B,A:最后的A表示透明度
+        //以原点为起点，其它坐标点依次为终点，
+        //两端为给定颜色，中间则为渐变色
         int colors[] = {
                 0,    0,    0,  one,
                 one,    0,    0,  one,
@@ -52,6 +57,7 @@ class Cube
                 0,  one,  one,  one,
         };
 
+        //索引
         byte indices[] = {
                 0, 4, 5,    0, 5, 1,
                 1, 5, 6,    1, 6, 2,

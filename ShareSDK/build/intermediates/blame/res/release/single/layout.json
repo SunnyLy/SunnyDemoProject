@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\layout\\common_share_dialog.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\layout\\common_share_dialog.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\layout\\common_share_widget_gridview.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\layout\\common_share_widget_gridview.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\layout\\common_share_widget_share_item.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\layout\\common_share_widget_share_item.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\layout\\common_vertical_dialog_layout.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\layout\\common_vertical_dialog_layout.xml"
+    }
+]

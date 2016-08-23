@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\menu\\gatt_services.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\res\\menu\\gatt_services.xml"
+    }
+]

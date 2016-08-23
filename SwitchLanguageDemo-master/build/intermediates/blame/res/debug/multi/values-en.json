@@ -1,0 +1,121 @@
+[
+    {
+        "outputFile": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\build\\intermediates\\res\\merged\\debug\\values-en\\values-en.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 55,
+                        "endOffset": 107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 111,
+                    "endColumn": 43,
+                    "endOffset": 150
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 1,
+                        "startOffset": 296,
+                        "endColumn": 40,
+                        "endOffset": 335
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 155,
+                    "endColumn": 43,
+                    "endOffset": 194
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 1,
+                        "startOffset": 255,
+                        "endColumn": 40,
+                        "endOffset": 294
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 199,
+                    "endColumn": 85,
+                    "endOffset": 280
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 85,
+                        "endOffset": 193
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 54,
+                    "endOffset": 335
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 1,
+                        "startOffset": 337,
+                        "endColumn": 51,
+                        "endOffset": 387
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 340,
+                    "endColumn": 59,
+                    "endOffset": 395
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\SwitchLanguageDemo-master\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 198,
+                        "endColumn": 59,
+                        "endOffset": 253
+                    }
+                }
+            }
+        ]
+    }
+]

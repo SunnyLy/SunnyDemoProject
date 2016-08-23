@@ -88,13 +88,13 @@ public class IActivityManagerHook extends ProxyHook {
             FieldUtils.writeField(obj, "mInstance", object);
 
             //这里使用方式1，如果成功的话，会导致上面的写操作被覆盖。
-            FieldUtils.writeStaticField(cls, "gDefault", new android.util.Singleton<Object>() {
+            /*FieldUtils.writeStaticField(cls, "gDefault", new android.util.Singleton<Object>() {
                 @Override
                 protected Object create() {
                     Log.e(TAG, "Install ActivityManager 3 Hook  old=%s,new=%s", mOldObj, object);
                     return object;
                 }
-            });
+            });*/
 
             Log.i(TAG, "Install ActivityManager Hook 2 old=%s,new=%s", mOldObj.toString(), object);
             Object iam2 = ActivityManagerNativeCompat.getDefault();

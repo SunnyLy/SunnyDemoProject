@@ -1,0 +1,35 @@
+package com.het.share.utils;
+
+import android.graphics.Bitmap;
+
+import java.io.ByteArrayOutputStream;
+
+/**
+ * Created by sunny on 2016/1/12.
+ * Annotion:
+ */
+public class ShareSDKUtils {
+
+    /**
+     * 把图片转成二进制数组
+     * @param bmp
+     * @param needRecycle
+     * @return
+     */
+    public static byte[] bmpToByteArray(final Bitmap bmp, final boolean needRecycle) {
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, output);
+        if (needRecycle) {
+            bmp.recycle();
+        }
+
+        byte[] result = output.toByteArray();
+        try {
+            output.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimens15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens15"
+        android:layout_marginRight="@dimen/dimens15"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 朋友圈 -->
+        <com.het.share.widget.CommonShareView
+            android:id="@+id/wechatmomentsRe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:share_bg_color="@color/white"
+            app:share_img="@drawable/logo_wechatmoments"
+            app:share_text="朋友圈" />
+
+        <!-- 微信好友 -->
+        <com.het.share.widget.CommonShareView
+            android:id="@+id/wechatRe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:share_img="@drawable/logo_wechat"
+            app:share_text="微信" />
+
+        <!-- qq空间 -->
+        <com.het.share.widget.CommonShareView
+            android:id="@+id/qqzoneRe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:share_img="@drawable/logo_qzone"
+            app:share_text="qq空间" />
+
+        <!-- qq -->
+        <com.het.share.widget.CommonShareView
+            android:id="@+id/qqRe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:share_img="@drawable/logo_qq"
+            app:share_text="qq" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizonal_diliver"
+        android:layout_marginTop="@dimen/dimens73" />
+
+    <Button
+        android:id="@+id/cancel_share"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens55"
+        android:background="@drawable/bg_color_selector"
+        android:text="取消"
+        android:textColor="@color/textcolor_36"
+        android:textSize="@dimen/textSize16" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\smlnpatch120dpi.9.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-ldpi\\smlnpatch120dpi.9.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\npatch120dpi.9.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-ldpi\\npatch120dpi.9.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\stylogo120dpi.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-ldpi\\stylogo120dpi.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\reslogo120dpi.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-ldpi\\reslogo120dpi.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\logo120dpi.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable-ldpi\\logo120dpi.png"
+    }
+]

@@ -103,6 +103,19 @@ public class BluetoothLeService extends Service {
             }
         }
 
+        /**
+         * 当App向设备写数据
+         * @param gatt
+         * @param characteristic
+         * @param status
+         */
+        @Override
+        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+           if(status == BluetoothGatt.GATT_SUCCESS){
+               //写成功。
+           }
+        }
+
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt,
                                             BluetoothGattCharacteristic characteristic) {

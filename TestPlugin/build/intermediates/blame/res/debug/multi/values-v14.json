@@ -1,0 +1,1047 @@
+[
+    {
+        "outputFile": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\res\\merged\\debug\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 191
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 220,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 356
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 196,
+                    "endLine": 7,
+                    "endColumn": 12,
+                    "endOffset": 382
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 387,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 574
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\SunnyDemo1.Libraries\\DroidPlugin\\unspecified\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 246,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 433
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 579,
+                    "endColumn": 131,
+                    "endOffset": 706
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 178,
+                        "endColumn": 138,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 711,
+                    "endColumn": 125,
+                    "endOffset": 832
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 318,
+                        "endColumn": 132,
+                        "endOffset": 446
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 837,
+                    "endColumn": 132,
+                    "endOffset": 965
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 452,
+                        "endColumn": 139,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 970,
+                    "endColumn": 132,
+                    "endOffset": 1098
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 593,
+                        "endColumn": 139,
+                        "endOffset": 728
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1103,
+                    "endColumn": 137,
+                    "endOffset": 1236
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 734,
+                        "endColumn": 144,
+                        "endOffset": 874
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1241,
+                    "endColumn": 131,
+                    "endOffset": 1368
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 880,
+                        "endColumn": 138,
+                        "endOffset": 1014
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1373,
+                    "endColumn": 138,
+                    "endOffset": 1507
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1020,
+                        "endColumn": 145,
+                        "endOffset": 1161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1512,
+                    "endColumn": 138,
+                    "endOffset": 1646
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1167,
+                        "endColumn": 145,
+                        "endOffset": 1308
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1651,
+                    "endColumn": 130,
+                    "endOffset": 1777
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1314,
+                        "endColumn": 137,
+                        "endOffset": 1447
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1782,
+                    "endColumn": 138,
+                    "endOffset": 1916
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1453,
+                        "endColumn": 145,
+                        "endOffset": 1594
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1921,
+                    "endColumn": 154,
+                    "endOffset": 2071
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1600,
+                        "endColumn": 161,
+                        "endOffset": 1757
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2076,
+                    "endColumn": 132,
+                    "endOffset": 2204
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1763,
+                        "endColumn": 139,
+                        "endOffset": 1898
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2209,
+                    "endColumn": 148,
+                    "endOffset": 2353
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1904,
+                        "endColumn": 155,
+                        "endOffset": 2055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2358,
+                    "endColumn": 140,
+                    "endOffset": 2494
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2061,
+                        "endColumn": 147,
+                        "endOffset": 2204
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2499,
+                    "endColumn": 156,
+                    "endOffset": 2651
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2210,
+                        "endColumn": 163,
+                        "endOffset": 2369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2656,
+                    "endColumn": 134,
+                    "endOffset": 2786
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2375,
+                        "endColumn": 141,
+                        "endOffset": 2512
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2791,
+                    "endColumn": 150,
+                    "endOffset": 2937
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 2518,
+                        "endColumn": 157,
+                        "endOffset": 2671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2942,
+                    "endLine": 51,
+                    "endColumn": 12,
+                    "endOffset": 4571
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2798,
+                        "endLine": 61,
+                        "endColumn": 12,
+                        "endOffset": 4427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 4576,
+                    "endLine": 75,
+                    "endColumn": 12,
+                    "endOffset": 6217
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 4433,
+                        "endLine": 86,
+                        "endColumn": 12,
+                        "endOffset": 6074
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 6222,
+                    "endLine": 99,
+                    "endColumn": 12,
+                    "endOffset": 7908
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 88,
+                        "startColumn": 4,
+                        "startOffset": 6080,
+                        "endLine": 111,
+                        "endColumn": 12,
+                        "endOffset": 7766
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 7913,
+                    "endColumn": 90,
+                    "endOffset": 7999
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 113,
+                        "startColumn": 4,
+                        "startOffset": 7893,
+                        "endColumn": 97,
+                        "endOffset": 7986
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 8004,
+                    "endColumn": 102,
+                    "endOffset": 8102
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 7992,
+                        "endColumn": 109,
+                        "endOffset": 8097
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 8107,
+                    "endColumn": 104,
+                    "endOffset": 8207
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 8103,
+                        "endColumn": 111,
+                        "endOffset": 8210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 8212,
+                    "endColumn": 106,
+                    "endOffset": 8314
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 8216,
+                        "endColumn": 113,
+                        "endOffset": 8325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 8319,
+                    "endColumn": 106,
+                    "endOffset": 8421
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 121,
+                        "startColumn": 4,
+                        "startOffset": 8331,
+                        "endColumn": 113,
+                        "endOffset": 8440
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 8426,
+                    "endColumn": 96,
+                    "endOffset": 8518
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 123,
+                        "startColumn": 4,
+                        "startOffset": 8446,
+                        "endColumn": 103,
+                        "endOffset": 8545
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 8523,
+                    "endColumn": 116,
+                    "endOffset": 8635
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 8551,
+                        "endColumn": 123,
+                        "endOffset": 8670
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 8640,
+                    "endColumn": 114,
+                    "endOffset": 8750
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 127,
+                        "startColumn": 4,
+                        "startOffset": 8676,
+                        "endColumn": 121,
+                        "endOffset": 8793
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 8755,
+                    "endLine": 114,
+                    "endColumn": 12,
+                    "endOffset": 9148
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 129,
+                        "startColumn": 4,
+                        "startOffset": 8799,
+                        "endLine": 135,
+                        "endColumn": 12,
+                        "endOffset": 9192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 9153,
+                    "endColumn": 112,
+                    "endOffset": 9261
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 137,
+                        "startColumn": 4,
+                        "startOffset": 9198,
+                        "endColumn": 113,
+                        "endOffset": 9307
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 9266,
+                    "endColumn": 106,
+                    "endOffset": 9368
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 139,
+                        "startColumn": 4,
+                        "startOffset": 9313,
+                        "endColumn": 107,
+                        "endOffset": 9416
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 9373,
+                    "endColumn": 93,
+                    "endOffset": 9462
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 141,
+                        "startColumn": 4,
+                        "startOffset": 9422,
+                        "endColumn": 94,
+                        "endOffset": 9512
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 9467,
+                    "endColumn": 90,
+                    "endOffset": 9553
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 9518,
+                        "endColumn": 97,
+                        "endOffset": 9611
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 9558,
+                    "endColumn": 86,
+                    "endOffset": 9640
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 145,
+                        "startColumn": 4,
+                        "startOffset": 9617,
+                        "endColumn": 87,
+                        "endOffset": 9700
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 9645,
+                    "endColumn": 102,
+                    "endOffset": 9743
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 147,
+                        "startColumn": 4,
+                        "startOffset": 9706,
+                        "endColumn": 109,
+                        "endOffset": 9811
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 9748,
+                    "endColumn": 114,
+                    "endOffset": 9858
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 149,
+                        "startColumn": 4,
+                        "startOffset": 9817,
+                        "endColumn": 121,
+                        "endOffset": 9934
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 9863,
+                    "endColumn": 130,
+                    "endOffset": 9989
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 151,
+                        "startColumn": 4,
+                        "startOffset": 9940,
+                        "endColumn": 137,
+                        "endOffset": 10073
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 9994,
+                    "endColumn": 116,
+                    "endOffset": 10106
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 153,
+                        "startColumn": 4,
+                        "startOffset": 10079,
+                        "endColumn": 123,
+                        "endOffset": 10198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 10111,
+                    "endColumn": 132,
+                    "endOffset": 10239
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 155,
+                        "startColumn": 4,
+                        "startOffset": 10204,
+                        "endColumn": 139,
+                        "endOffset": 10339
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 10244,
+                    "endColumn": 118,
+                    "endOffset": 10358
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 157,
+                        "startColumn": 4,
+                        "startOffset": 10345,
+                        "endColumn": 125,
+                        "endOffset": 10466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 10363,
+                    "endColumn": 134,
+                    "endOffset": 10493
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 159,
+                        "startColumn": 4,
+                        "startOffset": 10472,
+                        "endColumn": 141,
+                        "endOffset": 10609
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 10498,
+                    "endColumn": 118,
+                    "endOffset": 10612
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 161,
+                        "startColumn": 4,
+                        "startOffset": 10615,
+                        "endColumn": 125,
+                        "endOffset": 10736
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 10617,
+                    "endColumn": 134,
+                    "endOffset": 10747
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 10742,
+                        "endColumn": 141,
+                        "endOffset": 10879
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 10752,
+                    "endColumn": 108,
+                    "endOffset": 10856
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 165,
+                        "startColumn": 4,
+                        "startOffset": 10885,
+                        "endColumn": 115,
+                        "endOffset": 10996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 10861,
+                    "endColumn": 128,
+                    "endOffset": 10985
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 167,
+                        "startColumn": 4,
+                        "startOffset": 11002,
+                        "endColumn": 135,
+                        "endOffset": 11133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 10990,
+                    "endColumn": 126,
+                    "endOffset": 11112
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 169,
+                        "startColumn": 4,
+                        "startOffset": 11139,
+                        "endColumn": 133,
+                        "endOffset": 11268
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 11117,
+                    "endColumn": 120,
+                    "endOffset": 11233
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 171,
+                        "startColumn": 4,
+                        "startOffset": 11274,
+                        "endColumn": 127,
+                        "endOffset": 11397
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 11238,
+                    "endColumn": 124,
+                    "endOffset": 11358
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 173,
+                        "startColumn": 4,
+                        "startOffset": 11403,
+                        "endColumn": 125,
+                        "endOffset": 11524
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 11363,
+                    "endColumn": 112,
+                    "endOffset": 11471
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 175,
+                        "startColumn": 4,
+                        "startOffset": 11530,
+                        "endColumn": 113,
+                        "endOffset": 11639
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 11476,
+                    "endColumn": 102,
+                    "endOffset": 11574
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 177,
+                        "startColumn": 4,
+                        "startOffset": 11645,
+                        "endColumn": 109,
+                        "endOffset": 11750
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 11579,
+                    "endColumn": 98,
+                    "endOffset": 11673
+                },
+                "from": {
+                    "file": "E:\\studio_workspace\\SunnyDemo1\\TestPlugin\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\values-v14\\values.xml",
+                    "position": {
+                        "startLine": 179,
+                        "startColumn": 4,
+                        "startOffset": 11756,
+                        "endColumn": 99,
+                        "endOffset": 11851
+                    }
+                }
+            }
+        ]
+    }
+]

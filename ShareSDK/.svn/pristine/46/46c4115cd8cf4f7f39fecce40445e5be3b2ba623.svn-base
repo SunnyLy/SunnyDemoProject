@@ -1,0 +1,313 @@
+package com.het.share.manager;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.os.Environment;
+import android.text.TextUtils;
+
+import com.het.share.R;
+import com.het.share.listener.ICommonShareListener;
+import com.het.share.model.CommonShareBaseBean;
+import com.het.share.model.CommonShareImage;
+import com.het.share.model.CommonShareMusic;
+import com.het.share.model.CommonSharePicText;
+import com.het.share.model.CommonShareTextOnly;
+import com.het.share.model.CommonShareVideo;
+import com.het.share.model.CommonShareWebpage;
+import com.het.share.model.QQ;
+import com.het.share.model.SinaWeibo;
+import com.het.share.model.WeiXin;
+import com.het.share.utils.ShareSDKUtils;
+import com.sina.weibo.sdk.api.share.IWeiboShareAPI;
+import com.tencent.connect.share.QQShare;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.tauth.Tencent;
+
+/**
+ * Created by sunny on 2016/1/8.
+ * 分享的操作类
+ * 当外界
+ * 1，分享文本
+ * 2，分享图片
+ * 3，分享网页
+ * 4，分享音乐
+ * 5，分享视频
+ */
+public class CommonShareOperate {
+
+    private static final int THUMB_SIZE = 120;
+
+    private Context mContext;
+
+    private WeiXin mWeixin;
+
+    private QQ mQQ;
+
+    private SinaWeibo mSinaWeibo;
+
+    public CommonShareOperate(Context context) {
+        this.mContext = context;
+        mWeixin = new WeiXin(mContext);
+        mQQ = new QQ(mContext);
+        mSinaWeibo = new SinaWeibo((Activity) mContext);
+    }
+
+
+    /**
+     * 1,分享文本
+     *
+     * @param content       分享的文本，当不传时，分享为空
+     * @param sharePlatform 分享的平台：微信好友，微信朋友圈，QQ等
+     * @param object        目标分享平台的对象，eg:IWXAPI
+     */
+    public void shareText(CommonShareTextOnly shareTextBean, Object object) {
+
+        CommonSharePlatform sharePlatform = shareTextBean.getSharePlatform();
+        boolean isInstalled = CommonShareUtils.isSupport(mContext, sharePlatform, object);
+        try {
+            if (sharePlatform == CommonSharePlatform.WeixinFriend ||
+                    sharePlatform == CommonSharePlatform.WeixinFriendCircle) {
+                //分享至微信好友
+                if (!isInstalled) {
+                    shareTextBean.getUiListener().onShareFialure(sharePlatform, mContext.getResources().getString(R.string.share_not_supported));
+                    return;
+                }
+                mWeixin.shareTextToWeixin(shareTextBean.getContent(), sharePlatform, (IWXAPI) object);
+            } else if (sharePlatform == CommonSharePlatform.QQ_Friend ||
+                    sharePlatform == CommonSharePlatform.QQ_Weibo ||
+                    sharePlatform == CommonSharePlatform.QQ_Zone) {
+                shareTextToTencent(shareTextBean, (Tencent) object, shareTextBean.getUiListener());
+            } else if (sharePlatform == CommonSharePlatform.SinaWeibo) {
+                mSinaWeibo.shareTextToSina(shareTextBean, (IWeiboShareAPI) object);
+            }
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException("object必须传分享目标对象，eg:微信(IWXAPI),QQ(Tencent),微博(IWeiboShareAPI)");
+        }
+
+    }
+
+    /**
+     * 2，分享图片
+     *
+     * @param imgUrl         图片Url
+     * @param imgDescription 图片描述
+     * @param sharePlatform  分享的平台：微信好友，微信朋友圈，QQ等
+     * @param object         目标分享平台的对象，eg:IWXAPI
+     */
+    public void sharePicOnly(CommonShareBaseBean sharePicBean, Object object) {
+
+        CommonSharePlatform sharePlatform = sharePicBean.getSharePlatform();
+        boolean isInstalled = CommonShareUtils.isSupport(mContext, sharePlatform, object);
+        try {
+            if (sharePlatform == CommonSharePlatform.WeixinFriend ||
+                    sharePlatform == CommonSharePlatform.WeixinFriendCircle) {
+                if (!isInstalled) {
+                    sharePicBean.getUiListener().onShareFialure(sharePlatform, mContext.getResources().getString(R.string.share_not_supported));
+                    return;
+                }
+                //分享至微信好友
+                mWeixin.sharePicToWeixin(sharePicBean.getImgUrl(), sharePicBean.getDescription(), sharePlatform, (IWXAPI) object);
+            } else if (sharePlatform == CommonSharePlatform.QQ_Weibo ||
+                    sharePlatform == CommonSharePlatform.QQ_Zone ||
+                    sharePlatform == CommonSharePlatform.QQ_Friend) {
+                mQQ.sharePicJust(sharePicBean, (Tencent) object, sharePicBean.getUiListener());
+            } else if (sharePlatform == CommonSharePlatform.SinaWeibo) {
+                mSinaWeibo.sharePicToSina((CommonShareImage) sharePicBean, (IWeiboShareAPI) object);
+            }
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException("object必须传分享目标对象，eg:微信(IWXAPI),QQ(Tencent),微博(IWeiboShareAPI)");
+        }
+
+    }
+
+    /**
+     * 3.分享网页
+     *
+     * @param webUrl
+     * @param title
+     * @param description
+     * @param bm
+     * @param sharePlatform
+     * @param object
+     */
+    public void shareWebPage(CommonShareWebpage webPageBean, Object object) {
+        CommonSharePlatform sharePlatform = webPageBean.getSharePlatform();
+        boolean isInstalled = CommonShareUtils.isSupport(mContext, sharePlatform, object);
+        try {
+            if (sharePlatform == CommonSharePlatform.WeixinFriend
+                    || sharePlatform == CommonSharePlatform.WeixinFriendCircle) {
+                if (!isInstalled) {
+                    webPageBean.getUiListener().onShareFialure(sharePlatform, mContext.getResources().getString(R.string.share_not_supported));
+                    return;
+                }
+                //分享至微信好友
+                mWeixin.shareWebPageToWeixin(webPageBean, (IWXAPI) object);
+            } else if (sharePlatform == CommonSharePlatform.QQ_Friend ||
+                    sharePlatform == CommonSharePlatform.QQ_Zone ||
+                    sharePlatform == CommonSharePlatform.QQ_Weibo) {
+                Bitmap bitmap = webPageBean.getBm();
+                Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, 120, 120, true);
+                bitmap.recycle();
+                String imgUrl = webPageBean.getImgUrl();
+                String[] shareImgs = new String[1];
+                if (scaledBitmap == null && !TextUtils.isEmpty(imgUrl)) {
+                    shareImgs[0] = imgUrl;
+                } else if (scaledBitmap != null) {
+                    String localUrl = ShareSDKUtils.savePhoto(
+                            Environment.getExternalStorageDirectory() + "/" + mContext.getApplicationContext().getPackageName(), scaledBitmap);
+
+                    shareImgs[0] = localUrl;
+                } else if (scaledBitmap == null && TextUtils.isEmpty(imgUrl)) {
+                    throw new IllegalArgumentException("you must invoke one of method between setBm() and setImgUrl()!");
+                }
+                mQQ.sharePicText(webPageBean.getTitle(), webPageBean.getDescription(),
+                        webPageBean.getAppName(), shareImgs, webPageBean.getWebpageUrl(),
+                        sharePlatform, (Tencent) object, webPageBean.getUiListener());
+            } else if (sharePlatform == CommonSharePlatform.SinaWeibo) {
+                mSinaWeibo.shareWebpageToSina(webPageBean,
+                        (IWeiboShareAPI) object);
+            }
+
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException("object必须传分享目标对象，eg:微信(IWXAPI),QQ(Tencent),微博(IWeiboShareAPI)");
+        }
+
+    }
+
+    /**
+     * 4.分享音乐
+     */
+    public void shareMusic(CommonShareMusic shareBean, Object object) {
+        CommonSharePlatform sharePlatform = shareBean.getSharePlatform();
+        boolean isInstalled = CommonShareUtils.isSupport(mContext, sharePlatform, object);
+        try {
+            if (sharePlatform == CommonSharePlatform.WeixinFriend ||
+                    sharePlatform == CommonSharePlatform.WeixinFriendCircle) {
+                if (!isInstalled) {
+                    shareBean.getUiListener().onShareFialure(sharePlatform, mContext.getResources().getString(R.string.share_not_supported));
+                    return;
+                }
+                //分享至微信好友
+                mWeixin.shareMusicToWeixin(shareBean.getMusicUrl(),
+                        shareBean.getMusicDataUrl(), shareBean.getTitle(), shareBean.getDescription(),
+                        shareBean.getBm(), sharePlatform, (IWXAPI) object);
+            } else if (sharePlatform == CommonSharePlatform.QQ_Friend ||
+                    sharePlatform == CommonSharePlatform.QQ_Weibo ||
+                    sharePlatform == CommonSharePlatform.QQ_Zone) {
+
+                mQQ.shareMusic(shareBean.getTitle(),
+                        shareBean.getDescription(), shareBean.getAppName(), shareBean.getImgUrl(),
+                        shareBean.getMusicUrl(), shareBean.getMusicDataUrl(), sharePlatform, (Tencent) object, shareBean.getUiListener());
+            } else if (sharePlatform == CommonSharePlatform.SinaWeibo) {
+                mSinaWeibo.shareMusicToSina(shareBean, (IWeiboShareAPI) object);
+            }
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException("object必须传分享目标对象，eg:微信(IWXAPI),QQ(Tencent),微博(IWeiboShareAPI)");
+        }
+    }
+
+    /**
+     * 5.分享视频
+     */
+    public void shareVideo(CommonShareVideo shareVideo, Object object) {
+        CommonSharePlatform sharePlatform = shareVideo.getSharePlatform();
+        boolean isInstalled = CommonShareUtils.isSupport(mContext, sharePlatform, object);
+        try {
+            if (sharePlatform == CommonSharePlatform.WeixinFriend ||
+                    sharePlatform == CommonSharePlatform.WeixinFriendCircle) {
+                if (!isInstalled) {
+                    //shareVideo.getUiListener().onError(new UiError(0, mContext.getResources().getString(R.string.share_not_supported), null));
+                    shareVideo.getUiListener().onShareFialure(sharePlatform, mContext.getResources().getString(R.string.share_not_supported));
+                    return;
+                }
+                //分享至微信好友
+
+                mWeixin.shareVideoToWeixin(shareVideo.getVideoUrl(),
+                        shareVideo.getBm(),
+                        shareVideo.getTitle(),
+                        shareVideo.getDescription(), sharePlatform, (IWXAPI) object);
+            } else if (sharePlatform == CommonSharePlatform.SinaWeibo) {
+                mSinaWeibo.shareVideoToSina(shareVideo, (IWeiboShareAPI) object);
+            }
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException("object必须传分享目标对象，eg:微信(IWXAPI),QQ(Tencent),微博(IWeiboShareAPI)");
+        }
+
+    }
+
+    /**
+     * 分享图文
+     * 因为微信，QQ，微博等的不统一，暂时视图文为网页，
+     *
+     * @param sharePicTextBean 实体Bean
+     * @param object           各分享端对象
+     */
+    public void sharePicText(CommonShareWebpage sharePicTextBean, Object object) {
+        shareWebPage(sharePicTextBean, object);
+    }
+
+
+    /**
+     * 分享文本至QQ
+     *
+     * @param content
+     * @param platform
+     * @param tencent
+     */
+    public void shareTextToTencent(CommonShareTextOnly shareBaseBean, final Tencent tencent, ICommonShareListener uiListener) {
+        Bundle mParams = new Bundle();
+        CommonSharePlatform platform = shareBaseBean.getSharePlatform();
+        mParams.putString(QQShare.SHARE_TO_QQ_SUMMARY, shareBaseBean.getContent());
+        if (platform == CommonSharePlatform.QQ_Friend) {
+            mQQ.shareToQQ(mParams, tencent, uiListener);
+        } else if (platform == CommonSharePlatform.QQ_Zone) {
+            mQQ.shareToQQZone(mParams, tencent, uiListener);
+        } else if (platform == CommonSharePlatform.QQ_Weibo) {
+            mQQ.shareToQQWeibo(mParams, tencent, uiListener);
+        }
+
+    }
+
+    /**
+     * 分享图文信息至QQ好友
+     */
+    private void sharePicTextToTencent(CommonSharePicText sharePicText, Tencent tencent, ICommonShareListener uiListener) {
+        mQQ.sharePicText(sharePicText.getTitle(),
+                sharePicText.getDescription(),
+                sharePicText.getAppName(),
+                sharePicText.getImgUrls(),
+                sharePicText.getTargetUrl(),
+                sharePicText.getSharePlatform(), tencent, uiListener);
+    }
+
+    /**
+     * 分享应用至QQ好友
+     * 应用分享后，发送方和接收方在聊天窗口中点击消息气泡即可进入应用的详情页。
+     */
+    private void shareAppToQQ(CommonShareBaseBean shareBaseBean, Tencent tencent, ICommonShareListener uiListener) {
+        mQQ.shareApp(shareBaseBean.getTitle(),
+                shareBaseBean.getDescription(),
+                shareBaseBean.getAppName(),
+                shareBaseBean.getImgUrl(),
+                shareBaseBean.getTargetUrl(),
+                shareBaseBean.getSharePlatform(), tencent, uiListener);
+    }
+
+    /**
+     * 分享音乐至QQ好友
+     * 音乐分享后，发送方和接收方在聊天窗口中点击消息气泡即可开始播放音乐。
+     */
+    private void shareMusicToQQ(CommonShareMusic shareMusic, Tencent tencent, ICommonShareListener uiListener) {
+        mQQ.shareMusic(shareMusic.getTitle(),
+                shareMusic.getDescription(),
+                shareMusic.getAppName(),
+                shareMusic.getImgUrl(),
+                shareMusic.getTargetUrl(),
+                shareMusic.getMusicUrl(),
+                shareMusic.getSharePlatform(), tencent, uiListener);
+    }
+
+
+}

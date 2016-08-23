@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\common_share_toast.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable\\common_share_toast.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\common_share_item_bg_color_selector.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable\\common_share_item_bg_color_selector.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\common_share_bg_color_selector.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable\\common_share_bg_color_selector.xml"
+    }
+]
