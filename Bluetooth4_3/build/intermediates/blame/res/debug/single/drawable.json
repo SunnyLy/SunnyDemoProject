@@ -36,12 +36,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
@@ -60,12 +60,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",

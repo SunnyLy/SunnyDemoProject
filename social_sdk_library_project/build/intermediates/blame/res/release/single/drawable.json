@@ -36,12 +36,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\src\\main\\res\\drawable\\umeng_socialize_renren_off.png"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_right_normal.png",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_normal.png"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_left_normal.png",
         "source": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\src\\main\\res\\drawable\\umeng_socialize_title_tab_left_normal.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_right_normal.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_normal.png"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\social_sdk_library_project\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_left_pressed.png",

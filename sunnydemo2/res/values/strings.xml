@@ -18,6 +18,7 @@
         <item>Android MVP模式的应用</item>
         <item>抢红包插件</item>
         <item>OpenGL</item>
+        <item>WPS</item>
     </string-array>
 
     <string-array name="new_properties">

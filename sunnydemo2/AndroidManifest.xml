@@ -91,6 +91,14 @@
         <activity android:name="sunnydemo2.androidl.ToolbarActivity"/>
         <activity android:name="sunnydemo2.androidl.TestPrefeerenceActivity"/>
 
+        <activity android:name="sunnydemo2.wps.WpsDemoActivity"/>
+        <activity android:name="cn.wps.moffice.documentmanager.PreStartActivity2"/>
+        <receiver android:name="sunnydemo2.wps.WpsDemoActivity$WpsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="cn.wps.moffice.file.save"/>
+            </intent-filter>
+        </receiver>
+
 
         <!--图片加载-->
         <activity android:name="sunnydemo2.imageloader.PictureLoaderFrameActivity"/>

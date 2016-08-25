@@ -88,12 +88,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\anim\\layout_bottom_to_top_slide.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\anim\\animator.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\anim\\animator.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\anim\\hyperspace_in.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\anim\\hyperspace_in.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\anim\\animator.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\anim\\animator.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\anim\\push_left_in.xml",

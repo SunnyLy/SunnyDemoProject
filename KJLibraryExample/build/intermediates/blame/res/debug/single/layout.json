@@ -20,12 +20,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\plugin_item.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\scale_img.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\scale_img.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\example_db.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\example_db.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\scale_img.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\src\\main\\res\\layout\\scale_img.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\KJLibraryExample\\build\\intermediates\\res\\merged\\debug\\layout\\frag_plugin.xml",

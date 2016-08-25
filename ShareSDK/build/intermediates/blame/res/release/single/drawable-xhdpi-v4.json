@@ -12,12 +12,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_qzone.png"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_share_logo_sinaweibo.png",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_sinaweibo.png"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_share_logo_wechatmoments.png",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_wechatmoments.png"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_share_logo_sinaweibo.png",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\res\\drawable-xhdpi\\common_share_logo_sinaweibo.png"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ShareSDK\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_share_logo_wechat.png",

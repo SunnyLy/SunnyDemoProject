@@ -30,6 +30,7 @@ import sunnydemo2.plugin.GrabRedpacketActivity;
 import sunnydemo2.rxjava.RxJavaActivity;
 import sunnydemo2.sharesdk.SunnyShareActivity;
 import sunnydemo2.tts.TTSActivity;
+import sunnydemo2.wps.WpsDemoActivity;
 
 /**
  * Created by sunny on 2015/11/18.
@@ -126,6 +127,10 @@ public class StartActivity extends Activity implements AdapterView.OnItemClickLi
                // GrabRedpacketActivity.startGrabRedpacketActivity(this);
                 Intent targeIntent = new Intent(StartActivity.this, GrabRedpacketActivity.class);
                 startActivity(targeIntent);
+                break;
+            case 15:
+                Intent intent = new Intent(this, WpsDemoActivity.class);
+                startActivity(intent);
                 break;
         }
 

@@ -36,12 +36,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\incoming_message_panel.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\table_layout_4.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\table_layout_4.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\game_controller_input_text_column.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\game_controller_input_text_column.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\table_layout_4.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\table_layout_4.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\video_player.xml",
@@ -80,12 +80,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\layout_animation_7.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\autocomplete_3.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\autocomplete_3.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\rotating_list.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\rotating_list.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\autocomplete_3.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\autocomplete_3.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\animator_custom_evaluator.xml",
@@ -116,12 +116,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\switches.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\radio_group_1.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\radio_group_1.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\relative_layout_1.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\relative_layout_1.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\radio_group_1.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\radio_group_1.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\action_bar_tab_content.xml",
@@ -152,12 +152,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\spinner_1.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\notify_with_text.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\notify_with_text.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\resources_smallest_width.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\resources_smallest_width.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\notify_with_text.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\notify_with_text.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\searchview_actionbar.xml",
@@ -204,12 +204,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\custom_title.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\scroll_view_1.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\scroll_view_1.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\focus_5.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\focus_5.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\scroll_view_1.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\scroll_view_1.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\progressbar_3.xml",
@@ -276,24 +276,24 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\launcher_shortcuts.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\isolated_service_controller.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\isolated_service_controller.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_arguments.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\fragment_arguments.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\isolated_service_controller.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\isolated_service_controller.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\foreground_service_controller.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\foreground_service_controller.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\baseline_nested_1.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\baseline_nested_1.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\status_bar_balloon.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\status_bar_balloon.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\baseline_nested_1.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\baseline_nested_1.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\reorder_three.xml",
@@ -448,12 +448,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\autocomplete_4.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\search_view.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\search_view.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\table_layout_12.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\table_layout_12.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\search_view.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\layout\\search_view.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\debug\\layout\\overscan.xml",

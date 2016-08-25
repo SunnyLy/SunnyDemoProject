@@ -68,12 +68,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable\\shape_4.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable\\photo5.jpg",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable\\photo5.jpg"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable\\black_box.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable\\black_box.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable\\photo5.jpg",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\src\\main\\res\\drawable\\photo5.jpg"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\ApiDemos\\build\\intermediates\\res\\merged\\release\\drawable\\scrollbar_vertical_thumb.xml",

@@ -76,12 +76,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_media_action.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\res\\layout\\listitem_device.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
@@ -132,12 +132,12 @@
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
-        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\res\\layout\\gatt_services_characteristics.xml"
-    },
-    {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
+        "source": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\res\\layout\\gatt_services_characteristics.xml"
     },
     {
         "merged": "E:\\studio_workspace\\SunnyDemo1\\Bluetooth4_3\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
